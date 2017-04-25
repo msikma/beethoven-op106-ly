@@ -77,7 +77,7 @@ two-section-one = {
           r8
           <<
             \relative c'' {
-              d8.^(\cresc es16 | <bes es>4 \stemNeutral <f bes des f>8) r8 \stemNeutral <g bes c g'>8\f
+              d8.^(\cresc es16 | \break <bes es>4 \stemNeutral <f bes des f>8) r8 \stemNeutral <g bes c g'>8\f
             }
             \\
             \relative c'' {
@@ -85,7 +85,6 @@ two-section-one = {
             }
           >>
           r8 |
-          \break
           <c a' c>8 r8 r4
           \once \override DynamicText.extra-offset = #'(-2.4 . 1.8)
           \once \override DynamicText.self-alignment-X = #LEFT
@@ -112,7 +111,7 @@ two-section-one = {
             \relative c'' {
               \once \override Slur.positions = #'(0 . 2.5)
               \override Slur.height-limit = #5
-              bes'8.^(\cresc c16 | <f,_~ c'>4 <f d'>8) r8
+              bes'8.^(\cresc c16 | \break <f,_~ c'>4 <f d'>8) r8
               \once \override Slur.positions = #'(0 . 2.5)
               es'8.^( e16 | \stemNeutral <bes e>4 <f a f'>8)
               r8 <g bes e g>8\f
@@ -143,7 +142,7 @@ two-section-one = {
           \once \override Slur.positions = #'(0 . 0)
           <b, d>8.^(\> <es g>16 | <es g>4\! <c es>8) r8
           <a c>8.^(\> <c es>16 | <c es>4\! <a c>8) r8
-          <a c>8.^(\> <des f>16 | <d! f>4\! <bes d>8) r8 \clef bass
+          <a c>8.^(\> <des f>16 | \break <d! f>4\! <bes d>8) r8 \clef bass
           <<
             \relative c'' {
               \voiceTwo
@@ -170,7 +169,7 @@ two-section-one = {
           <<
             \relative c'' {
               \once \override Slur.height-limit = #4
-              b8.^( d16 | d4 b8)
+              b8.^( d16 | \break d4 b8)
             }
             \\
             \relative c' {
@@ -193,7 +192,7 @@ two-section-one = {
             \relative c'' {
               \stemNeutral
               \override Slur.height-limit = #4
-              <b' d>8.^(\> <d f>16 | <d f>4\! <b d>8)
+              <b' d>8.^(\> <d f>16 | \break <d f>4\! <b d>8)
             }
             \\
             \relative c'' {
@@ -427,14 +426,14 @@ two-section-one = {
             r8
             <<
               \relative c'' {
-                d8.^(\cresc es16 | <es, bes' es>4 \stemNeutral <f bes des f>8) r8 \stemNeutral <g bes c g'>8\f
+                d8.^(\cresc es16 | \break <es, bes' es>4 \stemNeutral <f bes des f>8) r8 \stemNeutral <g bes c g'>8\f
               }
               \\
               \relative c'' {
                 bes4
               }
             >>
-            r8 | \break
+            r8 |
             <c a' c>8
           }
           r8 r4
@@ -495,7 +494,7 @@ two-section-one = {
           r8
           <<
             \relative c''' {
-              bes8.^(\cresc c16 | c4 d8) b,8\rest
+              bes8.^(\cresc c16 | \break c4 d8) b,8\rest
               \once \override Slur.height-limit = #4
               es'8.^( e16 | e4 f8) b,,8\rest
               \stemDown
@@ -591,7 +590,7 @@ two-section-one = {
           <<
             \relative c'' {
               \once \override Slur.height-limit = #4
-              b8.^( d16 | d4 b8)
+              b8.^( d16 | \break d4 b8)
             }
             \\
             \relative c' {
@@ -614,7 +613,7 @@ two-section-one = {
             \relative c'' {
               \stemNeutral
               \override Slur.height-limit = #4
-              <b' d>8.^(\> <d f>16 | <d f>4\! <b d>8)
+              <b' d>8.^(\> <d f>16 | \break <d f>4\! <b d>8)
             }
             \\
             \relative c'' {
@@ -670,7 +669,7 @@ two-section-one = {
               <a c>4
               \voiceOne
               <g bes>4 <f_~ a^~>4 |
-              <f a>4 <e g>4 <es_~ c'^~>4\pp |
+              \break <f a>4 <e g>4 <es_~ c'^~>4\pp |
               <es c'>4 <b' d,>4)
             }
             \\
@@ -702,7 +701,7 @@ two-section-one = {
           \once \override Slur.positions = #'(0 . 2.5)
           <d, b'>8.^(\cresc <f d'>16 | <f d'>4 <d b'>8) r8
           \once \override Slur.positions = #'(0 . 2.5)
-          <d b'>8.^( <g es'>16 | <g es'>4 <es c'>8) r8
+          <d b'>8.^( <g es'>16 | \break <g es'>4 <es c'>8) r8
           \once \override Slur.positions = #'(2.2 . 2.5)
           \once \override Slur.height-limit = #9
           \once \override Slur.eccentricity = #-0.55
