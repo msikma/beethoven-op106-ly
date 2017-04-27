@@ -60,6 +60,62 @@ three-section-one = {
           4 <cis fis cis'>8) 8^( <eis b' cis eis> <fis a cis eis> |
           <gis cis gis'>4.) <gis b d>4. |
         }
+        \relative c'' {
+          <<
+            {
+              <gis d' b>4.^( <cis, a' cis>4 <b d eis b'>8 |
+              4.)
+            }
+            \\
+            \relative c' {
+              a4\rest d8 
+            }
+          >>
+          <b d eis b'>8 <a cis fis a>8^( <gis d' fis gis>8 |
+          <gis d' fis gis>4) 8 8^( <a d fis a>8 <fis a d fis>8 |
+          <<
+            \relative c' {
+              dis8 bis cis
+            }
+            \\
+            \relative c {
+              <fis a fis'>4.
+            }
+          >>
+          <eis gis cis eis>8)^( gis' b! |
+          <<
+            \relative c' {
+              <d b'>4
+            }
+            \\
+            \relative c' {
+              eis8-[ gis]
+            }
+          >>
+          <cis, fis a>8)
+          <<
+            \relative c' {
+              <cis fis a>8 <b d eis gis> <dis fis> |
+              <a bis dis fis>4 <gis cis eis>8
+              eis'8-[^( gis b!16 d!] |
+              <b d>4 cis8) <a cis>8 <d, eis gis b>8 <bis dis fis a>8 |
+              <fis' a>4 <eis gis>8 <cis eis gis>4^( <cis e g>8) |
+              \acciaccatura { g'8 } b'4^( a8 g4 fis8 |
+              e4 fis8 \stemDown <g, g'>4) \stemUp fis8^( |
+              fis8-[ <fis a> <fis a cis!>] <eis gis cis>4 8)
+            }
+            \\
+            \relative c' {
+              s8 s8 a16-[ bis] |
+              s4 s8 s4 <eis_~ gis_~>8 |
+              <eis! gis>8 <eis gis> <fis a>
+              b,16\rest fis'16 s4 |
+              b,8\rest <bis dis>8-[ cis] s4. |
+              g'8\rest b8 a g4. |
+              g4. s4 s8 |
+            }
+          >>
+        }
       }
       %---------------------------------------------------------------------
       %    Left hand
@@ -77,6 +133,17 @@ three-section-one = {
           \stemNeutral
           <d d'>4_( <b b'>8 | 4 <a a'>8) 8_( <gis gis'> <fis fis'> |
           <eis eis'>4.) <eis''! gis b d>4. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
+          s2. |
         }
       }
     >>
