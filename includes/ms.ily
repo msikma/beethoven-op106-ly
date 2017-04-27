@@ -308,6 +308,17 @@ parenHigh =
        }
     #}))
 
+% Special form of \paren for \p
+parenP =
+#(define-event-function (parser location dyn) (ly:event?)
+   (make-dynamic-script
+    #{ \markup \concat {
+         \pad-x #0.2 \hspace #-1.0 \normal-text \italic \fontsize #2 (
+           #(ly:music-property dyn 'text)
+           \normal-text \italic \fontsize #2 )
+       }
+    #}))
+
 % Language-independent variables.
 CURRENT-YEAR = #(strftime "%Y" (localtime (current-time)))
 COPYRIGHT-YEAR = #(format "~A-~A" COPYRIGHT-START-YEAR CURRENT-YEAR)
