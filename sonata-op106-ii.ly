@@ -143,26 +143,33 @@ two-section-one = {
           \once \override Slur.positions = #'(0 . 0)
           <b, d>8.(\> <es g>16) | <es g>4\!( <c es>8) r8
           <a c>8.(\> <c es>16) | <c es>4\!( <a c>8) r8
-          <a c>8.(\> <des f>16) | \break <d! f>4\!( <bes d>8) r8 \clef bass
+          <a c>8.(\> <des f>16) | \break <d! f>4\!( <bes d>8)
+          r8
           <<
             \relative c'' {
-              \voiceTwo
+              \voiceOne
               \once \override Slur.height-limit = #4
               \once \override Slur.positions = #'(0 . 3)
-              <a, c>8.^(\p <c es>16 | <c es>2_\textDecresc "dimin." <bes d>4 |
+              \change Staff = "left"
+              \once \override DynamicText.extra-offset = #'(-1.8 . -2.5)
+              \once \override DynamicText.self-alignment-X = #LEFT
+              <a, c>8.^(^\p <c es>16) | <c es>2^(^\textDecrescEnd "dimin." <bes d>4 |
               <a c>4 <g bes>4 <f_~ a^~>4 |
-              <f a>4 <e g>4 <es_~ c'^~>4\pp |
+              <f a>4 <e g>4^\pp <es_~ c'^~>4 |
               <es c'>4 <b' d,>4)
+              \change Staff = "right"
             }
             \\
             \relative c {
-              \voiceTwo
+              \voiceOne
+              \change Staff = "left"
               s4 |
               s2. |
               s2. |
               s2 g'4^~ |
-              \voiceOne
+              \voiceTwo
               g2
+              \change Staff = "right"
             }
           >>
           r4 | r4 r4
@@ -866,11 +873,13 @@ two-section-one = {
           <f f'>2 <f,_~ f'^~>4 |
           <f f'>2 <f_~ f'^~>4 |
           <f f'>2 <f,_~ f'^~>4 |
+          \stemDown
           <f f'>2 <fis_~ fis'^~>4 |
           <fis fis'>4 <g g'>2_( |
           <a a'>4 <bes bes'> <b b'> |
           <c c'>2) c4_( |
           g'2) r4 |
+          \stemNeutral
           R2. |
           r4 r4
           <<
