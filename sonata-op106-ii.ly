@@ -922,7 +922,7 @@ two-section-one = {
               \once \override Slur.positions = #'(-2 . -1)
               <fis' c' es>4_( <g bes d>4 |
               s2 s4 |
-              c,2 c4 |
+              c,2 \parenthesize c4 |
               s4 b'4)
             }
             \\
