@@ -218,11 +218,11 @@ two-section-one = {
             \relative c''' {
               \voiceTwo
               \once \override Slur.height-limit = #5
-              <a, c>8.^(\p <c es>16 | <c es>2_\textDecresc "dimin." <bes d>4 |
+              <a, c>8.^(\p <c es>16 | <c es>2_\textDecrescEnd "dimin." <bes d>4 |
               <a c>4
               \voiceOne
               <g bes>4 <f_~ a^~>4 |
-              <f a>4 <e g>4 <es_~ c'^~>4\pp |
+              <f a>4 <e g>4 <es_~ c'^~>4\parenP\pp |
               <es c'>4 <b' d,>4)
             }
             \\
