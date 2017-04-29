@@ -5,6 +5,11 @@ A transcription of Beethoven's 29th piano sonata (Op.106) in Lilypond format.
 
 Feel free to open an issue if you have suggestions for improvements.
 
+**Todo:**
+
+* I've only just started this. It's far from finished. II is the furthest along.
+* Add pedaling to II.
+
 Notes
 -----
 
