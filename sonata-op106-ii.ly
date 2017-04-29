@@ -397,25 +397,42 @@ two-section-one = {
           \relative c'' {
             <<
               {
-                \teeny b2.\rest
+                % Workaround for \teeny - works with \magnifyStaff
+                \once \override Dots.dot-count = #0
+                \override Rest.font-size = #-3
+                b2.\rest
               }
               \\
               {
                 s2.^\markup "Prestissimo"
               }
             >>
-            \teeny
             s2.
+            % Workaround for \teeny - works with \magnifyStaff
+            \override NoteHead.font-size = #-3
+            \override Rest.font-size = #-3
+            \once \override Dots.dot-count = #0
             b2.\rest
             \stemUp
-            \tuplet 3/2 { f8 g a } bes-[ c d e]
+            \once \override Beam.positions = #'(1.0 . 2.0) % start: -1.5 . -0.5
+            \tuplet 3/2 { f8 g a }
+            \once \override Beam.positions = #'(2.5 . 4.5) % start: 0.0 . 1.5
+            bes-[ c d e]
             \stemDown
-            \tuplet 3/2 { f g a } bes-[ c d e]
+            \once \override Beam.positions = #'(0.2 . 0.8)
+            \tuplet 3/2 { f g a }
+            \once \override Beam.positions = #'(1.0 . 2.0)
+            bes-[ c d e]
             \ottava #1
             \set Staff.ottavation = "8"
             \stemUp
-            \tuplet 3/2 { f g a } bes-[ c d e]
-            \normalsize
+            \once \override Beam.positions = #'(4.5 . 5.5) % start: 2.0 . 3.0
+            \tuplet 3/2 { f g a }
+            \once \override Beam.positions = #'(6.0 . 8.0) % start: 3.5 . 5.0
+            bes-[ c d e]
+            % Workaround for \normalsize - works with \magnifyStaff
+            \override NoteHead.font-size = #0
+            \override Rest.font-size = #0
             f8
             \ottava #0
           }
@@ -1038,7 +1055,7 @@ two-section-one = {
           \key bes \major
           r4 f,\sf |
           r4 f,\sf |
-          r4 f,\sf |
+          \stemDown r4 f,\sf \stemNeutral |
           <<
             \relative c {
               <a,^~ c^~>2^\sf |
@@ -1057,18 +1074,57 @@ two-section-one = {
           \explicitTuplets
           \relative c,, {
             \stemDown
-            \teeny
-            \tuplet 3/2 { f8 g a } bes-[ c d e]
+            % Workaround for \teeny - works with \magnifyStaff
+            \override NoteHead.font-size = #-3
+            \override Rest.font-size = #-3
+            %
+            % Overrides for the beam positions are calculated as follows:
+            %
+            % - If the stems go down,
+            %   - The first note of the four note beam is the anchor, and its
+            %     stem is size 2.5.
+            %   - The last note of the four note beam is 1.0 higher than the
+            %     first note of the four note beam.
+            %   - The three note beam uses the same values, minus (0.8 . 1.2).
+            %   - If not anchored to a staff line, the three note beam is
+            %     another minus (0.0 . 0.1). This is because normally the beams
+            %     are snapped to the staff lines slightly.
+            %
+            % - If the stems go up,
+            %   - The first note of the four note beam is 2.5 long.
+            %   - The last note of the four note beam is 3.0 long.
+            %   - Both the first and last notes of the three note beam are 2.5 long.
+            %
+            % This is more or less arbitrary but it makes them have pretty much
+            % the same angle in comparison to the angle of the notes.
+            %
+            \once \override Beam.positions = #'(-7.8 . -7.3)
+            \tuplet 3/2 { f8 g a }
+            \once \override Beam.positions = #'(-7.0 . -6.0)
+            bes-[ c d e]
             \stemUp
             \implicitTuplets
-            \tuplet 3/2 { f8 g a } bes-[ c d e]
+            \once \override Beam.positions = #'(0.0 . 1.0) % start: -2.5 . -1.5
+            \tuplet 3/2 { f8 g a }
+            \once \override Beam.positions = #'(1.5 . 3.5) % start: -1.0 . 0.5
+            bes-[ c d e]
             \stemDown
-            \tuplet 3/2 { f8 g a } bes-[ c d e]
+            \once \override Beam.positions = #'(-0.8 . -0.2) % start: 1.0 . 2.0
+            \tuplet 3/2 { f8 g a }
+            % Beam positions are calculated using this as the base.
+            \once \override Beam.positions = #'(0.0 . 1.0)
+            bes-[ c d e]
+            \once \override Dots.dot-count = #0
             \relative c d2.\rest
             s2.
             \clef treble
-            \tuplet 3/2 { f8 g a } bes-[ c d e]
-            \normalsize
+            \once \override Beam.positions = #'(-3.3 . -2.8) % minus 0.0 . 0.1
+            \tuplet 3/2 { f8 g a }
+            \once \override Beam.positions = #'(-2.5 . -1.5)
+            bes-[ c d e]
+            % Workaround for \normalsize - works with \magnifyStaff
+            \override NoteHead.font-size = #0
+            \override Rest.font-size = #0
             f8
           }
           r8^\fermata \clef bass
