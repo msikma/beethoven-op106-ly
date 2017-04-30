@@ -7,7 +7,8 @@
 %
 %---------------------------------------------------------------------------
 
-\include "sonata-op106-headers.ily"
+\version "2.19.42"
+\include "sonata-op106-includes.ily"
 
 %---------------------------------------------------------------------------
 %    II. Scherzo - Assai vivace
@@ -281,11 +282,11 @@ two-section-one = {
           \tuplet 3/2 \relative c'' { des8\cresc bes f }
           \tuplet 3/2 \relative c'' { bes8 f des }
           \tuplet 3/2 \relative c' { f8 des bes } |
-          
+
           \tuplet 3/2 \relative c' { <des bes'>8 bes des }
           \tuplet 3/2 \relative c' { bes'8 des, bes }
           \tuplet 3/2 \relative c' { <f des'>8 des f } |
-          
+
           \tuplet 3/2 \relative c'' { f8 des bes }
           \tuplet 3/2 \relative c'' { f8 des bes }
           \tuplet 3/2 \relative c'' { des8 bes f } |
@@ -293,14 +294,14 @@ two-section-one = {
           \tuplet 3/2 \relative c'' { bes8\> f des }
           \tuplet 3/2 \relative c'' { bes8_\textDecresc "dimin." f des }
           \tuplet 3/2 \relative c' { f8 des bes } |
-          
+
           \tuplet 3/2 \relative c' { <des aes'>8 aes des }
           \tuplet 3/2 \relative c'' { aes8 f des }
           \tuplet 3/2 \relative c' { <f des'>8 des f } |
           \tuplet 3/2 \relative c'' { f8 des aes }
           \tuplet 3/2 \relative c'' { f8 des aes }
           \tuplet 3/2 \relative c''' { aes8 f des } |
-          
+
           <f des'>4\! r4 <f'_~ f'^~>4 |
           <f f'>4 <aes aes'>4^( <f_~ f'^~>) |
           \break
@@ -315,7 +316,7 @@ two-section-one = {
           <aes aes'>2 <bes bes'>4 |
           <des des'>2 <f f'>4 |
           <bes, bes'>4) r4 <des, des'>8 r8 | <des des'>8 r8
-          
+
           <<
             \relative c'' {
               s4 f4 |
@@ -362,7 +363,7 @@ two-section-one = {
           c8 r8 aes8 r8 |
           c8 r8 g8 r8 |
           f2 |
-          
+
           \break
           r8\cresc <f aes c>8 r8 <f aes c>8 |
           r8 <e bes' c>8 r8 <e g bes c>8 |
@@ -373,7 +374,7 @@ two-section-one = {
           r8 <f c' f>8 r8 <f c' es!>8 |
           \break
           r8 <f bes des>8 r8 <es a c>8 |
-          
+
           <bes' f' bes>8\ff r8 <des f bes des>8 r8 |
           <c f a c>8 r8 <f, a c f>8 r8 |
           <f' bes f'>8 r8 <es f a es'>8 r8 |
@@ -1156,7 +1157,7 @@ two-section-one = {
           \stemUp
           <aes f'>8._( <g es'>16) | <g es'>4_( <f des'>8) r8
           <e c'>8 r8 | <f f'>8 r8 r4
-          
+
           \clef treble
           <bes'' d>8._( <f c'>16) | \stemDown <bes d>4_( <c es>8) r8
           \stemNeutral

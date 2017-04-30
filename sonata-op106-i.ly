@@ -7,7 +7,8 @@
 %
 %---------------------------------------------------------------------------
 
-\include "sonata-op106-headers.ily"
+\version "2.19.42"
+\include "sonata-op106-includes.ily"
 
 %---------------------------------------------------------------------------
 %    I. Allegro
@@ -25,7 +26,15 @@ one-section-one = {
     markup-system-spacing = \std-padding-page-one
     bookTitleMarkup = \std-title-markup-page-one
   }
-  \include "includes/header.ily"
+  \header {
+    title = "SONATA"
+    subtitle = "Große Sonate für das Hammerklavier"
+    composer = "L.Beethoven"
+    opus = "Op.106"
+    dedication = "Dem Erzherzog Rudolph von Österreich gewidmet"
+    copyright = ##f
+    tagline = \ms-tagline-en-cc-by-sa-four
+  }
   \score {
     \new PianoStaff \with {
       \std-staff-spacing
@@ -88,4 +97,3 @@ one-section-one = {
     }
   }
 }
-

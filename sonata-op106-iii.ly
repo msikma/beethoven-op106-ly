@@ -7,7 +7,8 @@
 %
 %---------------------------------------------------------------------------
 
-\include "sonata-op106-headers.ily"
+\version "2.19.42"
+\include "sonata-op106-includes.ily"
 
 %---------------------------------------------------------------------------
 %    III. Adagio sostenuto
@@ -67,7 +68,7 @@ three-section-one = {
             }
             \\
             \relative c' {
-              s4. | a8\rest a8\rest d8 
+              s4. | a8\rest a8\rest d8
             }
           >>
           <b d eis b'>8 <a cis fis a>8 <gis d' fis gis>8 |

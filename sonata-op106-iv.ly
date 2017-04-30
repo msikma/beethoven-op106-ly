@@ -7,7 +7,8 @@
 %
 %---------------------------------------------------------------------------
 
-\include "sonata-op106-headers.ily"
+\version "2.19.42"
+\include "sonata-op106-includes.ily"
 
 %---------------------------------------------------------------------------
 %    IV. Largo - Allegro risoluto
@@ -47,7 +48,7 @@ four-section-one = {
           \override Tie.minimum-length = #2.75
           \autoBeamOff
           \tuplet 3/2 {
-            r32^\markup { \italic "tutte le corde" } r 
+            r32^\markup { \italic "tutte le corde" } r
             \once \override Slur.positions = #'(1 . 2)
             f_( \noBeam
           }

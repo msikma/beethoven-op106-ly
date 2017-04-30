@@ -1,0 +1,5 @@
+\include "includes/dynamics.ily"
+\include "includes/etc.ily"
+\include "includes/fingering.ily"
+\include "includes/strings.ily"
+\include "includes/style.ily"

@@ -25,7 +25,7 @@
 %
 %---------------------------------------------------------------------------
 
-\include "sonata-op106-headers.ily"
+\version "2.19.42"
 \include "sonata-op106-i.ly"
 \include "sonata-op106-ii.ly"
 \include "sonata-op106-iii.ly"

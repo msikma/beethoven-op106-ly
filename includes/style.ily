@@ -1,7 +1,10 @@
-% Markup commands
+% Styling commands and defines.
 %
 % (C) 2016-2017, Michiel Sikma <michiel@sikma.org>
 % Licensed under CC BY-SA 4.0.
+
+% Set after grace notes a bit closer to the next notes.
+#(define afterGraceFraction (cons 8 9))
 
 % Standard padding. Use in \bookpart \paper markup-system-spacing.
 % For the first page only.
@@ -19,6 +22,12 @@ std-staff-spacing = \override StaffGrouper.staff-staff-spacing =
 
 % Standard scaling for a staff.
 std-magnification = \magnifyStaff #89/100
+
+% Used to add a space after a paragraph text.
+paragraphBreak = \markup \vspace #0.5
+
+% Sets dynamic text spanners to the standard font size.
+stdDynSize = { \override DynamicTextSpanner.font-size = #0 }
 
 % Standard title markup. Use in \bookpart \paper bookTitleMarkup.
 % Assumes that the COMPOSED variable is set in the source file.

@@ -15,7 +15,9 @@ Notes
 
 u = upper staff; l = lower staff; M = measure(s)
 
-No notes yet.
+**2nd movement**
+
+* 37 u: The second *c* is not present in the first edition, but present in analogous passages and added later.
 
 Copyright
 ---------
