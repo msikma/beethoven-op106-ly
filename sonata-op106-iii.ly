@@ -100,10 +100,44 @@ three-section-one = {
               eis'8-[ gis b!16 d!] |
               <b d>4 cis8 <a cis>8^( <gis b>8 <fis a>8) |
               <fis a>4^( <eis gis>8) <cis eis gis>4^( <cis e g>8) |
-              % TODO remove slur from acciaccatura
-              \acciaccatura { g'8 } b'4^( a8 g4 fis8 |
-              e4 fis8 g4) fis8 |
-              fis8-[ <fis a> <fis a cis!>] <eis gis cis>4 8
+              \slashedGrace g'8
+              \once \override Slur.positions = #'(4.8 . 3.7)
+              \once \override Slur.eccentricity = #0.75
+              \once \override Slur.height-limit = #4.5
+              b'4^( a8 g4 fis8 |
+              e4 fis8 g4) fis,8 |
+              fis8-[ <fis a> <fis a cis!>] <eis gis cis>4 8 |
+              <<
+                \relative c' {
+                  <eis gis cis>4 <fis a>8 8-[ <cis fis>8 <eis gis>16 <fis a>16] |
+                  <gis b>4 <fis a>8 a8-[ gis <dis fis>] |
+                  <a fis'>8-[ <fisis disis'>8 <gis eis'>8] eis'8.-[ gis16^( b d]) |
+                  <eis, gis b d>4 cis'8 <eis, gis cis>8 b' <fis a>8 |
+                  <fis b>4 <eis gis>8 8 g4 |
+                  \stemNeutral
+                  \slashedGrace g8 b'4^( a8)
+                  \once \override Slur.positions = #'(4.5 . 3.5)
+                  \once \override Slur.height-limit = #4.5
+                  \once \override Slur.eccentricity = #-0.55
+                  a8^( <g g'>8 <fis fis'> | 8 <e e'> <fis fis'>)
+                  % Todo fix slur
+                  \once \override Slur.height-limit = #13.5
+                  \once \override Slur.eccentricity = #0.25
+                  \once \override Slur.positions = #'(5.5 . 3.5)
+                  <fis fis'>^( <g g'>8. <fis, fis'>16) |
+                  <fis fis'>8 <a a'>8 <cis cis'>8 4 8 |
+                  \once \override Slur.height-limit = #4.5
+                  <cis cis'>8^( <d d'> <g, g'> <b b'> <cis, cis'> <eis eis'>)
+                }
+                \\
+                \relative c' {
+                  s4 s8 s8 s8 cis8 |
+                  a8\rest d8-[ cis] <b d eis>4 a8 |
+                  cis4. <gis cis>8. s8. |
+                  d'8-[ <gis b>8 a8] d,4 dis8 |
+                  <bis dis>8 8 cis cis e b
+                }
+              >> |
             }
             \\
             \relative c' {
@@ -115,7 +149,42 @@ three-section-one = {
               g'8\rest b8 a g4. |
               g4. g4 s8 |
             }
-          >>
+          >> |
+          r4 r8 r8 r8
+          <<
+            \relative c''' {
+              s8 | b8\rest b8\rest fis8 fis a cis |
+              \once \override Slur.height-limit = #4
+              \once \override Slur.positions = #'(5.8 . 3.7)
+              cis4^( e16-[ d]) d8 eis, b' |
+              % todo: make these cresc/decresc a bit nicer
+              b8 b, cis16^\< d\! d8^( cis8. b16)
+            }
+            \\
+            \relative c'' {
+              cis8_~ | cis16 8 8 16_~ 16 8 8 16 |
+              b16\rest <eis b'>8 <eis_~ b'_~>16 8 b16\rest b8 8 b16_~ |
+              b16 eis,8 8 eis16_~ 16^\> <eis b'>8\! 8 eis16
+            }
+          >> |
+          b16 a8 cis fis16^~
+          \tuplet 3/2 { fis16-[ a cis16^~] }
+          \implicitTuplets
+          \tuplet 3/2 { cis16-[ fis gis] }
+          \tuplet 3/2 { a-[ fis cis] } |
+          \afterGrace cis4\startTrillSpan { bis32\stopTrillSpan cis }
+          \explicitTuplets
+          \tuplet 3/2 { e16-[^( cis d)] }
+          \implicitTuplets
+          \tuplet 3/2 { d16-[^( e, eis)] }
+          \tuplet 3/2 { eis16-[^( d' cis)] }
+          \tuplet 3/2 { cis16-[^( ais b]) } |
+          b32
+          eis,,32-[ f g] a-[ ais b bis]
+          \explicitTuplets
+          \tuplet 3/2 { cis16-[ d dis] }
+          \tuplet 3/2 { e!16-[ cis d] }
+          d32-[\< b' g eis]\!\> d-[ bis d cis]\! |
         }
       }
       %---------------------------------------------------------------------
@@ -165,6 +234,73 @@ three-section-one = {
             }
           >> |
           d'8-[ cis!8] <cis, fis a cis>8 <cis eis gis! cis>4 8 |
+          <cis eis gis cis>4 <fis a cis>8 8-[ a <gis b>16 <fis a>16] |
+          <<
+            \relative c, {
+              cis8 eis fis gis8.-[ a16 b bis] |
+              s2. |
+              s2. |
+              a'8\rest <a fis>8-[ <eis gis>] s4. |
+              s2. |
+              s4. <g d'>8 g fis |
+              s2. |
+              cis'8 d g, b cis, eis
+            }
+            \\
+            \relative c, {
+              cis2. |
+              \stemNeutral
+              <cis_~ cis'^~>4. 16-[ cis'^( eis gis b d)] |
+              <cis,, cis'>8 <eis cis' eis>8 <fis cis' fis>8
+              <gis cis gis'>8.-[ <a a'>16 <b b'>16 <bis bis'>16] |
+              \stemDown cis4 cis8 <cis eis gis>8 <cis e g bes>8 <d g b>8 |
+              <g, d' b'>4. <b g' d'>4. |
+              <c g' e'>4.
+              b4 d8 |
+              <d fis>8 <cis fis a>8 <cis fis a cis>8 <cis eis gis! cis>4 <fis a cis>8 |
+              <fis a>8 b,4 g8\rest s8 g8\rest
+            }
+            \\
+            \relative c {
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s4 s8 s8 \voiceOne \stemDown
+              \once \override Voice.Stem.length = #3.8
+              cis4
+            }
+            \\
+            \relative c, {
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s2. |
+              s4 s8 s8 \voiceOne \stemDown cis8
+            }
+          >> |
+          r8
+          % Exactly as original edition.
+          fis,16-[ r16 <cis' fis a cis>16-.] r16
+          <cis fis a cis>16-.-[ r16 fis,16-. r16 <cis' fis a cis>16-.] r16 |
+          <cis fis a cis>16-[ r16 fis,16 r16 <cis' fis a cis>16] r16
+          <cis fis a cis>16-[ r16 fis,16 r16 <cis' fis a cis>16] r16 |
+          <cis eis gis b cis>16-[ r16 gis16 r16 <eis' gis b d>16] r16
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b d>16] r16 |
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b d>16] r16
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b cis>16] r16 |
+          <cis fis a cis>16-[ r16 fis,16 r16 <cis' fis a cis>16] r16
+          <cis fis a cis>16-[ r16 fis,16 r16 <cis' fis a cis>16] r16 |
+          <cis eis gis b cis>16-[ r16 gis16 r16 <eis' gis b d>16] r16
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b d>16] r16 |
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b d>16] r16
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b cis>16] r16
         }
       }
     >>
