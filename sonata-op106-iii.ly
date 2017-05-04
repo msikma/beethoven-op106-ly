@@ -116,11 +116,12 @@ three-section-one = {
                   <fis b>4 <eis gis>8 8 g4 |
                   \stemNeutral
                   \slashedGrace g8 b'4^( a8)
-                  \once \override Slur.positions = #'(4.5 . 3.5)
+                  \once \override Slur.positions = #'(5.2 . 3.5)
                   \once \override Slur.height-limit = #4.5
-                  \once \override Slur.eccentricity = #-0.55
+                  \once \override Slur.eccentricity = #-1.05
                   a8^( <g g'>8 <fis fis'> | 8 <e e'> <fis fis'>)
                   % Todo fix slur
+                  % Todo lower the dot
                   \once \override Slur.height-limit = #13.5
                   \once \override Slur.eccentricity = #0.25
                   \once \override Slur.positions = #'(5.5 . 3.5)
@@ -185,6 +186,55 @@ three-section-one = {
           \tuplet 3/2 { cis16-[ d dis] }
           \tuplet 3/2 { e!16-[ cis d] }
           d32-[\< b' g eis]\!\> d-[ bis d cis]\! |
+          <<
+            \relative c'' {
+              \override Tie.minimum-length = #2.5
+              cis8 gis'8. cis,16 d4 cis8 |
+              \tupletDown
+              \stemNeutral
+              \tuplet 3/2 { cis16-[^\( cis' gis] }
+              b32-[ a eis fis]
+              gis-[ fis]
+              \tuplet 3/2 { a-[^( fis cis]^)\) }
+              \stemUp
+              e16-[ dis] d16-[ 8 16] |
+              cis8.-[ fis8 16]^~ 8.-[ 8 16]^~ |
+              8.-[ b8 16]^~ 8.-[ <b, b'>8 <b^~ b'^~>16] |
+              <b b'>16-[ 8 8 <b b'^~>16]
+              \stemNeutral
+              b'16 <e, b' e>8
+              % Note: Henle has a neutral on d, but I don't see the need.
+              <e b' d e>8
+              <e a cis e>16 |
+              \stemUp
+              e'16-[^( gis, b a gis a]) cis8 b4^~ |
+              b16^( gis! bes a gis a) b8
+              % todo: make tie nicer
+              a4^~ |
+              a16^( fis a g fis g) g^( e g fis e f) |
+              f8^( <e, e'> <fis d'>) g' fis b!^~ |
+              b8 a d^~ \stemNeutral <d, g d'> <cis e g cis> <g'_~ cis_~ e^~ g^~> |
+              8.
+            }
+            \\
+            \relative c' {
+              e16\rest fis8 fis16_~ fis16 e16\rest e16\rest <eis b'>8 8 16 |
+              s4. e16\rest <eis b'>8 8 16 |
+              e16\rest fis8 e16\rest e8\rest e16\rest fis8 e16\rest e8\rest |
+              e16\rest b8 e16\rest e8\rest e16\rest b8 e16\rest e8\rest |
+              s2. |
+              e'8 e fis_~ fis16 16_( a g fis g) |
+              f8 e4_~ e16 e_( g fis eis fis) |
+              \bar "||"
+              \key b \minor
+              dis8 e cis cis d b_~ |
+              b16 f bes a gis a cis e d8 <b f'> |
+              <b d gis>8 <a d>
+              % Note: first edition ties the following to to the next d.
+              % Henle notes this is probably an engraving error.
+              d s4. |
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -248,6 +298,7 @@ three-section-one = {
             }
             \\
             \relative c, {
+              % Note: purposely left un-merged.
               cis2. |
               \stemNeutral
               <cis_~ cis'^~>4. 16-[ cis'^( eis gis b d)] |
@@ -300,7 +351,40 @@ three-section-one = {
           <cis eis gis b cis>16-[ r16 gis16 r16 <eis' gis b d>16] r16
           <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b d>16] r16 |
           <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b d>16] r16
-          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b cis>16] r16
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b cis>16] r16 |
+          <fis a cis>16-[ r16 a,16 r16 <fis' a cis>16] r16
+          <eis gis b d>16-[ r16 gis,16 r16 <eis' gis b cis>16] r16 |
+          <fis a cis>16-[ r16 a,16 r16 <cis fis a cis>16] r16
+          <cis eis gis b cis>16-[ r16 gis16 r16 <gis' b cis>16] r16 |
+          <a cis>16-[ r16 a, r16 <ais' cis>16] r16
+          <ais cis>16-[ r16 ais, r16 <b' dis>16] r16 |
+          <b dis>16-[ r16 b, r16 <cis' e>16] r16
+          <cis e>16-[ r16 cis, r16 <dis' fis>16] r16 |
+          <dis fis>16-[ dis, <e' g> e, <fis' a>16 fis,]
+          \clef treble
+          <g' b>16-[ g, <gis' b> gis, <a' cis> a,] |
+          <a' cis>8
+          % Note: first edition stays in treble a bit longer.
+          % Either is usable.
+          \clef bass
+          <<
+            \relative c' {
+              cis8 dis^~ dis16 dis fis e dis e |
+              d8 cis4^~ cis16 cis e d c d |
+              \key b \minor
+              <bis dis>8-[ <cis e> d16 e] e16 cis e d c d |
+              s4. e,16 cis e d c d |
+              d gis, b a gis a <a e> gis, bes a gis a |
+            }
+            \\
+            \relative c' {
+              a4 a4. |
+              a4. a4. |
+              a4 ais8 8 b gis |
+              <gis d'>8 <g cis> <fis a d> ais,8 b gis |
+              eis8 fis8. f16
+            }
+          >> |
         }
       }
     >>
