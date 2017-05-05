@@ -124,8 +124,10 @@ three-section-one = {
                   % Todo lower the dot
                   \once \override Slur.height-limit = #13.5
                   \once \override Slur.eccentricity = #0.25
-                  \once \override Slur.positions = #'(5.5 . 3.5)
-                  <fis fis'>^( <g g'>8. <fis, fis'>16) |
+                  \once \override Slur.positions = #'(6.0 . 4.3)
+                  <fis fis'>^(
+                  g8.
+                  <fis, fis'>16) |
                   <fis fis'>8 <a a'>8 <cis cis'>8 4 8 |
                   \once \override Slur.height-limit = #4.5
                   <cis cis'>8^( <d d'> <g, g'> <b b'> <cis, cis'> <eis eis'>)
@@ -137,6 +139,23 @@ three-section-one = {
                   cis4. <gis cis>8. s8. |
                   d'8-[ <gis b>8 a8] d,4 dis8 |
                   <bis dis>8 8 cis cis e b
+                }
+                \\
+                \relative c'''' {
+                  s2. |
+                  s2. |
+                  s2. |
+                  s2. |
+                  s2. |
+                  s2. |
+                  s8 s8 s8 s8
+                  % Cheating a little bit here. We made this note a 4 instead of 8.
+                  % This way it looks correctly. We only put this here because
+                  % we need to move only this note's dot down one position.
+                  \once \override Dots.extra-offset = #'(0 . -1)
+                  \voiceOne
+                  \stemDown
+                  g4.
                 }
               >> |
             }
@@ -203,7 +222,7 @@ three-section-one = {
               <b b'>16-[ 8 8 <b b'^~>16]
               \stemNeutral
               b'16 <e, b' e>8
-              % Note: Henle has a neutral on d, but I don't see the need.
+              % Note: Henle has an extra neutral on d, but I don't see the need.
               <e b' d e>8
               <e a cis e>16 |
               \stemUp
@@ -214,11 +233,12 @@ three-section-one = {
               a16^( fis a g fis g) g^( e g fis e f) |
               f8^( <e, e'> <fis d'>) g' fis b!^~ |
               b8 a d^~ \stemNeutral <d, g d'> <cis e g cis> <g'_~ cis_~ e^~ g^~> |
-              8.
+              8. g,16-[ e bes'] gis-[ a e b' a g]
             }
             \\
             \relative c' {
               e16\rest fis8 fis16_~ fis16 e16\rest e16\rest <eis b'>8 8 16 |
+              \noBreak
               s4. e16\rest <eis b'>8 8 16 |
               e16\rest fis8 e16\rest e8\rest e16\rest fis8 e16\rest e8\rest |
               e16\rest b8 e16\rest e8\rest e16\rest b8 e16\rest e8\rest |
@@ -233,6 +253,43 @@ three-section-one = {
               % Note: first edition ties the following to to the next d.
               % Henle notes this is probably an engraving error.
               d s4. |
+            }
+          >> |
+          fis,8 r8 \clef bass
+          d,,8_~ d4 d16_( a) |
+          a4. a4 a8 |
+          fis8 r8 \clef treble
+          <d''''_~ d'^~>8 <d d'>4 <d d'>16^( <a a'>) |
+          <a a'>4. 4 8 |
+          <fis fis'>8 r8 \clef bass
+          d,,8_~ d8-[ d8] \tuplet 3/2 { d16\< cis\> d\! } |
+          a4 4 4 |
+          fis8 r8 \clef treble
+          <d''''_~ d'^~>8 <d d'>8-[ <d d'>8] \tuplet 3/2 { <d d'>16 <cis cis'> <d d'> } |
+          \hideTupletBracket
+          <a a'>4 4 <a_~ a'^~>8 \tuplet 3/2 { <a_~ a'^~>16 16 <g g'> } |
+          <fis fis'>8\p
+          <<
+            \relative c'' {
+              fis4 g4. |
+              a8 a4 a4. |
+            }
+            \\
+            \relative c' {
+              \hideTupletBracket
+              \set subdivideBeams = ##t
+              \tuplet 3/2 { fis16 e' d }
+              \implicitTuplets
+              \tuplet 3/2 { cis b a }
+              \tuplet 3/2 { g bes a }
+              \tuplet 3/2 { g a b }
+              \tuplet 3/2 { cis d e } |
+              a,8\noBeam
+              \tuplet 3/2 { a16 g' fis }
+              \tuplet 3/2 { e d c }
+              \tuplet 3/2 { b d c }
+              \tuplet 3/2 { b c d }
+              \tuplet 3/2 { e fis g }
             }
           >>
         }
@@ -375,6 +432,56 @@ three-section-one = {
               <bis dis>8-[ <cis e> d16 e] e16 cis e d c d |
               s4. e,16 cis e d c d |
               d gis, b a gis a <a e> gis, bes a gis a |
+              a16 e''-[ cis g' e bes'] gis-[ a e b' a g] |
+              fis b gis a fis b gis a fis b fis a |
+              e a fis a g! a g a fis a e a |
+              fis b gis a fis b gis a fis b fis a |
+              e a fis a g! a g a fis a e a |
+              \set subdivideBeams = ##t
+              \hideTupletBracket
+              \explicitTuplets
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { fis b a }
+              \implicitTuplets
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { fis bes a }
+              |
+              \tuplet 3/2 { e b'! a }
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { e b' a }
+              |
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { fis bes a }
+              |
+              \tuplet 3/2 { e b'! a }
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { gis b a }
+              \tuplet 3/2 { fis b a }
+              \tuplet 3/2 { e b' a }
+              |
+              \tuplet 3/2 { fis16 a g }
+              \tuplet 3/2 { fis g a }
+              \tuplet 3/2 { b cis d }
+              e8^~
+              \tuplet 3/2 { e16 d cis }
+              \tuplet 3/2 { b a g }
+              |
+              \tuplet 3/2 { cis e d }
+              \tuplet 3/2 { a b c }
+              \tuplet 3/2 { d e fis }
+              g8^~
+              \tuplet 3/2 { g16 fis e }
+              \tuplet 3/2 { d c b }
             }
             \\
             \relative c' {
@@ -382,9 +489,20 @@ three-section-one = {
               a4. a4. |
               a4 ais8 8 b gis |
               <gis d'>8 <g cis> <fis a d> ais,8 b gis |
-              eis8 fis8. f16
+              eis8 fis8. f16 s4 s8 |
+              s2. |
+              d'4._~ d4 d8 |
+              cis8_( d e) e_( d cis) |
+              d4._~ d4 d8 |
+              cis8_( d e) e_( d cis) |
+              d4._~ d4 d8 |
+              cis8 d e e d cis |
+              d4._~ d4 d8 |
+              cis8 d e e d cis |
+              d4. e4. |
+              fis4. g4. |
             }
-          >> |
+          >>
         }
       }
     >>
@@ -392,7 +510,7 @@ three-section-one = {
       \context {
         \Score
         % Set the score to a default note value of one crotchet.
-        \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8)
+        \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/16)
         \consists #Span_stem_engraver
       }
     }
