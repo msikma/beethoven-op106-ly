@@ -272,7 +272,9 @@ three-section-one = {
           <<
             \relative c'' {
               fis4 g4. |
-              a8 a4 a4. |
+              a8 a4 b4. |
+              cis4 d8 e4 fis8 |
+              g8 a,8 b f4 e8
             }
             \\
             \relative c' {
@@ -283,15 +285,61 @@ three-section-one = {
               \tuplet 3/2 { cis b a }
               \tuplet 3/2 { g bes a }
               \tuplet 3/2 { g a b }
-              \tuplet 3/2 { cis d e } |
+              \tuplet 3/2 { cis d e }
+              |
               a,8\noBeam
               \tuplet 3/2 { a16 g' fis }
               \tuplet 3/2 { e d c }
               \tuplet 3/2 { b d c }
               \tuplet 3/2 { b c d }
               \tuplet 3/2 { e fis g }
+              |
+              \tuplet 3/2 { g g fis }
+              \tuplet 3/2 { e d cis }
+              \tuplet 3/2 { d e fis }
+              \tuplet 3/2 { e bes' a }
+              \tuplet 3/2 { g fis e }
+              \tuplet 3/2 { fis g a }
+              |
+              \tuplet 3/2 { g fis e }
+              \tuplet 3/2 { es d es }
+              \tuplet 3/2 { d c b }
+              \tuplet 3/2 { d\> cis b }
+              \tuplet 3/2 { gis a b }
+              \tuplet 3/2 { cis bes a\! }
+              |
             }
           >>
+          <<
+            \relative c''' {
+              a4.^( b4 fis8) |
+              s4 s8
+              \once \override Slur.height-limit = #3
+              \once \override Slur.positions = #'(0 . 3.7)
+              d'4^( <a cis>16-[ <a c>]) |
+              c8-[ c,^~] c16-[ b] s4 s8 |
+              a8-[ 8^~] a16-[ gis] s4 s8 |
+            }
+            \\
+            \relative c'' {
+              dis4. <b fis'>4 <b dis>8 |
+              \set subdivideBeams = ##f
+              a'16-[ fis <g g'> <b, b'> <fis' fis'> <e e'>]
+              d-[ eis g f] <cis e>16-[ <c es>] |
+              a'32-[ fis es c] a-[ fis es c] a'-[ e <b d> g'] \stemNeutral <bes, d g bes>4 \relative c'' b8\rest |
+              \stemDown
+              \explicitTuplets
+              \tuplet 3/2 { fis'16-[ d a] }
+              fis'32-[ d a fis']
+              fis d fis d
+              \stemNeutral
+              <g, bes e g>8 \relative c'' { b8\rest b8\rest } |
+            }
+          >> |
+          r4 r8 <dis fis>4 <dis fis b>8 |
+          <b dis fis b>4 8 <b e b'>8 <a cis e a>4 |
+          <a d! fis a>4_( fis'8 a,4 a'8) |
+          fis4 <fis' a fis'>8 <e g e'>4 <a, e' g a>8
         }
       }
       %---------------------------------------------------------------------
@@ -482,6 +530,21 @@ three-section-one = {
               g8^~
               \tuplet 3/2 { g16 fis e }
               \tuplet 3/2 { d c b }
+              |
+              \tuplet 3/2 { e cis! d }
+              \tuplet 3/2 { e fis g }
+              \tuplet 3/2 { fis e d }
+              \clef treble
+              \tuplet 3/2 { bes' e, fis }
+              \tuplet 3/2 { g a bes }
+              \tuplet 3/2 { a g fis }
+              |
+              \tuplet 3/2 { g bes cis }
+              \tuplet 3/2 { c b c }
+              \tuplet 3/2 { b a g }
+              \tuplet 3/2 { b, cis d }
+              \tuplet 3/2 { f e d }
+              \tuplet 3/2 { cis dis e }
             }
             \\
             \relative c' {
@@ -501,16 +564,48 @@ three-section-one = {
               cis8 d e e d cis |
               d4. e4. |
               fis4. g4. |
+              a4 b8 cis4 dis8 |
+              e8-[ f8] \implicitTuplets \tuplet 3/2 { g8-[ g,16] } gis4 g8
             }
           >>
+          <fis a>4. <dis fis>4 <b dis fis>8 |
+          <<
+            \relative c' {
+              <e g>8.-[ <g, b>16] a'16-[ g] fis-[ gis b a]
+              \clef bass
+              <a,,, a'>16 <g g'>32 <fis fis'>
+            }
+            \\
+            \relative c' {
+              s8. s16 b8 a4 
+            }
+          >> |
+          fis,,32-[ a c es] fis-[ a c es] fis-[ c' g b] \stemUp <g, g'>4 \stemNeutral r8 |
+          <<
+            \relative c, {
+              \stemUp
+              \tuplet 3/2 { a16 d fis }
+              a32-[ d fis a]
+              d,-[ fis d f]
+              <cis e>8 \stemNeutral <ais cis e g>8.-[^( <b dis fis>16]) |
+            }
+            \\
+            \relative c {
+              \mergeDifferentlyDottedOn
+              s8 a8.-[ b16]
+            }
+          >>
+          <b dis fis>4 <b dis fis b>8 4 8 |
+          <b, b'>8 <fis fis'>4 <g g'>8 <a a'>4 |
+          <d, d'>4 fis''8 a,4 a'8 |
+          fis4 <a,, a'>8 <b a' b>4 <cis a' cis>8 |
         }
       }
     >>
     \layout {
       \context {
         \Score
-        % Set the score to a default note value of one crotchet.
-        \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/16)
+        \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8)
         \consists #Span_stem_engraver
       }
     }
