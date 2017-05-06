@@ -1143,7 +1143,7 @@ two-section-one = {
           <bes d>8.^( <f c'>16) | <a c>4^( <bes d>8) r8
           <g bes>8.^( <d a'>16) | <fis a>4^( <g bes>8) r8
           <es g>8.^( <bes f'>16) | <d f>4^( <es g>8) r8
-          <es g>8.^( <c f>16) | <c f^~>4^( <d f>8) r8
+          <es g>8.^( <c f>16) | <c f_~>4^( <d f>8) r8
           <<
             {
                f4
