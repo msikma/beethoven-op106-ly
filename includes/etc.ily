@@ -24,6 +24,12 @@ resetNoteDuration =
     \revert Score.SpacingSpanner #'common-shortest-duration
   #})
 
+% Turn off tuplet brackets.
+hideTupletBracket = \override TupletBracket.stencil = ##f
+
+% Turn on tuplet brackets.
+showTupletBracket = \override TupletBracket.stencil = #ly:tuplet-bracket::print
+
 % Shorthand for turning off tuplet numbers. This turns off
 % the numbers for all subsequent tuplets, until \explicitTuplets.
 implicitTuplets = \override TupletNumber.stencil = ##f
