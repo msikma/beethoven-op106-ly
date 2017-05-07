@@ -355,12 +355,36 @@ three-section-one = {
           <<
             \relative c'' {
               gis'4 gis8 |
-              cis4. a4 fis8
+              cis4. a4 fis8 |
+              fis'4 s4 s4 |
             }
             \\
             \relative c'' {
               g8 eis' fis |
-              gis8 cis, cis cis a <fis cis'>
+              gis8 cis, cis cis a <fis cis'> |
+              fis'8-[ dis'] <fis, dis' fis> <fis dis' fis>-[ <fis gis dis'> <eis gis cis>] |
+            }
+          >>
+          \bar "||"
+          \key es \major
+          <<
+            \relative c''' {
+              d4 s8 s4. |
+              \stemDown
+              <bes, bes'>4 <g g'>8
+              \stemUp
+              <g g'> <es es'> <bes' d f> |
+            }
+            \\
+            \relative c'' {
+              <f a>4 a16 f
+              \clef bass
+              \stemNeutral
+              \relative c { d16-[ f }
+              \clef treble
+              \relative c' { bes d f bes] } |
+              \stemDown
+              s4 s8 s4 f,16 as |
             }
           >>
         }
@@ -643,7 +667,14 @@ three-section-one = {
           <bis, dis fis gis>4. |
           \key fis \minor
           <gis, gis'>4 <eis eis'>8 8-[ <cis cis'> <dis dis'>] |
-          <eis eis'>4 <eis' g>8 <fis a>4 <a cis>8 |
+          <eis eis'>4 <eis' gis>8 <fis a>4 <a cis>8 |
+          <a cis>4 <gis bis>8 <gis bis>-[ <bis dis> <cis eis>] |
+          \key es \major
+          \clef treble
+          d16 f as d f as <d, f as bes>4. |
+          \clef bass
+          g,,,16 bes es g bes es bes, es g bes as f |
+          
         }
       }
     >>
