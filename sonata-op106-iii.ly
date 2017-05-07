@@ -339,7 +339,30 @@ three-section-one = {
           r4 r8 <dis fis>4 <dis fis b>8 |
           <b dis fis b>4 8 <b e b'>8 <a cis e a>4 |
           <a d! fis a>4_( fis'8 a,4 a'8) |
-          fis4 <fis' a fis'>8 <e g e'>4 <a, e' g a>8
+          fis4 <fis' a fis'>8 <e g e'>4 <a, e' g a>8 |
+          <a fis' a>4^( fis'8 a,4 <a a'>8) |
+          <fis fis'>4 <a a'>8 <b g' b>4 <cis e g cis>8 |
+          <d fis d'>4. <e cis' e>4. |
+          % As per original edition.
+          4 <fis dis' fis>8 <g e' g>8 <a e' a>8-[ <a e' a g>8] |
+          <a a'>8 <a, a'>-[^( <fis fis'>)] <fis fis'>_( <d d'> <e e'>) |
+          <fis fis'>4. <g g'>4 <b b'>8 |
+          <b g' b>4 <ais g' ais>8 <ais ais'>8-[ <e' e'> <eis eis'>16 <fis fis'>16] |
+          <fis fis'>4. dis16^( fis gis dis' fis gis) |
+          \bar "||"
+          \key fis \minor
+          <eis,, eis'>4.
+          <<
+            \relative c'' {
+              gis'4 gis8 |
+              cis4. a4 fis8
+            }
+            \\
+            \relative c'' {
+              g8 eis' fis |
+              gis8 cis, cis cis a <fis cis'>
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -599,6 +622,28 @@ three-section-one = {
           <b, b'>8 <fis fis'>4 <g g'>8 <a a'>4 |
           <d, d'>4 fis''8 a,4 a'8 |
           fis4 <a,, a'>8 <b a' b>4 <cis a' cis>8 |
+          <d a' d>4 \clef treble
+          fis''8 a,4 \clef bass
+          <fis, a fis'>8 |
+          % Beams as per original edition.
+          <a a'>4 <fis_~ a^~ fis'^~>8 8-[ <e a e'>8 <a, a'>8] |
+          <d a'>4. <a a'>4. |
+          4 g'16-[ fis] e-[ d]
+          \explicitTuplets
+          \tupletUp
+          \tuplet 3/2 { cis-[ e a] }
+          \tuplet 3/2 { cis-[ e a] }
+          \implicitTuplets
+          |
+          <fis, fis'>4. <a a'>4. |
+          <d d'>4. <b b'>4 <g g'>8 |
+          <e e'>4 <e' g>8 <cis e>4 <b d>16-[ <ais cis>] |
+          ais16-[ cis fis ais cis fis]
+          % todo: check stem and voices
+          <bis, dis fis gis>4. |
+          \key fis \minor
+          <gis, gis'>4 <eis eis'>8 8-[ <cis cis'> <dis dis'>] |
+          <eis eis'>4 <eis' g>8 <fis a>4 <a cis>8 |
         }
       }
     >>
