@@ -348,7 +348,9 @@ three-section-one = {
           <a a'>8 <a, a'>-[^( <fis fis'>)] <fis fis'>_( <d d'> <e e'>) |
           <fis fis'>4. <g g'>4 <b b'>8 |
           <b g' b>4 <ais g' ais>8 <ais ais'>8-[ <e' e'> <eis eis'>16 <fis fis'>16] |
-          <fis fis'>4. dis16^( fis gis dis' fis gis) |
+          <fis fis'>4.
+          \once \override Slur.height-limit = #4
+          dis16^( fis gis dis' fis gis) |
           \bar "||"
           \key fis \minor
           <eis,, eis'>4.
@@ -391,6 +393,8 @@ three-section-one = {
           <des' des'>4 <bes bes'>8 <g g'>4 
           <<
             \relative c'' {
+              \once \override Slur.height-limit = #4
+              \once \override Slur.positions = #'(3.0 . 2.4)
               dis8^( |
               <gis, b>4 gis8 e'4 cis8) |
               \bar "||"
@@ -412,6 +416,33 @@ three-section-one = {
           >> |
           \bar "||"
           \key fis \minor
+          <b b'>4 <gis gis'>8 <eis eis'>4 <eis gis b eis>8 |
+          <d eis gis b>4 <b d eis gis>8 <gis b d eis>4
+          \change Staff = "left"
+          \voiceOne
+          \stemUp <eis_~ gis_~ b^~ d^~>8 |
+          32-[ b' gis eis] d-[ b gis b] <b d>-[ eis' gis b]
+          \change Staff = "right"
+          \oneVoice
+          <b d>-[ eis gis b] <d b>-[ eis gis b]
+          <<
+            \relative c''' {
+              d32-[ bis d cis] |
+              \once \override Slur.height-limit = #4
+              d-[^( d, d' cis]
+              d,-[ cis' d cis]
+              b-[ a, b' a]
+              a,-[ a' b a]
+              gis-[ fis, gis' fis]
+              gis,-[ gis' a gis]) |
+            }
+            \\
+            \relative c''' {
+              a8 |
+              a8 % todo fix this note
+              a
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -721,6 +752,22 @@ three-section-one = {
           \stemUp
           c-[ eis g c] eis,-[ g] f-[ a c f] b,,-[ <b b'>] |
           \stemNeutral
+          \key fis \minor
+          \clef bass
+          r16 <gis gis'>16
+          r16 <eis eis'>16
+          r8 r16  <cis cis'>16
+          r16 <cis, cis'>16 r8 |
+          r16 <cis cis'>16
+          r16 cis r8 r16
+          cis r cis\noBeam
+          \once \override Voice.Stem.length = #7.0
+          cis8 |
+          \stemDown
+          cis8-[ 8 <cis gis'>]
+          \stemUp
+          8-[ 8 <fis, cis' fis>8] |
+          8\noBeam <cis' fis cis'>8-[ 8] 8-[ 8 <cis eis cis'>] |
         }
       }
     >>
