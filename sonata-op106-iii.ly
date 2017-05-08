@@ -386,7 +386,32 @@ three-section-one = {
               \stemDown
               s4 s8 s4 f,16 as |
             }
-          >>
+          >> |
+          <g bes es g>4 <ces ces'>8 <as as'>4 <f f'>8 |
+          <des' des'>4 <bes bes'>8 <g g'>4 
+          <<
+            \relative c'' {
+              dis8^( |
+              <gis, b>4 gis8 e'4 cis8) |
+              \bar "||"
+              \key a \minor
+              ais4 \stemNeutral <fis' fis'>8\f <dis dis'>4 <bis bis'>8 |
+              <gis' gis'>4 <e e'>8\sf <dis dis'>4 <a, a'>8 |
+              fis'4 d8 b''4 gis8 |
+              eis4 <cis cis'>8 \stemUp a'!4 d!8 |
+            }
+            \\
+            \relative c' {
+              c16\rest <dis fisis>16 |
+              dis8 c8\rest c8\rest s4 s8 |
+              s2. |
+              s2. |
+              a8 ais16-[ dis] s4 s4 |
+              s4 s8 cis'16-[ fis8 a,16] d!8 |
+            }
+          >> |
+          \bar "||"
+          \key fis \minor
         }
       }
       %---------------------------------------------------------------------
@@ -674,7 +699,28 @@ three-section-one = {
           d16 f as d f as <d, f as bes>4. |
           \clef bass
           g,,,16 bes es g bes es bes, es g bes as f |
-          
+          es16-[ g bes es] as,,-[ as'] ces,-[ es as ces] des,-[ des'] |
+          bes,-[ des ges bes] des,-[ des'] es,-[ g bes des] fisis,-[ ais!] |
+          % TODO double check
+          gis-[ b dis gis] \clef treble bis,-[ dis] cis-[ e gis cis] eis,-[ gis] |
+          \clef bass
+          \key a \minor
+          fis,-[ ais cis fis] dis,,-[ dis'] fis,-[ ais dis fis] gis,-[ gis'] |
+          e,-[ gis cis e] gis,-[ gis'] a,-[ cis e a] cis,-[ cis'] |
+          <<
+            \relative c' {
+              c16\rest fis,8. \stemNeutral fisis16-[ ais]
+            }
+            \\
+            \relative c {
+              dis4
+            }
+          >>
+          g16-[ b dis gis] bis,-[ dis] |
+          \clef treble
+          \stemUp
+          c-[ eis g c] eis,-[ g] f-[ a c f] b,,-[ <b b'>] |
+          \stemNeutral
         }
       }
     >>
