@@ -442,7 +442,45 @@ three-section-one = {
               a8 % todo fix this note
               a
             }
-          >>
+          >> |
+          a,,32-[ a' b a]
+          b32-[ ais, b' ais]
+          b,32-[ b' cis b]
+          cis-[ b b, b']
+          b,-[ b' cis b]
+          e-[ d d, d']
+          |
+          d,-[ d' e d]
+          e-[ d d, d']
+          cis,-[ cis' d cis]
+          d-[ cis cis, cis']
+          <eis, b'>-[ eis' fis eis]
+          gis-[ fis <fis, a> fis']
+          |
+          a-[^( gis gis, gis'])
+          r32 gis-[ gis, gis']
+          r32 gis-[ gis, gis']
+          r32 gis,-[ e' d]
+          cis-[ d gis, d']
+          r32 d-[ gis, d']
+          |
+          d,-[ cis' e d]
+          cis-[ d d, d']
+          d,-[ d' e d]
+          d-[ cis cis, cis']
+          bis-[ cis cis, cis']
+          ais-[ b b, b']
+          |
+          b,-[ b' cis b]
+          ais-[ b b, b']
+          b,-[ b' cis b]
+          r32 cis-[ b, b']
+          r32 b-[ a,! a'!]
+          r32 a-[ gis, gis']
+          |
+          gis,-[ gis' fisis gis a gis gis, gis' gis, gis' a gis]
+          a-[ gis gis, gis' a, a' b a gis fis fis, fis']
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -768,6 +806,16 @@ three-section-one = {
           \stemUp
           8-[ 8 <fis, cis' fis>8] |
           8\noBeam <cis' fis cis'>8-[ 8] 8-[ 8 <cis eis cis'>] |
+          <cis fis cis'>-[ 8 <d fis d'>] 8-[ 8 <b fis' b>] |
+          8\noBeam \stemDown <b' fis' b>8-[ <a fis' a>] 8-[ <gis cis gis'> <fis cis' fis>] |
+          <eis cis' gis'>8-[ 8] <eis' gis b cis>\noBeam <eis gis b d>-[ 8 8] |
+          8\noBeam <eis, gis eis'>8-[ 8] 8-[ <fis a fis'> <gis b gis'>] |
+          8\noBeam \clef treble \stemNeutral
+          <gis' b d eis>8-[ 8] 8-[ <a cis fis>] <b d fis>16-[ <bis dis fis>] |
+          r16 <bis d fis gis>16 r16 <bis d fis>
+          r16 <bis d fis gis>16 r16 <bis d fis>
+          r16 <bis d fis a>16 r16 \clef bass <bis, dis fis a>16
+          |
         }
       }
     >>
