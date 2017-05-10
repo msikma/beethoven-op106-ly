@@ -481,6 +481,58 @@ three-section-one = {
           gis,-[ gis' fisis gis a gis gis, gis' gis, gis' a gis]
           a-[ gis gis, gis' a, a' b a gis fis fis, fis']
           |
+          eis-[ fis fis, fis' gis fis fis, fis' eis fis fis, fis']
+          r32 fis-[^( eis, eis'])
+          r32 a-[^( gis, gis'])
+          r32 cis-[^( b, b'])
+          |
+          cis-[^( b, cis' b ais b b, b' b a a, a']
+          b-[ a, b' a a gis, a' gis gis fis, gis' fis])
+          |
+          eis-[ fis fis, fis' gis fis fis, fis' eis, eis' fis eis]
+          fis-[^( eis, fis' eis gis, gis' a gis b b, d d'])
+          |
+          cis-[^( d d, d' e d d, d' d cis, d' cis])
+          r32 d-[^( cis, cis'])
+          r32 cis-[^( b, b'])
+          r32 b-[^( a, a'])
+          |
+          b-[^( a, b' a gis a a, a' a gis, a' gis])
+          r32 gis-[^( gis, gis'])
+          \ottava #1
+          \set Staff.ottavation = #"8"
+          \stemDown
+          r32 gis'-[^( gis, gis'])
+          r32 g-[^( g, g'])
+          |
+          r32 g-[^( g, g'])
+          r32 g-[^( b, b'])
+          r32 b-[^( a, a'])
+          r32 a-[ g, g']
+          r32 g-[ g, g']
+          r32 g-[ g, <fis fis'>]
+          |
+          r32 fis'-[ e, e']
+          r32 e-[ e, e']
+          r32 e-[ e, <fis fis'>]
+          r32 fis'-[ g, g']
+          r32 g-[ g, g']
+          r32 g-[ g, <fis fis'>]
+          |
+          fis'-[^( fis,) fis^( fis') a^( a,) a^( a') cis^( cis,) cis^( cis')]
+          r32 cis-[^( cis, cis')]
+          \stemNeutral
+          r32 cis,-[_( cis, cis')]
+          r32 cis'-[^( cis, cis')]
+          |
+          r32 cis,-[ cis, cis']
+          r32 cis'-[^( cis, cis']
+          a-[ a,) a^( a')]
+          a-[^( a,) a^( a')]
+          \ottava #0
+          fis-[^( fis,) fis^( fis,])
+          <b eis gis>-[^( gis) <b eis gis>^( gis])
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -815,6 +867,47 @@ three-section-one = {
           r16 <bis d fis gis>16 r16 <bis d fis>
           r16 <bis d fis gis>16 r16 <bis d fis>
           r16 <bis d fis a>16 r16 \clef bass <bis, dis fis a>16
+          |
+          r16 <cis fis a>
+          r16 <cis fis a bis>
+          r16 <cis fis a cis>
+          % todo: check this bis
+          <cis eis gis cis>8-[ <cis eis gis> <cis gis' bis>]
+          |
+          <cis gis' b>8-[ 8 <cis fis a>]
+          8-[ <b d eis gis> <a bis dis fis>]
+          |
+          \stemDown
+          8-[ 8 <gis cis eis>]
+          8
+          <<
+            \relative c {
+              eis16-[ <eis gis>] <gis b>-[ <b d>]
+            }
+            \\
+            \relative c {
+              cis8-[ 8]
+            }
+          >>
+          |
+          <cis b' d>8-[ 8 <cis a' cis>]
+          8-[ <cis gis' b> <cis fis a>]
+          |
+          8-[ <cis fis a bis> <cis eis gis cis>]
+          8-[ 8 <cis e g bes cis>]
+          |
+          <d g b d>8-[ 8 8]
+          8-[ <g b d>8\< 8]
+          |
+          <g c e>8-[ 8\> 8]
+          <g b d>8-[ <d g b d>\! <d fis a d>]
+          |
+          <d fis a d>8-[ <cis fis a cis>8 8]
+          <cis eis gis! cis>8-[ 8 8]
+          |
+          8-[ 8]
+          <fis a c>8\noBeam <fis a c>8\noBeam
+          <a c>16-[ <a, cis a'> <gis cis gis'> <fis cis' fis>]
           |
         }
       }
