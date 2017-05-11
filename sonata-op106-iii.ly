@@ -486,17 +486,22 @@ three-section-one = {
           r32 a-[^( gis, gis'])
           r32 cis-[^( b, b'])
           |
+          \once \override Slur.height-limit = #3.5
           cis-[^( b, cis' b ais b b, b' b a a, a']
           b-[ a, b' a a gis, a' gis gis fis, gis' fis])
           |
           eis-[ fis fis, fis' gis fis fis, fis' eis, eis' fis eis]
+          \once \override Slur.height-limit = #2.4
+          \once \override Slur.eccentricity = #-0.8
           fis-[^( eis, fis' eis gis, gis' a gis b b, d d'])
           |
+          \once \override Slur.height-limit = #3.5
           cis-[^( d d, d' e d d, d' d cis, d' cis])
           r32 d-[^( cis, cis'])
           r32 cis-[^( b, b'])
           r32 b-[^( a, a'])
           |
+          \once \override Slur.height-limit = #3.1
           b-[^( a, b' a gis a a, a' a gis, a' gis])
           r32 gis-[^( gis, gis'])
           \ottava #1
@@ -526,12 +531,31 @@ three-section-one = {
           r32 cis'-[^( cis, cis')]
           |
           r32 cis,-[ cis, cis']
+          % todo: fix this slur
           r32 cis'-[^( cis, cis']
           a-[ a,) a^( a')]
           a-[^( a,) a^( a')]
           \ottava #0
           fis-[^( fis,) fis^( fis,])
           <b eis gis>-[^( gis) <b eis gis>^( gis])
+          |
+          <b gis' b>8-[ <d, gis b> <cis fis a>]
+          <b d eis a>8-[ <b d eis gis> <a dis fis>]
+          |
+          <<
+            \relative c' {
+              % Todo move note a bit to the right
+              <a fis'>4.
+            }
+            \\
+            \relative c' {
+              d!8.-[_( bis16 cis bis])
+            }
+          >>
+          <gis cis eis>8.-[^( gis'16 b d])
+          |
+          <dis, eis gis b dis>8-[^( <dis gis b dis> <cis a' cis>])
+          <dis eis gis cis>-[^( <dis eis gis b> <dis fis a>])
           |
         }
       }
@@ -909,6 +933,19 @@ three-section-one = {
           <fis a c>8\noBeam <fis a c>8\noBeam
           <a c>16-[ <a, cis a'> <gis cis gis'> <fis cis' fis>]
           |
+          \stemNeutral <cis cis'>16\noBeam cis8-[ eis fis16_~]
+          % TODO: is this supposed to be a 16,
+          % or an 8 followed by a tuplet 3/2 16 16 16?
+          fis16-[^( gis8 a16 b bis])
+          |
+          <cis, cis'>16 <bis bis'> <cis cis'> <bis bis'> <cis cis'> <bis bis'>
+          <cis cis'> eis' gis eis gis b
+          |
+          <cis, eis gis b>16-[ <cis, cis'>8 <eis eis'>
+          % TODO: should this be a doulbe tie?
+          <fis_~ fis'^~>16] <fis fis'>16-[ <gis gis'>8 <a a'>16 <b b'>16 <bis_~ bis'^~>16]
+          |
+          <bis bis'>16-[ <cis cis'>]
         }
       }
     >>
