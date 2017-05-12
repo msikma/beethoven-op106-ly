@@ -554,9 +554,34 @@ three-section-one = {
           >>
           <gis cis eis>8.-[^( gis'16 b d])
           |
-          <dis, eis gis b dis>8-[^( <dis gis b dis> <cis a' cis>])
-          <dis eis gis cis>-[^( <dis eis gis b> <dis fis a>])
+          <dis, eis gis b dis>8-[_( <dis gis b dis> <cis a' cis>])
+          <dis eis gis cis>-[_( <dis eis gis b> <dis fis a>])
           |
+          <<
+            \relative c' {
+              <fis a>4^( <e gis>8) <gis, cis e gis>8 g'4
+              |
+              \slashedGrace g8 b'4^( a8)
+              <a, a'>8-[ <g! g'> <b g'>16 <d fis>]
+              |
+              <d fis>8-[ <c e> <c e>16( f)]
+              <a, c es f>16-[( <b d g>) 8]
+              g16-[( <fis, fis'>])
+              |
+              % todo: need some grace keys here
+              <e fis'>8-[ <a cis fis a> <cis fis a cis>]
+              <cis eis gis cis>4 <cis fis a cis>8
+              |
+            }
+            \\
+            \relative c' {
+              s8 bis16-[ cis bis cis] s8 <g bes e>8-[ <g b d>]
+              |
+              g'8\rest b8-[ a] s8 s8 g8
+              |
+              g8-[ g] g16-[ <a c es>] s8 s8 s8
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -936,16 +961,31 @@ three-section-one = {
           \stemNeutral <cis cis'>16\noBeam cis8-[ eis fis16_~]
           % TODO: is this supposed to be a 16,
           % or an 8 followed by a tuplet 3/2 16 16 16?
-          fis16-[^( gis8 a16 b bis])
+          fis16-[_( gis8 a16 b bis])
           |
           <cis, cis'>16 <bis bis'> <cis cis'> <bis bis'> <cis cis'> <bis bis'>
           <cis cis'> eis' gis eis gis b
           |
+          % TODO: isolate first note, nobeam it?
           <cis, eis gis b>16-[ <cis, cis'>8 <eis eis'>
           % TODO: should this be a doulbe tie?
           <fis_~ fis'^~>16] <fis fis'>16-[ <gis gis'>8 <a a'>16 <b b'>16 <bis_~ bis'^~>16]
           |
-          <bis bis'>16-[ <cis cis'>]
+          <bis bis'>16-[ <cis cis'>] <bis, bis'>16-[_( <cis cis'> <bis bis'> <cis cis'>])
+          <bis bis'>-[_( <cis cis'>])
+          cis16-[ bes' d, b']
+          |
+          \stemNeutral
+          % Todo: flip stems of these beams?
+          g,16-[( g' d' g, d' g,])
+          b,-[( g' g' g, g' g,])
+          |
+          c,-[( g' g' g, g' g,])
+          g,-[( g' g' g,]) g'32-[( g,) <d fis>16]
+          |
+          <d fis>16-[ a' <bis, fis' a> cis' <bis, fis' a> cis']
+          <cis, eis gis>16-[ cis' <cis, eis gis> cis' <fis, a> cis']
+          |
         }
       }
     >>
