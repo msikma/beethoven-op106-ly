@@ -192,6 +192,7 @@ three-section-one = {
           \implicitTuplets
           \tuplet 3/2 { cis16-[ fis gis] }
           \tuplet 3/2 { a-[ fis cis] } |
+          % TODO should after grace be 16 or 32? check with M 117.
           \afterGrace cis4\startTrillSpan { bis32\stopTrillSpan cis }
           \explicitTuplets
           \tuplet 3/2 { e16-[^( cis d)] }
@@ -598,7 +599,6 @@ three-section-one = {
               |
               fis-[ a g]
               g8.-[ e16 cis d]
-              |
             }
             \\
             \relative c'' {
@@ -611,6 +611,42 @@ three-section-one = {
             }
           >>
           |
+          dis''16-[ e]^~
+          \hideTupletBracket
+          \explicitTuplets
+          \tupletDown
+          \tuplet 6/4 { e16-[ g, fis g a ais] }
+          \set subdivideBeams = ##t
+          \tuplet 3/2 { cis b a }
+          \tuplet 3/2 { g fis g }
+          \tuplet 3/2 { gis a e }
+          \set subdivideBeams = ##f
+          |
+          g16-[ fis8 a d16^~] d16-[ d8 e fis16]
+          |
+          \afterGrace fis4\startTrillSpan { eis16\stopTrillSpan fis }
+          a16-[ g] g8^~ \tuplet 6/4 { g16-[ dis e g fis e] }
+          |
+          e8^~ \tuplet 6/4 { e16-[ bis cis e d! cis] }
+          b32-[ gis d' cis bis cis e, g eis fis cis e]
+          |
+          d8-[ b'8. fis16]
+          <<
+            \relative c''' {
+              g4 fis8
+              |
+              fis32-[ fis' cis d e d ais b] cis-[ b]
+              \tuplet 3/2 { d-[ b gis] }
+              a16-[ g^~] g16-[ 8 fis16]
+              |
+            }
+            \\
+            \relative c'' {
+              b16\rest <ais e'>8-[ 8 16]
+              |
+              <b d>8 b8\rest b8\rest <ais e'>16_~ <ais e'>16-[ 8 16]
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -1022,6 +1058,7 @@ three-section-one = {
           fis,16-[ <cis' a'> cis <fis cis'> cis cis']
           |
           r8
+          % TODO double check these chords
           % TODO maybe split chords between right/left?
           <d, d'>16-[ r16 <gis' d' fis a>] r16 <gis d' fis a>-[ r16 <d, d'> r16 <gis' d' fis a>] r16
           |
@@ -1029,6 +1066,24 @@ three-section-one = {
           |
           <gis d' fis a>-[ r16 <d, d'> r16 <gis' d' fis a>] r16
           <gis d' fis a>-[ r16 <d, d'>] r16 <gis' d' fis a> r16
+          |
+          <a cis e a>16 r16 <cis,, cis'> r16 <a'' cis e a> r16
+          <a cis e a>16 r16 <cis,, cis'> r16 <a'' cis e a> r16
+          |
+          <a d fis a>16 r16 <d,, d'> r16 <fis' a d fis>16 r16
+          <fis a d fis>16 r16 <cis, cis'> r16 <fis' a d fis>16 r16
+          |
+          <fis ais cis e fis>16 r16 <ais,, ais'> r16 <g'' ais cis e g>16 r16
+          <g ais cis e g>16 r16 <ais,, ais'> r16 <g'' ais cis e g>16 r16
+          |
+          <g ais cis e g>16 r16 <ais,, ais'> r16 <g'' ais cis e g>16 r16
+          <fis ais cis e fis>16 r16 <ais,, ais'> r16 <fis'' ais cis e fis>16 r16
+          |
+          <fis b d fis>16 r16 <b,, b'>16 r16 <fis'' b d fis>16 r16
+          <fis ais e' fis>16 r16 <cis, cis'>16 r16 <fis' ais e' fis>16 r16
+          |
+          <fis b d fis>16 r16 <b,, b'>16 r16 <fis'' b d fis>16 r16
+          <fis a e' fis>16 r16 <cis, cis'>16 r16 <fis' a e' fis>16 r16
           |
         }
       }
