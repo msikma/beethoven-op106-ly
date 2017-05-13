@@ -639,12 +639,38 @@ three-section-one = {
               \tuplet 3/2 { d-[ b gis] }
               a16-[ g^~] g16-[ 8 fis16]
               |
+              % todo: consider using 8 instead of 16~16
+              fis8.-[ 16^~ 16 16] 8.-[ b16^( 16) 16]
+              |
+              bis16-[ 8 16^~ 16 16]
+              cis16-[ cis^~ cis cis^~ cis cis^~]
+              |
+              \voiceTwo
+              \once \omit Flag
+              cis16
             }
             \\
             \relative c'' {
               b16\rest <ais e'>8-[ 8 16]
               |
-              <b d>8 b8\rest b8\rest <ais e'>16_~ <ais e'>16-[ 8 16]
+              <b d>8 b8\rest b8\rest b16\rest <ais e'>16_~ <ais e'>16-[ 8 16]
+              |
+              % TODO: double check this whole section
+              <b d>16-[ fis fis] <fis b d>16-[ <fis ais e'>16 16]
+              <fis b d>16-[ b b] <b d fis>16-[_( <b dis fis>16) 16]
+              |
+              <bis dis fis>16-[ 8 16 <bis dis a'>16 16]
+              % todo fix these ties
+              <cis gis'>16 <cis_~ gis'^~>16 16 <cis_~ gis'>16 <cis fis> <cis_~ fis^~>
+              |
+              <cis fis cis'>16-[ <bis bis'> <dis dis'> <cis cis'> <bis bis'> <cis cis'>]
+              <e e'>8^( <dis_~ dis'^~>4)
+              |
+              \key dis \minor
+              <dis dis'>16-[ <bis bis'> <dis dis'> <cis cis'> <bis bis'> <cis cis'>]
+              <dis dis'>8^( <cis_~ cis'^~>4)
+              |
+              <cis cis'>16
             }
           >>
         }
@@ -1085,6 +1111,29 @@ three-section-one = {
           <fis b d fis>16 r16 <b,, b'>16 r16 <fis'' b d fis>16 r16
           <fis a e' fis>16 r16 <cis, cis'>16 r16 <fis' a e' fis>16 r16
           |
+          <fis b d fis>16 r16 <d, d'>16 r16 <cis' e cis'>16 r16
+          <b fis' b>16 r16 <b, b'>16 r16 <a' a'>16 r16
+          |
+          <g g'> r16 <g, g'> r16 <fis' fis'> r16
+          <eis eis'>-[ <eis' eis'> <eis, eis'> <eis' eis'> <dis, dis'> <dis' dis'>]
+          |
+          <cis, cis'>8 \clef treble
+          <<
+            \relative c' {
+              <eis g>8-[ <fis ais^~>] <fisis ais>16-[^( 16 <ais cis> <gis b> <fisis a> <gis b>])
+              |
+              \key dis \minor
+              % todo: fix this tie
+              <fis ais>-[ <fis a>] <eis_~ gis^~>4 16-[^( 16 <gis b> <fis ais> <eis gis> <fis ais>])
+              |
+            }
+            \\
+            \relative c' {
+              cis4 4.
+              |
+              4. 4.
+            }
+          >>
         }
       }
     >>
