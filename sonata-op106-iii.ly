@@ -670,7 +670,38 @@ three-section-one = {
               <dis dis'>16-[ <bis bis'> <dis dis'> <cis cis'> <bis bis'> <cis cis'>]
               <dis dis'>8^( <cis_~ cis'^~>4)
               |
-              <cis cis'>16
+              <cis cis'>16-[^( <ais ais'> <cis cis'> <b b'> <ais ais'> <b b'>])
+              <b b'>16-[^( <gis gis'> <b b'> <ais ais'> <gis gis'> <a a'>])
+              |
+              <<
+                \relative c''' {
+                  a8-[ gis fis]
+                  b8-[ a dis^~]
+                  |
+                  dis8-[ cis fis^~]
+                  fis-[ eis b^~]
+                  |
+                  \voiceTwo
+                  \stemUp
+                  % TOdo: this tie is ugly, fix it
+                  <b, eis gis b>8.
+                }
+                \\
+                \relative c'' {
+                  <a a'>8-[ <gis cis> cis_~]
+                  cis16-[ cis gis' fis eis fis]
+                  |
+                  <dis fis>8-[ <cis fis> fis^~]
+                  fis-[ eis <b_~ eis_~ gis_~>]
+                  |
+                  \stemUp
+                  \once \omit Flag 
+                  <b eis gis>8
+                }
+              >>
+              b16-[ gis d']
+              bis-[ cis gis dis' cis b]
+              |
             }
           >>
         }
@@ -1126,14 +1157,37 @@ three-section-one = {
               % todo: fix this tie
               <fis ais>-[ <fis a>] <eis_~ gis^~>4 16-[^( 16 <gis b> <fis ais> <eis gis> <fis ais>])
               |
+              <disis fisis>8-[ <eis gis>8 8] gis16-[ eis gis fisis eis fis]
+              |
+              fis16-[ dis fis eis fis cis]
+              \clef bass
+              fis16-[ eis fis8] s8
+              |
+              b,16-[ eis, gis fis dis cis]
+              bis16-[ cis]
             }
             \\
             \relative c' {
               cis4 4.
               |
               4. 4.
+              |
+              cis4 cisis8 cisis8-[ dis bis]
+              |
+              bis-[ b ais]
+              <gis cis>8-[ <fis cis'>8 <b, b'>]
+              |
+              b8-[ ais a] gis8
+              \stemUp
+              dis16-[ cis bis cis]
             }
           >>
+          |
+          \stemDown
+          cis16-[ gis'' eis b' gis d']
+          bis-[ cis gis dis' cis b]
+          \stemNeutral
+          |
         }
       }
     >>
