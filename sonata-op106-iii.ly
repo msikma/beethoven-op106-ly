@@ -572,6 +572,12 @@ three-section-one = {
               <e fis'>8-[ <a cis fis a> <cis fis a cis>]
               <cis eis gis cis>4 <cis fis a cis>8
               |
+              <cis a' cis>8-[ <d g d'> <g, g'>]
+              % TODO: should lower cis be played with left hand?
+              <b b'>8-[ <cis, cis'>8 <eis eis'>]
+              |
+              <fis fis'>8-[ <cis' cis'>8. <gis! gis'!>16]
+              <a a'>8-[ <a' a'>8. <eis eis'>16]
             }
             \\
             \relative c' {
@@ -582,6 +588,29 @@ three-section-one = {
               g8-[ g] g16-[ <a c es>] s8 s8 s8
             }
           >>
+          |
+          r4 r8 r8 r8
+          <<
+            \relative c''' {
+              s8
+              |
+              d8\rest d8\rest a8\noBeam d8-[ e fis]
+              |
+              fis-[ a g]
+              g8.-[ e16 cis d]
+              |
+            }
+            \\
+            \relative c'' {
+              \stemNeutral fis8^~
+              |
+              \stemDown
+              fis16 8 8 16_~ 16 8 8 16
+              |
+              d8\rest d16\rest a'8._~ a16 a8 d,16\rest d8\rest
+            }
+          >>
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -985,6 +1014,21 @@ three-section-one = {
           |
           <d fis>16-[ a' <bis, fis' a> cis' <bis, fis' a> cis']
           <cis, eis gis>16-[ cis' <cis, eis gis> cis' <fis, a> cis']
+          |
+          <fis, a>16-[ cis' <b, b'> d' <b, g'> b']
+          <b, b'>16-[ b' cis, cis' cis, eis]
+          |
+          fis,16-[ <cis' fis>16 eis, <cis' gis'> eis, <cis' gis'>]
+          fis,16-[ <cis' a'> cis <fis cis'> cis cis']
+          |
+          r8
+          % TODO maybe split chords between right/left?
+          <d, d'>16-[ r16 <gis' d' fis a>] r16 <gis d' fis a>-[ r16 <d, d'> r16 <gis' d' fis a>] r16
+          |
+          <gis d' fis a>16 r16 <d, d'> r16 <gis' d' fis a> r16 <gis d' fis a> r16 <d, d'> r16 <gis' d' fis a> r16
+          |
+          <gis d' fis a>-[ r16 <d, d'> r16 <gis' d' fis a>] r16
+          <gis d' fis a>-[ r16 <d, d'>] r16 <gis' d' fis a> r16
           |
         }
       }
