@@ -281,8 +281,8 @@ three-section-one = {
             \relative c' {
               \hideTupletBracket
               \set subdivideBeams = ##t
-              \tuplet 3/2 { fis16 e' d }
               \implicitTuplets
+              \tuplet 3/2 { fis16 e' d }
               \tuplet 3/2 { cis b a }
               \tuplet 3/2 { g bes a }
               \tuplet 3/2 { g a b }
@@ -701,9 +701,129 @@ three-section-one = {
               >>
               b16-[ gis d']
               bis-[ cis gis dis' cis b]
-              |
             }
           >>
+          ais,8 r8 \clef bass
+          fis,,8_~4 16-[_( cis])
+          |
+          cis4. 4 8
+          |
+          ais8 r8 \clef treble
+          <fis''''_~ fis'^~>8 4 16-[^( <cis cis'>])
+          |
+          <cis cis'>4. 4 8
+          |
+          <ais ais'>8 r8 \clef bass
+          % todo: does this need a tie?
+          fis,,8_~ 8-[ 8]
+          \tupletUp
+          \tuplet 3/2 { fis16\<-[ eis\> fis\!] }
+          |
+          cis4 4 4
+          |
+          ais8 r8 \clef treble
+          <fis''''_~ fis'^~>8 8-[ 8]
+          \implicitTuplets
+          \tuplet 3/2 { <fis fis'>16\<-[ <eis eis'>\> <fis fis'>\!] }
+          |
+          <cis cis'>4 4 <cis_~ cis'^~>8
+          \explicitTuplets
+          \tupletDown
+          \tuplet 3/2 { <cis_~ cis'^~>16-[ <cis cis'> <b b'>] }
+          |
+          <<
+            \relative c''' {
+              s8 ais4 b4. |
+              cis8 cis4 dis4. |
+              eis4 fis8 gis4 ais8 |
+              b8 cis,8-[ dis] a4 gis8 |
+              <fisis cis'>4. <ais dis>4 <dis, ais'>8 |
+            }
+            \\
+            \relative c'' {
+              % todo: should this really be in the same voice, as per M 52?
+              % maybe we should instead do both in separate voices?
+              <ais ais'>8\noBeam
+              \hideTupletBracket
+              \set subdivideBeams = ##t
+              \implicitTuplets
+              \tuplet 3/2 { ais16 gis' fis }
+              \tuplet 3/2 { eis dis cis }
+              \tuplet 3/2 { b cis ais }
+              \tuplet 3/2 { b cis dis }
+              \tuplet 3/2 { eis fis gis }
+              |
+              cis,8\noBeam
+              \tuplet 3/2 { ais'16 gis fis }
+              \tuplet 3/2 { e dis cis }
+              \tuplet 3/2 { cis dis e }
+              \tuplet 3/2 { dis eis fis }
+              \tuplet 3/2 { gis ais b^~ }
+              |
+              \tuplet 3/2 { b b ais }
+              \tuplet 3/2 { gis fis eis }
+              \tuplet 3/2 { fis gis b }
+              \tuplet 3/2 { gis b ais }
+              \tuplet 3/2 { gis b ais }
+              \tuplet 3/2 { ais b cis^~ }
+              |
+              \tuplet 3/2 { cis ais b }
+              \tuplet 3/2 { g fis e }
+              \tuplet 3/2 { dis e fis_~ }
+              \tuplet 3/2 { fis eis dis }
+              \tuplet 3/2 { bis cis dis }
+              \tuplet 3/2 { eis cisis cis }
+              |
+              \set subdivideBeams = ##f
+              eis4 dis8 dis4 cis8 |
+            }
+          >>
+          |
+          \stemNeutral
+          <cis cis'>16^(-[ <ais ais'> <b b'> <dis dis'> <ais' ais'> <gis_~ gis'^~>)]
+          <gis gis'>-[ <fis_~ fis'^~>] <fis fis'>-[^( <fis, ais fis'> <eis gis eis'> <e g cis e>])
+          |
+          <e g cis e>4
+          <<
+            \relative c'' {
+              e16-[ dis]
+            }
+            \\
+            \relative c'' {
+              cis32-[ g b fis]
+            }
+          >>
+          <d fis b d>4 r8
+          |
+          <<
+            \relative c' {
+              <cis fis ais cis^~>4 cis'16-[ bis]
+            }
+            \\
+            \relative c'' {
+              s4 ais32-[ fis a fis]
+            }
+          >>
+          <d eis gis b>8 r8 r8
+          |
+          r4 r8 <g bes>4 \stemUp <g bes eis>8 \stemNeutral
+          |
+          <<
+            \relative c'' {
+              <g bes es>4 <g es'>8 <fis dis'>8 <eis cis'>4
+            }
+            \\
+            \relative c' {
+              es4 es8 dis8 cis4
+            }
+          >>
+          |
+          <cis, fis ais cis>4 ais'8 cis,4 cis'8
+          |
+          ais4 <ais cis ais'>8 <gis b gis'>4 <cis, gis' b cis>8
+          |
+          <cis fis ais cis>4 ais''8 cis,4 <cis cis'>8
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -884,14 +1004,14 @@ three-section-one = {
               \tuplet 3/2 { fis16 a g }
               \tuplet 3/2 { fis g a }
               \tuplet 3/2 { b cis d }
-              e8^~
+              e8^~\noBeam
               \tuplet 3/2 { e16 d cis }
               \tuplet 3/2 { b a g }
               |
               \tuplet 3/2 { cis e d }
               \tuplet 3/2 { a b c }
               \tuplet 3/2 { d e fis }
-              g8^~
+              g8^~\noBeam
               \tuplet 3/2 { g16 fis e }
               \tuplet 3/2 { d c b }
               |
@@ -1187,6 +1307,162 @@ three-section-one = {
           cis16-[ gis'' eis b' gis d']
           bis-[ cis gis dis' cis b]
           \stemNeutral
+          |
+          <<
+            \relative c' {
+              ais16-[ dis bis cis ais dis]
+              bis-[ cis ais dis ais cis]
+              |
+              gis-[ cis ais cis b! cis]
+              b-[ cis ais cis gis cis]
+              |
+              ais16-[ dis bis cis ais dis]
+              bis-[ cis ais dis ais cis]
+              |
+              gis-[ cis ais cis b! cis]
+              b-[ cis ais cis gis cis]
+              |
+              \set subdivideBeams = ##t
+              \hideTupletBracket
+              \explicitTuplets
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { bis dis cis }
+              \tuplet 3/2 { ais dis cis }
+              \implicitTuplets
+              \tuplet 3/2 { bis dis cis }
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { ais d cis }
+              |
+              \tuplet 3/2 { gis dis' cis }
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { b dis cis }
+              \tuplet 3/2 { b dis cis }
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { gis dis' cis }
+              |
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { bis dis cis }
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { bis dis cis }
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { ais d cis }
+              |
+              \tuplet 3/2 { gis dis' cis }
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { b dis cis }
+              \tuplet 3/2 { b dis cis }
+              \tuplet 3/2 { ais dis cis }
+              \tuplet 3/2 { gis dis' cis }
+              |
+              \tuplet 3/2 { ais16 dis cis }
+              \tuplet 3/2 { ais b cis }
+              \tuplet 3/2 { dis eis fis }
+              gis8_~\noBeam
+              \tuplet 3/2 { gis16 fis eis }
+              \tuplet 3/2 { dis cis b }
+              |
+              \clef treble
+              \tuplet 3/2 { eis16 gis fis }
+              \tuplet 3/2 { cis dis e }
+              \tuplet 3/2 { fis gis ais }
+              b8_~\noBeam
+              \tuplet 3/2 { b16 ais gis }
+              \tuplet 3/2 { fis eis dis }
+              |
+              \tuplet 3/2 { cis eis fis }
+              \tuplet 3/2 { gis ais b }
+              \tuplet 3/2 { ais gis fis }
+              \tuplet 3/2 { eis gis ais }
+              \tuplet 3/2 { b cis dis }
+              \tuplet 3/2 { cis b ais }
+              |
+              \tuplet 3/2 { e' cis dis }
+              \tuplet 3/2 { e fis, g }
+              \tuplet 3/2 { fis e dis }
+              \tuplet 3/2 { dis eis fis }
+              \tuplet 3/2 { ais g fis }
+              \tuplet 3/2 { cis eis g }
+              |
+            }
+            \\
+            \relative c {
+              eis4._~ 4 8
+              |
+              eis8-[_( fis gis] gis-[ fis eis])
+              |
+              fis4._~ 4 8
+              |
+              % todo: needs a slur?
+              eis8-[ fis gis] gis-[ fis eis]
+              |
+              fis4._~ 4 8
+              |
+              eis8-[ fis gis] gis-[ fis eis]
+              |
+              fis4._~ 4 8
+              |
+              eis8-[ fis gis] gis-[ fis eis]
+              |
+              fis4. gis4.
+              |
+              ais4. b4.
+              |
+              cis4 dis8 eis4 fis8
+              |
+              gis8\noBeam
+              \implicitTuplets
+              \tupletDown
+              \tuplet 3/2 { ais16 ais,16^~ ais16 }
+              b8\noBeam bis4 b8
+              |
+            }
+          >>
+          <ais' cis>4. <fisis ais>4 <dis fisis>8
+          |
+          <<
+            \relative c'' {
+              \set subdivideBeams = ##f
+              ais16-[ fisis gis dis \clef bass cis b]
+              s8
+              ais,16-[ cis^~] cis32-[ b ais b]
+              |
+              s2 s4
+              |
+              s4
+              fis'32-[ ais fis a]
+            }
+            \\
+            \relative c' {
+              b8\rest
+              gis8-[ b,]
+              <cis ais'>
+              cis,16-[ cis_~] cis32-[ b ais b]
+              |
+              ais32-[ cis e g] ais-[ cis e g] <ais cis>-[ e' b dis]
+              <b, b'>4 d8\rest
+              |
+              \set subdivideBeams = ##t
+              \hideTupletBracket
+              \tuplet 3/2 { cis,16 fis ais }
+              \tuplet 3/2 { cis fis ais }
+              \set subdivideBeams = ##f
+              cis,16-[ dis]
+            }
+          >>
+          <d, eis! gis b>8 <d f aes ces>8.-[ <es g bes>16]
+          |
+          <es g bes>4 <es g bes es>8 4 8
+          |
+          <es, es'>8 <bes bes'>4 <b b'>8 <cis cis'>4
+          |
+          <fis, fis'>4 ais''8 cis,4 cis'8
+          |
+          ais4
+          <cis,,_~ cis'^~>8 8-[ <dis dis'>16 <cis cis'> <dis cis' dis> <eis cis' eis>]
+          |
+          <fis cis' fis>4 \clef treble
+          ais''8 cis,4 \clef bass
+          <ais,, ais'>8
           |
         }
       }
