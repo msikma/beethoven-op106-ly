@@ -824,6 +824,39 @@ three-section-one = {
           |
           <cis fis ais cis>4 ais''8 cis,4 <cis cis'>8
           |
+          <ais ais'>4
+          <<
+            \relative c''' {
+              s8 cis8-[ <dis, dis'> <eis eis'>]
+            }
+            \\
+            \relative c'' {
+              <cis_~ cis'^~>8 8 cis'16-[ b ais bis]
+            }
+          >>
+          |
+          <<
+            \relative c'' {
+              <fis ais fis'>4. <gis eis' gis>4.
+            }
+            \\
+            \relative c'' {
+              s4. b8\rest b8\rest cis'8
+            }
+          >>
+          |
+          <ais' cis fis ais>4 <ais, cis ais'>8
+          <cis ais' cis>8.-[ <d b' d>16 <e cis' e> <fis d' fis>]
+          |
+          <fis fis'>4 <d d'>8\noBeam <d d'>8-[^( <b b'> <cis cis'>])
+          |
+          <d d'>4 r8 r4 r8
+          |
+          <b b'>4. <d d'>4.
+          |
+          \key e \minor
+          <g_~ g'^~>4. <g g'>8-[ <b, d> <fis c'>16 <g b>]
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -1463,6 +1496,23 @@ three-section-one = {
           <fis cis' fis>4 \clef treble
           ais''8 cis,4 \clef bass
           <ais,, ais'>8
+          |
+          <cis cis'>8-[ <cis' cis'> <ais cis ais'>]
+          <gis cis gis'>4 <cis, cis'>8
+          |
+          <fis cis' fis>4. <cis cis'>4.
+          |
+          <fis, fis'>4 <fis' fis'>8 <fis fis'>4 <fis fis'>16.-[ <e e'>32]
+          |
+          <d d'>4. <fis fis'>4.
+          |
+          <b b'>4 r8 r8 <b b'>8-[ <g g'>16 <d d'>16]
+          |
+          <d d'>4 <b b'>8 8-[_( <g g'> <ais ais'>)]
+          |
+          \key e \minor
+          <b b'>8-[ <b' b'> <c c'>]
+          <d b'>8-[ <g b>^( <d a' c>16 <g b>)]
           |
         }
       }
