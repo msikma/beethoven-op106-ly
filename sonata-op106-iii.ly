@@ -854,9 +854,59 @@ three-section-one = {
           |
           <b b'>4. <d d'>4.
           |
-          \key e \minor
+          \key g \major
           <g_~ g'^~>4. <g g'>8-[ <b, d> <fis c'>16 <g b>]
           |
+          <g b>8 r8 \clef bass
+          \implicitTuplets
+          g,,8_~ g-[ g] \tuplet 3/2 { g16-[_( fis g]) }
+          |
+          d4 d d
+          |
+          b8 r8 \clef treble
+          <g''''_~ g'^~>8 8-[ 8] \tuplet 3/2 { <g g'>16-[^( <fis fis'> <g g'>]) }
+          |
+          <e e'>4 4 4
+          |
+          4 <e_~ e'^~>8 8-[ <e_~ e'^~>] \tuplet 3/2 { <e e'>16-[^( <dis dis'> <e e'>)] }
+          |
+          <d fis d'>4 4 <fis_~ fis'^~>8\noBeam \tuplet 3/2 { <fis fis'>16-[^( <eis eis'> <fis fis'>]) }
+          |
+          \key d \major
+          <fis fis'>4 <fis_~ fis'^~>8-[ <fis fis'>16] r16 <fis_~ fis'^~>8-[ <fis fis'>16] r16
+          |
+          % todo: fingering was in first edition
+          <fis fis'>16 \repeat unfold 5 { fis'16^(-[-4 fis]-3) } fis16\noBeam
+          |
+          \key a \major
+          \stemUp cis,4_( a8) a_(-[ fis <cis eis gis>]) \stemNeutral
+          |
+          <a cis fis a>4 <ais cis fis ais>8 <b d fis b>4 <d fis b d>8
+          |
+          <d eis b' d>4 <cis fis a! cis>8\noBeam
+          8-[ <b d gis b> <a dis fis a>]
+          |
+          <<
+            \relative c' {
+              <a fis' a>4 <gis eis' gis>8 <gis cis eis gis>8 gis'4
+              |
+              % todo is this a 16 grace?
+              \slashedGrace b8 b'4 a8 a-[ g fis] |
+              fis-[ e fis] fis-[ g8. <fis,, fis'>16]
+            }
+            \\
+            \relative c' {
+              dis8 cis4 s8 <g bes e>-[ <g bes d>]
+              |
+              b'8\rest b8_(-[ a]) a-[ g fis]
+              |
+              fis-[ e fis] fis-[ g8.] s16
+              |
+            }
+          >>
+          |
+          <fis fis'>8-[ <a a'> <cis fis a cis>]
+          <cis eis gis! cis>4 <cis fis a cis>8
         }
       }
       %---------------------------------------------------------------------
@@ -1513,6 +1563,125 @@ three-section-one = {
           \key e \minor
           <b b'>8-[ <b' b'> <c c'>]
           <d b'>8-[ <g b>^( <d a' c>16 <g b>)]
+          |
+          <<
+            \relative c' {
+              \set subdivideBeams = ##t
+              \hideTupletBracket
+              \explicitTuplets
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { cis! e d }
+              \tuplet 3/2 { b e d }
+              \implicitTuplets
+              \tuplet 3/2 { cis e d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { b es d }
+              |
+              \tuplet 3/2 { a e'! d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { c! e d }
+              \tuplet 3/2 { c e d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { ais e' d }
+              |
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { cis! e d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { cis e d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { b es d }
+              |
+              \tuplet 3/2 { a e'! d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { c! e d }
+              \tuplet 3/2 { c e d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { ais e' d }
+              |
+              \tuplet 3/2 { ais e' d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { b e d }
+              \tuplet 3/2 { b f' d }
+              \tuplet 3/2 { b f' d }
+              |
+              % todo: break these up as per original edition?
+              \tuplet 3/2 { d fis e }
+              \tuplet 3/2 { d fis e }
+              \tuplet 3/2 { d fis e }
+              \tuplet 3/2 { d fis e }
+              \tuplet 3/2 { d fis e }
+              \tuplet 3/2 { d eis fis }
+              |
+              \key d \major
+              \tuplet 3/2 { d g fis }
+              \tuplet 3/2 { dis gis fis }
+              \tuplet 3/2 { dis a' fis }
+              \tuplet 3/2 { dis,-[ a' fis] }
+              \tuplet 3/2 { dis'-[ a' fis] }
+              \tuplet 3/2 { dis,-[ a' fis] }
+            }
+            \\
+            \relative c' {
+              g4._~ g4 g8
+              |
+              fis8-[ g a]
+              a-[ g fis]
+              |
+              g4._~ g4 g8
+              |
+              fis8-[ g a]
+              a-[ g fis]
+              |
+              fis8-[_( g gis])
+              gis-[ gis gis]
+              |
+              a8-[_( ais b])
+              b-[ b b]
+              |
+              b-[ bis] bis\noBeam
+              bis,\noBeam
+              bis'\noBeam
+              bis,\noBeam
+            }
+          >>
+          |
+          bis32-[ a' <dis, fis> a']
+          bis,,32-[ a' <dis, fis> a']
+          bis32-[ a' <dis, fis> a']
+          \tupletDown
+          \explicitTuplets
+          \tuplet 6/4 { bis,,32-[ a' <dis, fis> a' <dis, fis> a'] }
+          \tuplet 6/4 { bis32-[ a' <dis, fis> a' <dis, fis> a'] }
+          \tuplet 6/4 { bis,,32-[ a' <dis, fis> a' <dis, fis> a'] }
+          \key a \major
+          |
+          cis4 a8 a-[ fis <cis gis'>]
+          |
+          <fis, fis'>4 8 <b, b'>4 8
+          |
+          <gis gis'>4 <a a'>8 8-[ <b b'> <bis bis'>]
+          |
+          <bis bis'>8-[ <cis cis'>8. <bis bis'>16]
+          <cis cis'>8-[ 8 <d d'>]
+          |
+          <g, d' b'>4.
+          <b g' e'>4.
+          |
+          <c g' e'>4.
+          <b g' d'>8
+          <<
+            \relative c {
+              g8.-[ fis16]
+            }
+            \\
+            \relative c, {
+              b8\rest d8
+            }
+          >>
+          |
+          <d fis>8-[ <cis a'> <cis cis'>]
+          <cis cis'>4 <fis cis'>8
           |
         }
       }
