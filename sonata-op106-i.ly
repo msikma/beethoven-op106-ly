@@ -51,17 +51,30 @@ one-section-one = {
         \clef treble \relative c'' {
           \one-section-one
           r8\ff |
-          r4 r8 <d f bes d>8-. 4-. <d f bes es>8-. <d f bes d>-. |
+          r4 r8 <d f bes d>8 4-. <d f bes es>8-. <d f bes d>-. |
           4-. <bes d f bes>-. r2 |
-          r4 r8 <f' bes d f>8-. 4-. <f bes d g>8-. <f bes d f>-. |
-          4-. <d f bes d>4-. r4\fermata
+          r4 r8 <f' bes d f>8 4 <f bes d g>8 <f bes d f> |
+          4 <d f bes d>4 r4\fermata
           <<
             \relative c'' {
-              bes8\p-3 c
+              bes8\p-3^( c
+              |
+              d2 c4) 8-[^( d]
+              |
+              es2 d4) 8-[^( es]
+              |
+              f4. g8\noBeam f e4 f8)
             }
             \\
-            \relative c'' {
+            \relative c' {
               s4
+              |
+              e4\rest g4 a as
+              |
+              g a bes g
+              |
+              f bes g a
+              |
             }
           >>
         }
@@ -77,10 +90,16 @@ one-section-one = {
         \clef bass \relative c, {
           \one-section-one
           bes8 |
-          <f'' bes d>4. 8-. 4-. 8-. 8-. |
+          <f'' bes d>4. 8 4-. 8-. 8-. |
           4-. <bes, f' bes>4-. r4 r8 bes,8 |
-          <f'' bes d f>4. 8-. 4-. 8-. 8-. |
-          4-. <f bes d>4-. r4\fermata r4 |
+          <f'' bes d f>4. 8 4 8 8 |
+          4 <f bes d>4 r4\fermata r4 |
+          r4 e'4 f b,
+          |
+          c fis, g es!
+          |
+          d des c f,
+          |
         }
       }
     >>
