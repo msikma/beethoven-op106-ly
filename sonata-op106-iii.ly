@@ -907,6 +907,70 @@ three-section-one = {
           |
           <fis fis'>8-[ <a a'> <cis fis a cis>]
           <cis eis gis! cis>4 <cis fis a cis>8
+          |
+          <cis a' cis>8-[ <d g d'> <g, g'>]
+          <b b'>-[ <cis, cis'> <eis eis'>16 <fis fis'>]
+          |
+          <<
+            \relative c' {
+              fis4 fis'8 4 cis8
+              |
+              e8-[^( d b]) b-[^( d b])
+              |
+            }
+            \\
+            \relative c {
+              <fis ais e'>8. fis'8-[ fis16_~] fis-[ 8 8 16^~]
+              |
+              fis16-[ 8 <d eis gis> <d_~ eis_~ gis^~>16] 16-[ 8 8 16]
+              |
+            }
+          >>
+          |
+          <<
+            \relative c' {
+              \tuplet 3/2 { <fis ais>16-[ fis' cis] }
+              \hideTupletBracket
+              \implicitTuplets
+              \stemNeutral
+              \tuplet 3/2 { ais'-[ fis cis'] }
+              \tuplet 3/2 { fis,-[ g' fis] }
+              \tuplet 3/2 { eis-[ fis e^~] }
+              \tuplet 3/2 { e-[ cis ais] }
+              \stemUp
+              \tuplet 3/2 { g-[ fis e^~] }
+              |
+              \tuplet 3/2 { e-[ cis d] }
+              \tuplet 3/2 { b'-[ fis d'^~] }
+              \tuplet 3/2 { d-[ cis b] }
+            }
+            \\
+            \relative c' {
+              cis8 s2 cis'8
+            }
+          >>
+          <b' d eis gis! b>4 8
+          |
+          <ais_~ cis_~ fis^~ ais^~>4. 4 <ais_~ cis_~ fis^~ ais^~>8
+          |
+          4 <fis'_~ ais^~ fis'^~>8 4 <fis_~ ais^~ fis'^~>8
+          |
+          8 <ais_~ cis^~ ais'^~>4 4 cis,8
+          |
+          4 a8 a8-[^( fis <cis eis gis>]
+          |
+          <cis fis a>4 <ais cis fis ais>8) <b d fis b>4 <cis fis ais cis>8
+          |
+          <d fis b d>8 <d gis b d>4 4 16-[_( <cis ais' cis>16])
+          |
+          <cis ais' cis>2.
+          |
+          <ais' fis' cis'>2.
+          |
+          4. <ais, fis' cis'>4.\pp
+          |
+          \relative c' { <ais fis' cis'>4\ppp\arpeggio } r8 r4
+          \bar "|."
         }
       }
       %---------------------------------------------------------------------
@@ -1683,6 +1747,74 @@ three-section-one = {
           <d fis>8-[ <cis a'> <cis cis'>]
           <cis cis'>4 <fis cis'>8
           |
+          <<
+            \relative c {
+              cis8-[ d g,]
+              b8\noBeam cis,8-[ eis16 fis]
+            }
+            \\
+            \relative c, {
+              fis8 b,4_~ b8 cis8-[ 8]
+            }
+          >>
+          |
+          <cis fis>8-[ <fis, fis'> <ais ais'>]
+          <cis cis'>8-[ <fis, fis'> <ais ais'>]
+          |
+          <b b'>-[^( <fis fis'> <b b'>] <d d'>-[ <fis, fis'> <b b'>])
+          |
+          <cis cis'>8-[ <fis, fis'> <ais ais'>]
+          <cis cis'>-[ <fis, fis'> <ais ais'>]
+          |
+          <b b'>-[ <fis fis'> <b b'>]
+          \set subdivideBeams = ##f
+          \hideTupletBracket
+          \explicitTuplets
+          \tupletUp
+          \tuplet 6/4 { <d d'>16-[ fis, b d fis b] }
+          \tuplet 3/2 { d-[ fis, d'] }
+          |
+          \set subdivideBeams = ##t
+          \implicitTuplets
+          % todo connect disconnect the beams or something
+          \tuplet 3/2 { fis, cis' fis, }
+          \tuplet 3/2 { fis' cis fis }
+          \tuplet 3/2 { fis, cis' fis, }
+          \tuplet 3/2 { fis' cis fis }
+          \tuplet 3/2 { cis fis, cis' }
+          \tuplet 3/2 { fis cis fis }
+          |
+          \tuplet 3/2 { cis, fis cis }
+          \tuplet 3/2 { cis' fis, cis' }
+          \tuplet 3/2 { cis, fis cis }
+          \tuplet 3/2 { cis' fis, cis' }
+          \tuplet 3/2 { cis, fis cis }
+          \tuplet 3/2 { cis' fis, cis' }
+          |
+          \tuplet 3/2 { fis, cis fis }
+          \tuplet 3/2 { fis, cis' fis, }
+          \tuplet 3/2 { fis' cis fis }
+          \tuplet 3/2 { fis, cis' fis, }
+          \tuplet 3/2 { fis' cis fis }
+          \tuplet 3/2 { cis fis cis }
+          |
+          \stemNeutral
+          cis'8-[ cis' a!]
+          a-[ fis <cis eis gis>]
+          |
+          <fis a>8
+          % todo check precedents for this
+          <fis,_~ fis'^~>4 8-[ <b, b'> <fis fis'>8]
+          |
+          b8 <eis, eis'>4 4 16-[_( <fis fis'>])
+          |
+          4. \stemDown <fis'_~ cis'^~ ais'^~>4.
+          |
+          4. \stemNeutral <fis, cis' ais'>4.
+          |
+          4. 4.
+          |
+          \relative c,, { <fis cis' ais'>4\arpeggio } r8 r4
         }
       }
     >>
