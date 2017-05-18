@@ -64,6 +64,22 @@ one-section-one = {
               es2 d4) 8-[^( es]
               |
               f4. g8\noBeam f e4 f8)
+              |
+              es8-[ d f es]
+              s4 bes'8-[^( c]
+              |
+              d2 c4)
+              c8-[ d]
+              |
+              es2 d4 d8-[ es]
+              |
+              f4. g8\noBeam f es4 f8
+              |
+              es8 d4 es8\noBeam d8-[ c d es]
+              |
+              g-[ f g f]
+              f-[ es f es]
+              |
             }
             \\
             \relative c' {
@@ -74,6 +90,19 @@ one-section-one = {
               g a bes g
               |
               f bes g a
+              |
+              <f bes>4 4 \stemUp <a c>4^\fermata \stemDown s4
+              |
+              b4\rest
+              g'4 a aes
+              |
+              g a! bes g
+              |
+              f bes g a
+              |
+              f bes_~ bes <f a>
+              |
+              <f bes> bes g a
               |
             }
           >>
@@ -94,12 +123,24 @@ one-section-one = {
           4-. <bes, f' bes>4-. r4 r8 bes,8 |
           <f'' bes d f>4. 8 4 8 8 |
           4 <f bes d>4 r4\fermata r4 |
-          r4 e'4 f b,
+          r4 e'4^( f b,
           |
           c fis, g es!
           |
-          d des c f,
+          d des c f,)
           |
+          bes es, d^\fermata r4
+          |
+          \clef treble r4 e'''4 f b,
+          |
+          c fis, g es!
+          |
+          \clef bass
+          d des c f,!
+          |
+          bes ges f es
+          |
+          d des c f,
         }
       }
     >>
