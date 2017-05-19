@@ -80,6 +80,19 @@ one-section-one = {
               g-[ f g f]
               f-[ es f es]
               |
+              es-[ d f d]
+              d-[ c d es]
+              |
+              g-[^( f)]
+              a8\rest
+              g8\noBeam^( 8) aes4 a8
+              |
+              \ottava #1
+              \set Staff.ottavation = "8"
+              c8^(-[\f b a! g]) f4-. <f a>-.
+              |
+              bes2\sf
+              \ottava #0
             }
             \\
             \relative c' {
@@ -104,8 +117,35 @@ one-section-one = {
               |
               <f bes> bes g a
               |
+              f4 bes2 <f a>4
+              |
+              <f bes>4 <bes e>4
+              es <c es>
+              |
+              <bes d> <bes es> <bes d> <a c>
+              |
+              <bes d f>2
             }
           >>
+          <bes d bes'>2
+          |
+          <d f d'>4-.\p <bes d bes'>-. <d f d'>-. <c es c'>-.
+          |
+          <es g es'>2\f <c es c'>2\f
+          |
+          <es g es'>4-.\p <cis e cis'>-. <es ges es'!>-. <d f d'>-.
+          |
+          <f aes f'>2\f
+          % note: the \f is omitted here.
+          % todo should it?
+          <d f d'>2
+          |
+          <f aes f'>4-.\p <d fis d'>-. <f aes f'!>-. <es g es'>-.
+          |
+          <g bes g'>2\f <es g bes es>2\sf
+          |
+          <g bes g'>4-.\p <e bes' e>-. <ges bes ges'>-. <f bes f'>-.
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -141,6 +181,43 @@ one-section-one = {
           bes ges f es
           |
           d des c f,
+          |
+          bes ges f es
+          |
+          d des c fis,
+          |
+          g es' f! <f, f'>
+          |
+          <bes bes'>8\noBeam
+          <f'' bes d>8-[ 8 8]
+          r8
+          <d f bes>8-[ 8 8]
+          |
+          r8 <f bes d>8 r8 <d bes'> r8 <f bes d>8 r8 <f bes c>
+          |
+          <bes,, bes'>8\noBeam <g'' bes es>8-[ 8 8]
+          r8 <es bes' c>8-[ 8 8]
+          |
+          % Note: previous notes were non-beamed, these are, as per first edition.
+          r8 <g bes es>8-[ r8 <e bes' cis>] r8 <ges bes es!>-[ r8 <f bes d>]
+          |
+          <bes,, bes'>8\noBeam <aes'' bes f'>8-[ 8 8]
+          r8 <f bes d>8-[ 8 8]
+          |
+          r8
+          <aes bes f'>8-[ r8 <fis bes d>]
+          r8 <aes bes f'>8-[ r8 <g bes es>]
+          |
+          <bes,, bes'>8\noBeam
+          <bes'' es g>8-[ 8 8]
+          r8
+          <g bes es>8-[ 8 8]
+          |
+          r8
+          \clef treble
+          <bes es g>8-[ r8 <bes cis e>]
+          r8 <bes es ges>8-[ r8 <bes d f>]
+          |
         }
       }
     >>
