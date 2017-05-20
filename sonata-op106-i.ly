@@ -146,6 +146,133 @@ one-section-one = {
           |
           <g bes g'>4-.\p <e bes' e>-. <ges bes ges'>-. <f bes f'>-.
           |
+          \ottava #1
+          \set Staff.ottavation = "8"
+          <a bes a'>4
+          <fis bes fis'>
+          <a bes a'>
+          <g bes g'>
+          |
+          <bes es g bes>
+          <gis gis'>
+          <bes bes'>
+          <a a'>
+          |
+          <c c'>\f
+          <bes bes'>
+          \ottava #0
+          <g g'>\sf
+          <f f'>
+          |
+          <es es'>\sf
+          <d d'>
+          <c c'>\sf
+          <bes bes'>
+          |
+          <g g'>\sf
+          <f f'>
+          <es es'>\sf
+          <d d'>
+          |
+          <c c'>\sf
+          <bes bes'>
+          <g g'>\sf
+          <f f'>
+          |
+          a' \relative c' f c \relative c' f
+          |
+          f \relative c' f a \relative c' f
+          |
+          c \relative c' f f \relative c' f
+          |
+          f\pp \relative c' f f r4
+          |
+          r4 r8
+          % Note: first explicitly does not have staccato.
+          <d, f bes d>8\f 4-. <d f bes es>8-.-[ <d f bes d>-.]
+          |
+          4 <bes d f bes>4 r2
+          |
+          r4 r8
+          <d f bes d>8
+          <d d'>4
+          <d fis bes d>8-[ 8]
+          |
+          4 4 r4\fermata r8 r8
+          |
+          r4 <fis, a d>4 r4 4
+          |
+          r4 4 r4 4
+          |
+          r4 <a c d fis> r4 4
+          |
+          r4 <a c fis a> r4 <c fis a c>
+          |
+          \ottava #1
+          \set Staff.ottavation = "8"
+          r4 <fis a c fis> r4 <a c a'>
+          |
+          r4 <c a' c> r4 <c fis a c>
+          |
+          \bar "||"
+          \key g \major
+          <c fis a c>4
+          \ottava #0
+          <a c>8-[ <gis b>] <a c>4
+          <fis, a>8-[ <g bes>]
+          |
+          <fis a>4
+          <a' c>8-[ <gis b>] <a c>4
+          \ottava #1
+          \set Staff.ottavation = "8"
+          fis'8-[ a]
+          |
+          c8-[ d c b]
+          c-[ d e d]
+          |
+          a-[ b c a]
+          fis-[ g a fis]
+          |
+          \ottava #0
+          c\p-[ d e c]
+          a-[ b c a]
+          |
+          fis-[ g a fis]
+          <a, c d>4 r4
+          |
+          \ottava #1
+          \set Staff.ottavation = "8"
+          b''8 c b a b c d b
+          |
+          g a b g d fis g d
+          |
+          b c d c g a b g
+          |
+          \ottava #0
+          d fis g b, g a b g
+          |
+          <d fis a>4\p
+          e''8-[ d] e d c e
+          |
+          c b a c a g fis a
+          |
+          e\p d c e c b a c
+          |
+          a g fis a c b a c
+          |
+          <d, f>4\p
+          \ottava #1
+          \set Staff.ottavation = "8"
+          d'''8 c d c b d
+          |
+          b a g b
+          \ottava #0
+          b, a g b
+          |
+          d, c b d b' a g b
+          |
+          d c b d e4 <a, d fis>
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -218,6 +345,104 @@ one-section-one = {
           <bes es g>8-[ r8 <bes cis e>]
           r8 <bes es ges>8-[ r8 <bes d f>]
           |
+          r8 <bes f' aes>8-[ r8 <bes d fis>]
+          r8 <bes f' bes>8-[ r8 <bes e g>]
+          |
+          r8 <bes c e g>8-[ r8 <bes c e gis>]
+          r8 <bes c e a>8-[ r8 8]
+          |
+          r8 <c c'>8-[ r8 <bes bes'>]
+          \clef bass
+          r8 <g g'>8-[ r8 <f f'>]
+          |
+          r8 <es es'>8-[ r8 <d d'>]
+          r8 <c c'>8-[ r8 <bes bes'>]
+          |
+          r8 <g g'>8-[ r8 <f f'>]
+          r8 <es es'>8-[ r8 <d d'>]
+          |
+          r8 <c c'>8-[ r8 <bes bes'>]
+          r8 <g g'>8-[ r8 <f f'>]
+          |
+          r8 a-[ r8 f]
+          r8 c'-[ r8 \relative c,, f]
+          |
+          r8 f-[ r8 \relative c,, f]
+          r8 a-[ r8 \relative c,, f]
+          |
+          r8 c-[ r8 \relative c,, f]
+          r8 f-[ r8 \relative c,, f]
+          |
+          r8 f-[ r8 \relative c,, f]
+          r8 \stemUp f\noBeam r8 \relative c,, f\f \stemNeutral
+          |
+          <f bes d>4. 8 4-. 8-. 8-.
+          |
+          4 <d f bes>4 r4 r8 bes,8
+          |
+          <d' f bes d>4. 8 <d d'>4 <d fis bes d>8-[ 8]
+          |
+          4 4 r4\fermata r8 d8^(
+          |
+          d'4.) d,8 d'4. d,8
+          |
+          d'4. d,8 d'4. d,8
+          |
+          <a' c>4. d,8 <a' c>4. d,8
+          |
+          <fis a>4. d8 a4. d8
+          |
+          a4. d8 g,4. d'8
+          |
+          fis,4. d'8 es,4. d'8
+          \bar "||"
+          \key g \major
+          <d, d'>4
+          \clef treble
+          es'''8-[ d] es4 d8-[ cis]
+          |
+          d4 es,8-[ d] es4 d8-[ cis]
+          |
+          d4
+          \clef bass
+          r8 b,8 fis4 r8 a8
+          |
+          c4 
+          \clef treble r8
+          fis'8_( a4) c8-[ a]
+          |
+          a'8-[ b c a]
+          c,8-[ d e d]
+          |
+          a8-[ b c a]
+          fis-[ g a fis]
+          |
+          <d g b>4 \clef bass r8 d,8^( g4) r8 b8^(
+          |
+          d4) \clef treble r8 \stemUp g8_( b4) \stemNeutral r8 d8^(
+          |
+          g8) a b g b, c d b
+          |
+          g a b g b c d b
+          |
+          c d c b c d e c
+          |
+          a b c a fis g a fis
+          \clef bass
+          |
+          c d e c a b c a
+          |
+          fis g a fis \clef treble
+          a' g fis a
+          |
+          b c b a b c d b
+          |
+          g a b g d fis g d
+          \clef bass
+          |
+          b c d b g a b g
+          |
+          d fis g d c g' d c
         }
       }
     >>
