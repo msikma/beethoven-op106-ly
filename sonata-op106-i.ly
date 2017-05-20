@@ -273,6 +273,43 @@ one-section-one = {
           |
           d c b d e4 <a, d fis>
           |
+          <g d' g>4\p r4 r2
+          |
+          r4 <fis, a>4 <g b>8 r8 <b' g'>8^( <a fis'>)
+          |
+          <b g'>4 <g b g'>4 <fis a fis'> <eis b' eis>
+          |
+          <g eis'> <fis d'>4 4
+          <<
+            \relative c''' {
+              d8 c!
+              |
+              b4 g'4 e8 r8
+              \ottava #1
+              \set Staff.ottavation = "8"
+              c'-[ a]
+              |
+              fis4 d' b8 r8
+              \ottava #0
+              g8-[^( fis]^)
+              |
+              \stemDown g4 e c <fis, b> \stemUp
+              |
+              b2 \stemDown g4 <g bes e>
+            }
+            \\
+            \relative c''' {
+              g8 a
+              |
+              s4 g4. s4.
+              |
+              s4 d'4. s4.
+              |
+              s1
+              |
+              fis,4 a8-[ g]
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -442,7 +479,61 @@ one-section-one = {
           |
           b c d b g a b g
           |
-          d fis g d c g' d c
+          d^( fis g d c g' d c
+          |
+          b4)^( \stemDown <g g'> <c e>8) \stemNeutral r8 c'8-[^( a])
+          |
+          <<
+            \relative c {
+              fis4 d' b8 d,8\rest \clef treble
+              e'4^(
+              |
+              e) e fis g8-[ a]
+              |
+              a4 b8.-[ cis16] d4 \stemDown e8-[^( fis]
+              |
+              g4 <b, d>4 <c! e>8) b8\rest a8-[^( c]
+              |
+              d4 <fis, a>4 <g b>8) b8\rest b4\rest
+              |
+              \stemUp
+              <e, g b>4 <e g c>4 c'4 <dis, fis b>4
+              
+            }
+            \\
+            \relative c {
+              s4 d4 g8 s8 \stemUp g4_(
+              |
+              \stemDown g4) g a a
+              |
+              d2. s4
+              |
+              s1
+              |
+              s1
+              |
+              s4 s4 e4
+            }
+            \\
+            \relative c'' {
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              % Todo fix this voices setup
+              s4 s4 \voiceFour g8-[ a]
+            }
+          >>
+          |
+          \stemNeutral
+          <dis fis b>4^( <b dis>4 <e g> <dis f>8-[ <cis e>])
+          |
         }
       }
     >>
