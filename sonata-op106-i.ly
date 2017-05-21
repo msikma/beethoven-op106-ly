@@ -295,7 +295,52 @@ one-section-one = {
               |
               \stemDown g4 e c <fis, b> \stemUp
               |
-              b2 \stemDown g4 <g bes e>
+              b2 \stemDown s4 s4
+              |
+              \stemUp
+              a2. d4
+              |
+              b2. cis4
+              |
+              fis,2. b4
+              |
+              f8\noBeam e4 a8 es8 d4 g8
+              |
+              s1
+              |
+              s2 g,4 e'!8-[ d]
+              |
+              s1
+              |
+              s2 g,4 e'!8-[ d]
+              |
+              \stemDown d8-[^( <b g'> <d b'> <c a'>]
+              \stemUp g'2^~
+              |
+              g2 fis4) d!8-[ d']
+              |
+              s1
+              |
+              s2 g,4 e'8-[ d]
+              |
+              s1
+              |
+              s2 g,4 e'8-[ d]
+              |
+              d8-[ g, b a]
+              g2^~
+              |
+              g2 fis4 g4
+              |
+              s2 c2^~
+              |
+              c2 b4 c4
+              |
+              s2 fis2^~
+              |
+              fis2 e2^~
+              |
+              e4
             }
             \\
             \relative c''' {
@@ -307,7 +352,125 @@ one-section-one = {
               |
               s1
               |
-              fis,4 a8-[ g]
+              fis,4 a8-[ g] g4 <g_~ bes e>
+              |
+              g4 g8-[ f] f4 <f_~ aes>4
+              |
+              f4 f8-[ e] e4 <e_~ g>4
+              |
+              e4 e8-[ dis] d4 <d f>4
+              |
+              d4 cis4 c4 b4
+              |
+              d8 d' cis c a fis es d
+              |
+              cis c a fis
+              es d
+              g4
+              |
+              d'8 d' cis c a fis es d
+              |
+              cis c a fis
+              es d
+              g4
+              |
+              s2
+              b8-[_( dis e b]
+              |
+              bes-[ dis e bes]
+              a-[ cis]) s4
+              |
+              \ottava #1
+              \set Staff.ottavation = "8"
+              d'8 d' cis c a fis es d
+              |
+              cis c a fis
+              es d
+              g4
+              |
+              d'8 d' cis c a fis es d
+              |
+              cis c a fis
+              es d
+              g4
+              \ottava #0
+              |
+              s8 b,8-[ d c] b-[ dis e b]
+              |
+              bes-[ dis e bis]
+              a-[ d g, c]
+              |
+              g'8-[ <e c'> <g e'> <f d'>]
+              e-[ gis a e]
+              |
+              es-[ gis a es]
+              d-[ gis c, f]
+              |
+              % Note: original has this in the upper voice for some reason.
+              c'8-[ <a f'> <c a'> <bes g'>]
+              aes-[ f aes g]
+              |
+              aes-[ cis d aes]
+              g-[ b c! g]
+              |
+              c4
+            }
+          >>
+          <e g c e>4\ff <b' d> <c e>8-[ <d f>]
+          |
+          <e g>4 <c e> b,2\rest
+          |
+          b4\rest <e g c e>4\sf <b' d> <c e>8-[ <d f>]
+          |
+          <e g>4
+          <g, a e' g>\sf \relative c'' b4\rest
+          <g cis e g>\sf
+          |
+          \relative c'' b4\rest <g b d g>\sf
+          \relative c'' b4\rest <g a cis g'>\sf
+          <g b d g>2^(\sf <g_~ b^~ d^~>2)
+          |
+          <g b d>4^( <d g b>4)
+          d8-[ fis g b]
+          |
+          \ottava #1
+          \set Staff.ottavation = "8"
+          cis-[ d e d] fis-[ g a g]
+          |
+          ais-[ b c b] d4
+          \ottava #0
+          <d,, a' c>4
+          |
+          <<
+            \relative c'' {
+              % Todo: check these slurs
+              <d g d'>1^(
+              |
+              c'2 <c es>)
+              |
+              <g g'>1^(
+              |
+              <c es>2 c)
+              |
+              g1
+              |
+              d'2 <a c>4. <fis a>8
+              |
+            }
+            \\
+            \relative c''' {
+              s1
+              |
+              g2 g2
+              |
+              d'2 b2
+              |
+              g2 g
+              |
+              bes b
+              |
+              fis2 b,4\rest d4
+              |
             }
           >>
         }
@@ -534,6 +697,107 @@ one-section-one = {
           \stemNeutral
           <dis fis b>4^( <b dis>4 <e g> <dis f>8-[ <cis e>])
           |
+          <cis e>4 <a cis> <d f> <c es>8-[ <b d>]
+          \clef bass
+          |
+          <b d>4 <g b> <c e!> <b dis>8-[ <ais c>]
+          |
+          <ais cis>4 <fis ais> <b d!> <a! cis>8-[ <gis b>]
+          |
+          <<
+            \relative c' {
+              b4 e4 a, b
+            }
+            \\
+            \relative c' {
+              gis4 a8-[ g] fis4 g8-[ b,]
+            }
+          >>
+          |
+          <a,_~ d^~ c'!^~>1
+          |
+          <a d c'>2 <b d b'>2
+          |
+          <a_~ d^~ c'^~>1
+          |
+          <a d c'>2 <b d b'>2
+          |
+          <b, b'>2 <e e'>
+          |
+          <cis cis'> <d d'>4 r4
+          |
+          \clef treble
+          <a''_~ d^~ c'^~>1
+          |
+          <a d c'>2 <b d b'>2
+          |
+          \clef bass
+          <a,_~ d^~ c'^~>1
+          |
+          <a d c'>2 <b d b'>4
+          \clef treble
+          b'4
+          |
+          b2 e
+          |
+          cis d4 es
+          |
+          e2 a
+          |
+          fis g4 aes4
+          |
+          a!2 des
+          |
+          b2 <c,_~ c'^~>2
+          |
+          <c c'>4 \clef bass
+          <c,, c'>4 r2
+          |
+          r4 <c'' e>4 <b d>4\sf <c e>8-[ <d f>]
+          |
+          <e g>4
+          <c,, c'>4\sf r2
+          |
+          r4 <cis cis'>4 r4 <a a'>
+          |
+          r4 <d d'> r4 <e e'>
+          |
+          d8-[ fis! g b]
+          d8-[ fis g b]
+          |
+          \clef treble
+          d8-[ fis g b]
+          r4 g8-[ b]
+          |
+          cis-[ d e d]
+          fis-[ g a g]
+          |
+          ais-[ b c b]
+          d4
+          \tuplet 3/2 { d,,8-[ e fis] }
+          |
+          \tupletUp
+          \tuplet 3/2 { g,4 b' g }
+          \tuplet 3/2 { f b g }
+          |
+          \implicitTuplets
+          \hideTupletBracket
+          \clef treble
+          \tuplet 3/2 { es c' g }
+          \tuplet 3/2 { c, c' g }
+          |
+          \tuplet 3/2 { b, b' g }
+          \tuplet 3/2 { g, b' g }
+          |
+          \tuplet 3/2 { c, c' g }
+          \tuplet 3/2 { es c' g }
+          |
+          \tuplet 3/2 { d bes' g }
+          \tuplet 3/2 { d b' g }
+          |
+          \tuplet 3/2 { d c' a }
+          \clef bass
+          \tuplet 3/2 { d,, d' c }
         }
       }
     >>
