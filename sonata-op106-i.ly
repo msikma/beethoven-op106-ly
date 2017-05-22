@@ -473,6 +473,59 @@ one-section-one = {
               |
             }
           >>
+          |
+          <<
+            \relative c''' {
+              b1
+              |
+              c2 e
+              |
+              g1
+              |
+              e2 c
+              |
+              bes4^( b2 d4)
+            }
+            \\
+            \relative c''' {
+              % Todo: optimize position
+              \trillSpanUp
+              \once \override TrillSpanner.bound-details.right.padding = #2.0
+              g1\startTrillSpan
+              |
+              g1
+              |
+              g1
+              |
+              g1
+              |
+              g1
+              |
+              % Todo: should be a spanner?
+              \afterGrace d'1\stopTrillSpan^\trill { \stemUp cis16-[ d] }
+            }
+            \\
+            \relative c'' {
+              \voiceFour d4 b4\rest b2\rest
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              b4\rest d4 b2\rest
+            }
+          >>
+          |
+          \ottava #1
+          \set Staff.ottavation = "8"
+          <d' f b d>4\ff 2\sf <c d f c'>4
+          |
+          <b d f b>-. <c d f c'>-. <d f d'>-. <b d e b'>\p-.
+          \ottava #0
         }
       }
       %---------------------------------------------------------------------
@@ -798,6 +851,24 @@ one-section-one = {
           \tuplet 3/2 { d c' a }
           \clef bass
           \tuplet 3/2 { d,, d' c }
+          |
+          g,8 g' b g fis g g' g,
+          |
+          e g g' g, c, g' g' g,
+          |
+          b, g' d' g, g, g' b g
+          |
+          c, g' e' g, e g g' g,
+          |
+          d e fis g a b a g
+          |
+          fis g fis e d c b a
+          |
+          \repeat tremolo 2 { g,8 g' }
+          \repeat tremolo 2 { g,8 g' }
+          |
+          \repeat tremolo 2 { g,8 g' }
+          g,8-[ g' gis, gis']
         }
       }
     >>
