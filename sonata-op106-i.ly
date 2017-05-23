@@ -49,483 +49,552 @@ one-section-one = {
         midiInstrument = "acoustic grand"
       } {
         \clef treble \relative c'' {
-          \one-section-one
-          r8\ff |
-          r4 r8 <d f bes d>8 4-. <d f bes es>8-. <d f bes d>-. |
-          4-. <bes d f bes>-. r2 |
-          r4 r8 <f' bes d f>8 4 <f bes d g>8 <f bes d f> |
-          4 <d f bes d>4 r4\fermata
-          <<
-            \relative c'' {
-              bes8\p-3^( c
+          \repeat volta 2 {
+            \one-section-one
+            r8\ff |
+            r4 r8 <d f bes d>8 4-. <d f bes es>8-. <d f bes d>-. |
+            4-. <bes d f bes>-. r2 |
+            r4 r8 <f' bes d f>8 4 <f bes d g>8 <f bes d f> |
+            4 <d f bes d>4 r4\fermata
+            <<
+              \relative c'' {
+                bes8\p-3^( c
+                |
+                d2 c4) 8-[^( d]
+                |
+                es2 d4) 8-[^( es]
+                |
+                f4. g8\noBeam f e4 f8)
+                |
+                es8-[ d f es]
+                s4 bes'8-[^( c]
+                |
+                d2 c4)
+                c8-[ d]
+                |
+                es2 d4 d8-[ es]
+                |
+                f4. g8\noBeam f es4 f8
+                |
+                es8 d4 es8\noBeam d8-[ c d es]
+                |
+                g-[ f g f]
+                f-[ es f es]
+                |
+                es-[ d f d]
+                d-[ c d es]
+                |
+                g-[^( f)]
+                a8\rest
+                g8\noBeam^( 8) aes4 a8
+                |
+                \ottava #1
+                \set Staff.ottavation = "8"
+                c8^(-[\f b a! g]) f4-. <f a>-.
+                |
+                bes2\sf
+                \ottava #0
+              }
+              \\
+              \relative c' {
+                s4
+                |
+                e4\rest g4 a as
+                |
+                g a bes g
+                |
+                f bes g a
+                |
+                <f bes>4 4 \stemUp <a c>4^\fermata \stemDown s4
+                |
+                b4\rest
+                g'4 a aes
+                |
+                g a! bes g
+                |
+                f bes g a
+                |
+                f bes_~ bes <f a>
+                |
+                <f bes> bes g a
+                |
+                f4 bes2 <f a>4
+                |
+                <f bes>4 <bes e>4
+                es <c es>
+                |
+                <bes d> <bes es> <bes d> <a c>
+                |
+                <bes d f>2
+              }
+            >>
+            <bes d bes'>2
+            |
+            <d f d'>4-.\p <bes d bes'>-. <d f d'>-. <c es c'>-.
+            |
+            <es g es'>2\f <c es c'>2\f
+            |
+            <es g es'>4-.\p <cis e cis'>-. <es ges es'!>-. <d f d'>-.
+            |
+            <f aes f'>2\f
+            % note: the \f is omitted here.
+            % todo should it?
+            <d f d'>2
+            |
+            <f aes f'>4-.\p <d fis d'>-. <f aes f'!>-. <es g es'>-.
+            |
+            <g bes g'>2\f <es g bes es>2\sf
+            |
+            <g bes g'>4-.\p <e bes' e>-. <ges bes ges'>-. <f bes f'>-.
+            |
+            \ottava #1
+            \set Staff.ottavation = "8"
+            <a bes a'>4
+            <fis bes fis'>
+            <a bes a'>
+            <g bes g'>
+            |
+            <bes es g bes>
+            <gis gis'>
+            <bes bes'>
+            <a a'>
+            |
+            <c c'>\f
+            <bes bes'>
+            \ottava #0
+            <g g'>\sf
+            <f f'>
+            |
+            <es es'>\sf
+            <d d'>
+            <c c'>\sf
+            <bes bes'>
+            |
+            <g g'>\sf
+            <f f'>
+            <es es'>\sf
+            <d d'>
+            |
+            <c c'>\sf
+            <bes bes'>
+            <g g'>\sf
+            <f f'>
+            |
+            a' \relative c' f c \relative c' f
+            |
+            f \relative c' f a \relative c' f
+            |
+            c \relative c' f f \relative c' f
+            |
+            f\pp \relative c' f f r4
+            |
+            r4 r8
+            % Note: first explicitly does not have staccato.
+            <d, f bes d>8\f 4-. <d f bes es>8-.-[ <d f bes d>-.]
+            |
+            4 <bes d f bes>4 r2
+            |
+            r4 r8
+            <d f bes d>8
+            <d d'>4
+            <d fis bes d>8-[ 8]
+            |
+            4 4 r4\fermata r8 r8
+            |
+            r4 <fis, a d>4 r4 4
+            |
+            r4 4 r4 4
+            |
+            r4 <a c d fis> r4 4
+            |
+            r4 <a c fis a> r4 <c fis a c>
+            |
+            \ottava #1
+            \set Staff.ottavation = "8"
+            r4 <fis a c fis> r4 <a c a'>
+            |
+            r4 <c a' c> r4 <c fis a c>
+            |
+            \bar "||"
+            \key g \major
+            <c fis a c>4
+            \ottava #0
+            <a c>8-[ <gis b>] <a c>4
+            <fis, a>8-[ <g bes>]
+            |
+            <fis a>4
+            <a' c>8-[ <gis b>] <a c>4
+            \ottava #1
+            \set Staff.ottavation = "8"
+            fis'8-[ a]
+            |
+            c8-[ d c b]
+            c-[ d e d]
+            |
+            a-[ b c a]
+            fis-[ g a fis]
+            |
+            \ottava #0
+            c\p-[ d e c]
+            a-[ b c a]
+            |
+            fis-[ g a fis]
+            <a, c d>4 r4
+            |
+            \ottava #1
+            \set Staff.ottavation = "8"
+            b''8 c b a b c d b
+            |
+            g a b g d fis g d
+            |
+            b c d c g a b g
+            |
+            \ottava #0
+            d fis g b, g a b g
+            |
+            <d fis a>4\p
+            e''8-[ d] e d c e
+            |
+            c b a c a g fis a
+            |
+            e\p d c e c b a c
+            |
+            a g fis a c b a c
+            |
+            <d, f>4\p
+            \ottava #1
+            \set Staff.ottavation = "8"
+            d'''8 c d c b d
+            |
+            b a g b
+            \ottava #0
+            b, a g b
+            |
+            d, c b d b' a g b
+            |
+            d c b d e4 <a, d fis>
+            |
+            <g d' g>4\p r4 r2
+            |
+            r4 <fis, a>4 <g b>8 r8 <b' g'>8^( <a fis'>)
+            |
+            <b g'>4 <g b g'>4 <fis a fis'> <eis b' eis>
+            |
+            <g eis'> <fis d'>4 4
+            <<
+              \relative c''' {
+                d8 c!
+                |
+                b4 g'4 e8 r8
+                \ottava #1
+                \set Staff.ottavation = "8"
+                c'-[ a]
+                |
+                fis4 d' b8 r8
+                \ottava #0
+                g8-[^( fis]^)
+                |
+                \stemDown g4 e c <fis, b> \stemUp
+                |
+                b2 \stemDown s4 s4
+                |
+                \stemUp
+                a2. d4
+                |
+                b2. cis4
+                |
+                fis,2. b4
+                |
+                f8\noBeam e4 a8 es8 d4 g8
+                |
+                s1
+                |
+                s2 g,4 e'!8-[ d]
+                |
+                s1
+                |
+                s2 g,4 e'!8-[ d]
+                |
+                \stemDown d8-[^( <b g'> <d b'> <c a'>]
+                \stemUp g'2^~
+                |
+                g2 fis4) d!8-[ d']
+                |
+                s1
+                |
+                s2 g,4 e'8-[ d]
+                |
+                s1
+                |
+                s2 g,4 e'8-[ d]
+                |
+                d8-[ g, b a]
+                g2^~
+                |
+                g2 fis4 g4
+                |
+                s2 c2^~
+                |
+                c2 b4 c4
+                |
+                s2 fis2^~
+                |
+                fis2 e2^~
+                |
+                e4
+              }
+              \\
+              \relative c''' {
+                g8 a
+                |
+                s4 g4. s4.
+                |
+                s4 d'4. s4.
+                |
+                s1
+                |
+                fis,4 a8-[ g] g4 <g_~ bes e>
+                |
+                g4 g8-[ f] f4 <f_~ aes>4
+                |
+                f4 f8-[ e] e4 <e_~ g>4
+                |
+                e4 e8-[ dis] d4 <d f>4
+                |
+                d4 cis4 c4 b4
+                |
+                d8 d' cis c a fis es d
+                |
+                cis c a fis
+                es d
+                g4
+                |
+                d'8 d' cis c a fis es d
+                |
+                cis c a fis
+                es d
+                g4
+                |
+                s2
+                b8-[_( dis e b]
+                |
+                bes-[ dis e bes]
+                a-[ cis]) s4
+                |
+                \ottava #1
+                \set Staff.ottavation = "8"
+                d'8 d' cis c a fis es d
+                |
+                cis c a fis
+                es d
+                g4
+                |
+                d'8 d' cis c a fis es d
+                |
+                cis c a fis
+                es d
+                g4
+                \ottava #0
+                |
+                s8 b,8-[ d c] b-[ dis e b]
+                |
+                bes-[ dis e bis]
+                a-[ d g, c]
+                |
+                g'8-[ <e c'> <g e'> <f d'>]
+                e-[ gis a e]
+                |
+                es-[ gis a es]
+                d-[ gis c, f]
+                |
+                % Note: original has this in the upper voice for some reason.
+                c'8-[ <a f'> <c a'> <bes g'>]
+                aes-[ f aes g]
+                |
+                aes-[ cis d aes]
+                g-[ b c! g]
+                |
+                c4
+              }
+            >>
+            <e g c e>4\ff <b' d> <c e>8-[ <d f>]
+            |
+            <e g>4 <c e> b,2\rest
+            |
+            b4\rest <e g c e>4\sf <b' d> <c e>8-[ <d f>]
+            |
+            <e g>4
+            <g, a e' g>\sf \relative c'' b4\rest
+            <g cis e g>\sf
+            |
+            \relative c'' b4\rest <g b d g>\sf
+            \relative c'' b4\rest <g a cis g'>\sf
+            <g b d g>2^(\sf <g_~ b^~ d^~>2)
+            |
+            <g b d>4^( <d g b>4)
+            d8-[ fis g b]
+            |
+            \ottava #1
+            \set Staff.ottavation = "8"
+            cis-[ d e d] fis-[ g a g]
+            |
+            ais-[ b c b] d4
+            \ottava #0
+            <d,, a' c>4
+            |
+            <<
+              \relative c'' {
+                % Todo: check these slurs
+                <d g d'>1^(
+                |
+                c'2 <c es>)
+                |
+                <g g'>1^(
+                |
+                <c es>2 c)
+                |
+                g1
+                |
+                d'2 <a c>4. <fis a>8
+                |
+              }
+              \\
+              \relative c''' {
+                s1
+                |
+                g2 g2
+                |
+                d'2 b2
+                |
+                g2 g
+                |
+                bes b
+                |
+                fis2 b,4\rest d4
+                |
+              }
+            >>
+            |
+            <<
+              \relative c''' {
+                \once \override NoteColumn.force-hshift = #0.91
+                b1
+                |
+                c2 e
+                |
+                g1
+                |
+                e2 c
+                |
+                bes4^( b2 d4)
+              }
+              \\
+              \relative c''' {
+                % Todo: optimize position
+                \trillSpanUp
+                \once \override TrillSpanner.bound-details.left.padding = #-0.5
+                \once \override TrillSpanner.bound-details.right.padding = #0.0
+                \once \override TrillSpanner.outside-staff-priority = ##f
+                % 1.335 = 1.5 * our magnification of 89/100.
+                \once \override TrillSpanner.Y-offset = #1.335
+                \once \override NoteColumn.force-hshift = #0.91
+                g1\startTrillSpan
+                |
+                g1
+                |
+                g1
+                |
+                g1
+                |
+                g1
+                |
+                % Todo: should be a spanner?
+                \afterGrace d'1\stopTrillSpan^\trill { \stemUp cis16-[ d] }
+              }
+              \\
+              \relative c'' {
+                \voiceFour d4 g,4\rest g2\rest
+                |
+                s1
+                |
+                s1
+                |
+                s1
+                |
+                s1
+                |
+                g4\rest d'4 b2\rest
+              }
+            >>
+            |
+            \ottava #1
+            \set Staff.ottavation = "8"
+            <d' f b d>4\ff 2\sf <c d f c'>4
+            |
+            <b d f b>-. <c d f c'>-. <d f d'>-. <b d e b'>\p-.
+            |
+            <c e c'>-. <b d e b'>-. <c e c'>-. <a c e a>-.
+            |
+            <a e' g>-. <a cis g'>-. <a c fis>-. <a c a'>-.
+            |
+            \stemUp
+            <g b g'>-.\cresc <d b' d>-. <fis c' fis>-. <a c fis a>-.
+            |
+            <g b g'> <d b' d> <fis c' fis> <a c fis a>
+            |
+            \stemNeutral
+            g8\f g' d, d' fis,\sf fis' a, a'
+            |
+            g,\sf g' d, d' fis,\sf fis' a, a'
+            |
+          }
+          \alternative {
+            \relative c''' {
+              % Todo: change priority of ottava and repeat
+              <g g'>4\ff r4 <a a'> r4
               |
-              d2 c4) 8-[^( d]
+              <bes_~ bes'^~>2 4. r8
+              \ottava #0
               |
-              es2 d4) 8-[^( es]
+              R1
               |
-              f4. g8\noBeam f e4 f8)
+              r2 r4 r8 bes,,8
               |
-              es8-[ d f es]
-              s4 bes'8-[^( c]
+              bes'4.\sfp 8 4 r4
               |
-              d2 c4)
-              c8-[ d]
-              |
-              es2 d4 d8-[ es]
-              |
-              f4. g8\noBeam f es4 f8
-              |
-              es8 d4 es8\noBeam d8-[ c d es]
-              |
-              g-[ f g f]
-              f-[ es f es]
-              |
-              es-[ d f d]
-              d-[ c d es]
-              |
-              g-[^( f)]
-              a8\rest
-              g8\noBeam^( 8) aes4 a8
-              |
+              \set Timing.measureLength = #(ly:make-moment 7/8)
+              r2 r4 r8
+            }
+            \relative c''' {
               \ottava #1
               \set Staff.ottavation = "8"
-              c8^(-[\f b a! g]) f4-. <f a>-.
+              \set Timing.measureLength = #(ly:make-moment 4/4)
+              <g g'>4\sf r4 <a a'>\sf r4
               |
-              bes2\sf
-              \ottava #0
+              <b b'>1\ff\fermata
+              |
+              <b b'>4\sf r4 <c c'>\sf r4
+              |
+              <d d'>1\ff\fermata
             }
-            \\
-            \relative c' {
-              s4
-              |
-              e4\rest g4 a as
-              |
-              g a bes g
-              |
-              f bes g a
-              |
-              <f bes>4 4 \stemUp <a c>4^\fermata \stemDown s4
-              |
-              b4\rest
-              g'4 a aes
-              |
-              g a! bes g
-              |
-              f bes g a
-              |
-              f bes_~ bes <f a>
-              |
-              <f bes> bes g a
-              |
-              f4 bes2 <f a>4
-              |
-              <f bes>4 <bes e>4
-              es <c es>
-              |
-              <bes d> <bes es> <bes d> <a c>
-              |
-              <bes d f>2
-            }
-          >>
-          <bes d bes'>2
+          }
           |
-          <d f d'>4-.\p <bes d bes'>-. <d f d'>-. <c es c'>-.
-          |
-          <es g es'>2\f <c es c'>2\f
-          |
-          <es g es'>4-.\p <cis e cis'>-. <es ges es'!>-. <d f d'>-.
-          |
-          <f aes f'>2\f
-          % note: the \f is omitted here.
-          % todo should it?
-          <d f d'>2
-          |
-          <f aes f'>4-.\p <d fis d'>-. <f aes f'!>-. <es g es'>-.
-          |
-          <g bes g'>2\f <es g bes es>2\sf
-          |
-          <g bes g'>4-.\p <e bes' e>-. <ges bes ges'>-. <f bes f'>-.
-          |
-          \ottava #1
-          \set Staff.ottavation = "8"
-          <a bes a'>4
-          <fis bes fis'>
-          <a bes a'>
-          <g bes g'>
-          |
-          <bes es g bes>
-          <gis gis'>
-          <bes bes'>
-          <a a'>
-          |
-          <c c'>\f
-          <bes bes'>
           \ottava #0
-          <g g'>\sf
-          <f f'>
+          <d,, g d'>4\pp 2 <es g c>4-.
           |
-          <es es'>\sf
-          <d d'>
-          <c c'>\sf
-          <bes bes'>
+          <f g b>-. <es g c>-. <d g d'>-. <f g b>-.
           |
-          <g g'>\sf
-          <f f'>
-          <es es'>\sf
-          <d d'>
+          <es g es'>4 2 <d f g d'>4-.
           |
-          <c c'>\sf
-          <bes bes'>
-          <g g'>\sf
-          <f f'>
+          <es g c>4-. <d f g d'>-. <es g es'>-. <es g c>-.
           |
-          a' \relative c' f c \relative c' f
+          <f as f'>4 2 <es g es'>4-.
           |
-          f \relative c' f a \relative c' f
-          |
-          c \relative c' f f \relative c' f
-          |
-          f\pp \relative c' f f r4
-          |
-          r4 r8
-          % Note: first explicitly does not have staccato.
-          <d, f bes d>8\f 4-. <d f bes es>8-.-[ <d f bes d>-.]
-          |
-          4 <bes d f bes>4 r2
-          |
-          r4 r8
-          <d f bes d>8
-          <d d'>4
-          <d fis bes d>8-[ 8]
-          |
-          4 4 r4\fermata r8 r8
-          |
-          r4 <fis, a d>4 r4 4
-          |
-          r4 4 r4 4
-          |
-          r4 <a c d fis> r4 4
-          |
-          r4 <a c fis a> r4 <c fis a c>
-          |
-          \ottava #1
-          \set Staff.ottavation = "8"
-          r4 <fis a c fis> r4 <a c a'>
-          |
-          r4 <c a' c> r4 <c fis a c>
-          |
+          <d f d'>-. <es g es'>-. <f as f'>-. <d f bes d>-.
           \bar "||"
-          \key g \major
-          <c fis a c>4
-          \ottava #0
-          <a c>8-[ <gis b>] <a c>4
-          <fis, a>8-[ <g bes>]
+          \key es \major
+          <g, es' g>\sf r4 <as f' as>\sf r4
           |
-          <fis a>4
-          <a' c>8-[ <gis b>] <a c>4
-          \ottava #1
-          \set Staff.ottavation = "8"
-          fis'8-[ a]
-          |
-          c8-[ d c b]
-          c-[ d e d]
-          |
-          a-[ b c a]
-          fis-[ g a fis]
-          |
-          \ottava #0
-          c\p-[ d e c]
-          a-[ b c a]
-          |
-          fis-[ g a fis]
-          <a, c d>4 r4
-          |
-          \ottava #1
-          \set Staff.ottavation = "8"
-          b''8 c b a b c d b
-          |
-          g a b g d fis g d
-          |
-          b c d c g a b g
-          |
-          \ottava #0
-          d fis g b, g a b g
-          |
-          <d fis a>4\p
-          e''8-[ d] e d c e
-          |
-          c b a c a g fis a
-          |
-          e\p d c e c b a c
-          |
-          a g fis a c b a c
-          |
-          <d, f>4\p
-          \ottava #1
-          \set Staff.ottavation = "8"
-          d'''8 c d c b d
-          |
-          b a g b
-          \ottava #0
-          b, a g b
-          |
-          d, c b d b' a g b
-          |
-          d c b d e4 <a, d fis>
-          |
-          <g d' g>4\p r4 r2
-          |
-          r4 <fis, a>4 <g b>8 r8 <b' g'>8^( <a fis'>)
-          |
-          <b g'>4 <g b g'>4 <fis a fis'> <eis b' eis>
-          |
-          <g eis'> <fis d'>4 4
-          <<
-            \relative c''' {
-              d8 c!
-              |
-              b4 g'4 e8 r8
-              \ottava #1
-              \set Staff.ottavation = "8"
-              c'-[ a]
-              |
-              fis4 d' b8 r8
-              \ottava #0
-              g8-[^( fis]^)
-              |
-              \stemDown g4 e c <fis, b> \stemUp
-              |
-              b2 \stemDown s4 s4
-              |
-              \stemUp
-              a2. d4
-              |
-              b2. cis4
-              |
-              fis,2. b4
-              |
-              f8\noBeam e4 a8 es8 d4 g8
-              |
-              s1
-              |
-              s2 g,4 e'!8-[ d]
-              |
-              s1
-              |
-              s2 g,4 e'!8-[ d]
-              |
-              \stemDown d8-[^( <b g'> <d b'> <c a'>]
-              \stemUp g'2^~
-              |
-              g2 fis4) d!8-[ d']
-              |
-              s1
-              |
-              s2 g,4 e'8-[ d]
-              |
-              s1
-              |
-              s2 g,4 e'8-[ d]
-              |
-              d8-[ g, b a]
-              g2^~
-              |
-              g2 fis4 g4
-              |
-              s2 c2^~
-              |
-              c2 b4 c4
-              |
-              s2 fis2^~
-              |
-              fis2 e2^~
-              |
-              e4
-            }
-            \\
-            \relative c''' {
-              g8 a
-              |
-              s4 g4. s4.
-              |
-              s4 d'4. s4.
-              |
-              s1
-              |
-              fis,4 a8-[ g] g4 <g_~ bes e>
-              |
-              g4 g8-[ f] f4 <f_~ aes>4
-              |
-              f4 f8-[ e] e4 <e_~ g>4
-              |
-              e4 e8-[ dis] d4 <d f>4
-              |
-              d4 cis4 c4 b4
-              |
-              d8 d' cis c a fis es d
-              |
-              cis c a fis
-              es d
-              g4
-              |
-              d'8 d' cis c a fis es d
-              |
-              cis c a fis
-              es d
-              g4
-              |
-              s2
-              b8-[_( dis e b]
-              |
-              bes-[ dis e bes]
-              a-[ cis]) s4
-              |
-              \ottava #1
-              \set Staff.ottavation = "8"
-              d'8 d' cis c a fis es d
-              |
-              cis c a fis
-              es d
-              g4
-              |
-              d'8 d' cis c a fis es d
-              |
-              cis c a fis
-              es d
-              g4
-              \ottava #0
-              |
-              s8 b,8-[ d c] b-[ dis e b]
-              |
-              bes-[ dis e bis]
-              a-[ d g, c]
-              |
-              g'8-[ <e c'> <g e'> <f d'>]
-              e-[ gis a e]
-              |
-              es-[ gis a es]
-              d-[ gis c, f]
-              |
-              % Note: original has this in the upper voice for some reason.
-              c'8-[ <a f'> <c a'> <bes g'>]
-              aes-[ f aes g]
-              |
-              aes-[ cis d aes]
-              g-[ b c! g]
-              |
-              c4
-            }
-          >>
-          <e g c e>4\ff <b' d> <c e>8-[ <d f>]
-          |
-          <e g>4 <c e> b,2\rest
-          |
-          b4\rest <e g c e>4\sf <b' d> <c e>8-[ <d f>]
-          |
-          <e g>4
-          <g, a e' g>\sf \relative c'' b4\rest
-          <g cis e g>\sf
-          |
-          \relative c'' b4\rest <g b d g>\sf
-          \relative c'' b4\rest <g a cis g'>\sf
-          <g b d g>2^(\sf <g_~ b^~ d^~>2)
-          |
-          <g b d>4^( <d g b>4)
-          d8-[ fis g b]
-          |
-          \ottava #1
-          \set Staff.ottavation = "8"
-          cis-[ d e d] fis-[ g a g]
-          |
-          ais-[ b c b] d4
-          \ottava #0
-          <d,, a' c>4
-          |
-          <<
-            \relative c'' {
-              % Todo: check these slurs
-              <d g d'>1^(
-              |
-              c'2 <c es>)
-              |
-              <g g'>1^(
-              |
-              <c es>2 c)
-              |
-              g1
-              |
-              d'2 <a c>4. <fis a>8
-              |
-            }
-            \\
-            \relative c''' {
-              s1
-              |
-              g2 g2
-              |
-              d'2 b2
-              |
-              g2 g
-              |
-              bes b
-              |
-              fis2 b,4\rest d4
-              |
-            }
-          >>
-          |
-          <<
-            \relative c''' {
-              b1
-              |
-              c2 e
-              |
-              g1
-              |
-              e2 c
-              |
-              bes4^( b2 d4)
-            }
-            \\
-            \relative c''' {
-              % Todo: optimize position
-              \trillSpanUp
-              \once \override TrillSpanner.bound-details.right.padding = #2.0
-              g1\startTrillSpan
-              |
-              g1
-              |
-              g1
-              |
-              g1
-              |
-              g1
-              |
-              % Todo: should be a spanner?
-              \afterGrace d'1\stopTrillSpan^\trill { \stemUp cis16-[ d] }
-            }
-            \\
-            \relative c'' {
-              \voiceFour d4 b4\rest b2\rest
-              |
-              s1
-              |
-              s1
-              |
-              s1
-              |
-              s1
-              |
-              b4\rest d4 b2\rest
-            }
-          >>
-          |
-          \ottava #1
-          \set Staff.ottavation = "8"
-          <d' f b d>4\ff 2\sf <c d f c'>4
-          |
-          <b d f b>-. <c d f c'>-. <d f d'>-. <b d e b'>\p-.
-          \ottava #0
         }
       }
       %---------------------------------------------------------------------
@@ -869,6 +938,63 @@ one-section-one = {
           |
           \repeat tremolo 2 { g,8 g' }
           g,8-[ g' gis, gis']
+          |
+          a,8-[ a' gis, gis']
+          a,-[ a' c, c']
+          |
+          cis,-[ cis' e, e']
+          d,-[ d' d, d']
+          |
+          d,-[ d' g, g']
+          d,-[ d'] d-[ d']
+          |
+          d,,-[ d' g, g']
+          d,-[ d'] d-[ d']
+          |
+          g,,-[ g' d, d']
+          fis,-[ fis' a, a']
+          |
+          g,-[ g' d, d']
+          d,,-[ d' a a']
+          |
+          <g, g'>4 r4 <a a'> r4
+          |
+          <bes_~ bes'^~>2 4. bes'8\p
+          |
+          bes'4.\sfp 8 4 r4
+          |
+          r2 r4 r8 d,8
+          |
+          d'4. 8 4 r4
+          |
+          r2 r4 r8
+          |
+          <g,,, g'>4 r4 <a a'> r4
+          |
+          <b b'>1\fermata
+          |
+          <b b'>4 r4 <c c'> r4
+          |
+          <d d'>1\fermata
+          |
+          \clef treble
+          b'''8 g b g b g c g
+          |
+          d' g, c g b g d' g,
+          |
+          c g c g c g b g
+          |
+          c g b g c g c c,
+          |
+          bes'8 bes, <d bes'> bes <d bes'> bes <es bes'> bes
+          |
+          <f' bes> bes, <es bes'> bes <d bes'>-[ bes] \clef bass
+          as,-[ as']
+          |
+          \key es \major
+          g,8-[ g' g g']
+          g,,-[ g' g g']
+          |
         }
       }
     >>
