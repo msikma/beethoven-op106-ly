@@ -28,7 +28,7 @@ one-section-one = {
   }
   \header {
     title = "SONATA"
-    subtitle = "Große Sonate für das Hammerklavier"
+    subtitle = "Grosse Sonate für das Hammerklavier"
     composer = "L.Beethoven"
     opus = "Op.106"
     dedication = "Dem Erzherzog Rudolph von Österreich gewidmet"
@@ -593,8 +593,42 @@ one-section-one = {
           <d f d'>-. <es g es'>-. <f as f'>-. <d f bes d>-.
           \bar "||"
           \key es \major
-          <g, es' g>\sf r4 <as f' as>\sf r4
+          \ottava #1
+          \set Staff.ottavation = "8"
+          <g es' g>\sf r4 <as f' as>\sf r4
           |
+          <bes g' bes>1\sf
+          \ottava #0
+          <es,, g>4\p r4 <f as> r4
+          |
+          <g_~ bes^~>2 4.\fermata r8
+          |
+          R1
+          |
+          r2 r4 r8
+          \clef bass
+          es,8\f
+          |
+          es'4.\fp 8 4 r4
+          |
+          r2 r4 r8 bes,8\p
+          |
+          es4. 8 4 f8-[ es]
+          |
+          es4 c4 c2^( |
+          as'4) as8-[ g] f4 f8-[ es]
+          |
+          d4 r4 d2^( |
+          bes'4) bes8-[ as] g4 g8-[ f]
+          |
+          e4 r4 e2^( |
+          c'4)\cresc c8-[ bes] as4 as8-[ g]
+          |
+          f4 f8-[ g] a4 a8-[ bes]
+          |
+          g4 g8-[ f] es4 r8\!
+          \clef treble
+          f'8
         }
       }
       %---------------------------------------------------------------------
@@ -995,6 +1029,48 @@ one-section-one = {
           g,8-[ g' g g']
           g,,-[ g' g g']
           |
+          es,,8-[ es'] <es es'>2.
+          |
+          r4 g8-[^( bes)] r4 f8-[^( a])
+          |
+          % TODO: do we need the second tie?
+          r4 <es_~ g^~>4 4.\fermata es8\ff^(
+          |
+          es'4.\fp) 8 4 r4
+          |
+          % TODO: aren't these reversed???
+          r2 r4 r8 g,8
+          |
+          g'4. 8 4 r4
+          |
+          R1
+          |
+          r2 r4 r8 es,,8
+          |
+          as4. 8 4 bes8-[ as]
+          |
+          4 f4 f2_(
+          |
+          bes4) bes8-[ as] g4 g8-[ f]
+          |
+          es4 r4 e2_(
+          |
+          c'4) c8-[ bes] as4 as8-[ g]
+          |
+          f4 r8 c'8 f4 f8-[ es]
+          |
+          d4 d8-[ c] bes4 c8-[ d]
+          |
+          es4 g,4_( a)
+          <<
+            \relative c {
+              f8-[ es]
+            }
+            \\
+            \relative c {
+              c4
+            }
+          >>
         }
       }
     >>
