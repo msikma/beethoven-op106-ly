@@ -629,6 +629,85 @@ one-section-one = {
           g4 g8-[ f] es4 r8\!
           \clef treble
           f'8
+          |
+          <<
+            \relative c'' {
+              bes4. 8 4 c8 bes
+              |
+              bes4 g g2^(
+              |
+              es'4-.) es8-[ d] c4 c8 bes
+              |
+              % TODO: missing the slur?
+              a4 d4\rest a2
+              |
+              f'4 f8 es d4 d8 c
+              |
+              b4 e4\rest b2
+              |
+              g'4 g8 f es4 es8 d
+              |
+              c4 c8 bes! as4 as8 g
+              |
+              f4 f8 g as4 bes
+              |
+              bes4 f'4\rest f4\rest f8\rest bes,8
+              |
+              es4. 8 4 f8-[ es]
+              |
+              es4 c c2^(
+              |
+              as'4-.) as8-[ bes] f4 f8-[ es]
+              |
+              d4-. a'4\rest d,2^(
+              |
+              bes'4) bes8-[ as] g4 g8-[ f]
+              |
+              e4 e,4 f g
+              |
+            }
+            \\
+            \relative c' {
+              s1
+              |
+              es4. 8 4 f8 es
+              |
+              es4 s4 c2
+              |
+              f4 f8 es d4 d8 c
+              |
+              s1
+              |
+              g'4 g8 f es4 es8 d
+              |
+              s4 s2 g8 f
+              |
+              es4 f8 g c,4 c8 bes
+              |
+              c4 d es d8 <d f>
+              |
+              <es g>4.\f g8 4 as8-[ g]
+              |
+              g4 es4 es2
+              |
+              es4 c'8-[ bes] as4 as8-[ g]
+              |
+              f4 g4\rest f2_(
+              |
+              d'4-.) d8-[ c] bes4 bes8-[ as]
+              |
+              g4 g4\rest g2_~
+              |
+              g4
+              \change Staff = "left"
+              \stemUp
+              g,8-[
+              \stemDown
+              \change Staff = "right"
+              des'8] c4 c8-[ bes]
+              |
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -1065,10 +1144,86 @@ one-section-one = {
           <<
             \relative c {
               f8-[ es]
+              |
+              d4 s2 bes'4
+              |
+              s1
+              |
+              s4 c4 s2
+              |
+              s1
+              |
+              b4 c4\rest b2
+              |
+              s1
+              |
+              % Todo: No rest in between these?
+              c4 c2 s4
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              
             }
             \\
             \relative c {
               c4
+              |
+              bes4 bes8 c d4 es8 f
+              |
+              es4 d4\rest d2\rest
+              |
+              c4 c8 d e4 f8 g
+              |
+              f4 d4\rest f4 f8 es!8
+              |
+              d4 d8 es f4 g8 as8
+              |
+              g4 d4\rest g4 g8 f
+              |
+              es4 es8 f g4 a8 b
+              |
+              c4 d,8 e f4 \stemNeutral f,8 g
+              |
+              as!4 bes!4 ces4 bes8 bes,8
+              |
+              es4. 8 4 f8 es
+              |
+              <<
+                \relative c {
+                  c!4. 8 4 d8-[ c]
+                  |
+                  c4 as4 as2^(
+                  |
+                  % TODO should this have a staccato?
+                  f'4-.) f8-[ es] d4 d8-[ c]
+                  |
+                  bes4-. f'4\rest bes,2^(
+                  |
+                  g'4) g8-[ f] e4 e8-[ d]
+                  |
+                  c4 s4 c4 e4
+                  |
+                }
+                \\
+                \relative c, {
+                  es4 c4 c2
+                  |
+                  as'4 as8-[ g] f4 f8-[ es]
+                  |
+                  d4 e4\rest d2_(
+                  |
+                  bes'4-.) bes8-[ as] g4 g8-[ f]
+                  |
+                  e4 e4\rest e2
+                  |
+                  c'4 c8-[ b] as4 g
+                  |
+                }
+              >>
             }
           >>
         }
