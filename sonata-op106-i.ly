@@ -665,6 +665,15 @@ one-section-one = {
               |
               e4 e,4 f g
               |
+              aes2. a4
+              |
+              bes4 g'8 f es4 es8 d
+              |
+              c2. cis4
+              |
+              d4 es8 d c!4 b8 g
+              |
+              s4
             }
             \\
             \relative c' {
@@ -706,8 +715,51 @@ one-section-one = {
               \change Staff = "right"
               des'8] c4 c8-[ bes]
               |
+              s4\p f'8 es d4 d8 c
+              |
+              bes4 e4\rest e2\rest\cresc
+              |
+              e4\rest c4 f2
+              |
+              f4 g8 f es4 d
+              |
+              <c' es>4.\f
             }
           >>
+          <c' es>8 4 <d f>8 <c es>
+          |
+          4 <aes c>4 2\sf
+          |
+          <f' aes>4 8 <es g>8 <des f>4 8 <c es>
+          |
+          <bes des>4 r4 2\sf
+          |
+          <g' bes>4 8 <f aes> <e g>4 8 <d! f>
+          |
+          <c e>4 r4 <c f>2\sf
+          |
+          <aes' c>4 8^( <g bes>) <f aes>4-. <g bes>8^( <f aes>)
+          |
+          <es g>4-. <aes f'>8^( <g es'>) <f d'>4-. <g es'>8^( <f d'>)
+          |
+          % TODO: there is really no staccato here?
+          <es c'>4 <g bes>8^( <aes c>
+          <bes des>4-.) <f aes>8^( <g bes>
+          |
+          <aes c>4-.)
+          <<
+            \relative c'' {
+              es8 f g4 b,8\rest <b d>
+            }
+            \\
+            \relative c'' {
+              c4 b s4
+            }
+          >>
+          |
+          <g_~ b^~>2\ff 4. <b, d>8
+          |
+          %<g b>2.\sf
         }
       }
       %---------------------------------------------------------------------
@@ -1207,6 +1259,16 @@ one-section-one = {
                   |
                   c4 s4 c4 e4
                   |
+                  % TODO double check this slur
+                  aes4^( c,4 f es)
+                  |
+                  d4 d g f
+                  |
+                  es aes8 g f4 f8 es
+                  |
+                  d4 bes'8 aes g4 f4
+                  |
+                  <c es>4
                 }
                 \\
                 \relative c, {
@@ -1222,10 +1284,66 @@ one-section-one = {
                   |
                   c'4 c8-[ b] as4 g
                   |
+                  f'4 s2.
+                  |
+                  s1
+                  |
+                  s1
+                  |
+                  bes,4 b c d
+                  |
+                  s4
+                }
+                \\
+                \relative c, {
+                  \voiceFour
+                  s1
+                  |
+                  s1
+                  |
+                  s1
+                  |
+                  s1
+                  |
+                  s1
+                  |
+                  s1
+                  |
+                  % TODO Fix this note, should be more right
+                  f2. fis4
+                  |
+                  g2. g4
+                  |
+                  aes2. a4
+                  |
                 }
               >>
             }
           >>
+          r4 r4 r8 \stemUp <c es>8
+          |
+          \stemNeutral
+          <f aes>4. 8 4 <g bes>8 <f aes>
+          |
+          4 <des f>4 2
+          |
+          <bes' des>4 8 <aes c> <g bes>4 8 <f aes>
+          |
+          <e g>4 r4 2
+          |
+          <c' e>4 <c es>8 <bes des> <aes c>4 8 <g bes>
+          |
+          <f aes>4 <d! f>8^( <es g>) <f aes>4-. <c es>8^( <d f>)
+          |
+          <es g>4-. \stemDown <b d>8^( <c es>) <d f>4-. <a c>8^( <bes d>)
+          |
+          <c es>4-. \stemNeutral
+          <des' f>8^( <c es> <bes des>4-.) <c es>8^( <bes des>
+          |
+          <aes c>4-.) 4 <g d>4 r4
+          |
+          \clef treble r4 r8 <g' b>8 4. \clef bass <g, b>8
+          |
         }
       }
     >>
