@@ -759,7 +759,218 @@ one-section-one = {
           |
           <g_~ b^~>2\ff 4. <b, d>8
           |
-          %<g b>2.\sf
+          <g' b>2.\sf
+          <<
+            \relative c''' {
+              es8^( d)
+              |
+              g^(-[ f])
+            }
+            \\
+            \relative c''' {
+              <g bes>4
+              |
+              <b d>4
+            }
+          >>
+          r4
+          <<
+            \relative c''' {
+              g8^(-[ f])
+            }
+            \\
+            \relative c'' {
+              <b d>4
+            }
+          >>
+          r4
+          |
+          <<
+            \relative c'' {
+              g8^(-[ f])
+            }
+            \\
+            \relative c' {
+              <b d>4
+            }
+          >>
+          r4
+          <<
+            \relative c''' {
+              g8^(-[ f])
+            }
+            \\
+            \relative c'' {
+              <b d>4
+            }
+          >>
+          r4
+          |
+          <g_~ c^~ es^~>2\ff 4. <es_~ g_~>8
+          |
+          <es_~ g_~ c^~ es^~>2\sf 4
+          <<
+            \relative c'''' {
+              g8^(-[ f])
+            }
+            \\
+            \relative c''' {
+              <g c>4
+            }
+          >>
+          |
+          <<
+            \relative c'''' {
+              as8^(-[ g])
+            }
+            \\
+            \relative c''' {
+              <c es>4
+            }
+          >>
+          r4
+          <<
+            \relative c''' {
+              as8^(-[ g])
+            }
+            \\
+            \relative c'' {
+              <c es>4
+            }
+          >>
+          r4
+          |
+          <<
+            \relative c'' {
+              as8^(-[ g])
+            }
+            \\
+            \relative c' {
+              <c es>4
+            }
+          >>
+          r4
+          <<
+            \relative c''' {
+              as8^(-[ g])
+            }
+            \\
+            \relative c'' {
+              <c es>4
+            }
+          >>
+          r4
+          |
+          <f_~ d'^~ f^~>2 4. <d f>8
+          |
+          <<
+            \relative c''' {
+              <d^~ f^~>2 4
+              g8^(-[ f])
+              |
+              bes8^(-[ as])
+            }
+            \\
+            \relative c'' {
+              \relative c'' { b4\rest b8\rest }
+              f8 bes4
+              <bes d>4
+              |
+              <d f>4
+            }
+          >>
+          r4
+          <<
+            \relative c''' {
+              bes8^(-[ as])
+            }
+            \\
+            \relative c'' {
+              <d f>4
+            }
+          >>
+          r4
+          |
+          <<
+            \relative c'' {
+              bes8^(-[ as])
+            }
+            \\
+            \relative c' {
+              <d f>4
+            }
+          >>
+          r4
+          <<
+            \relative c''' {
+              bes8^(-[ as])
+            }
+            \\
+            \relative c'' {
+              <d f>4
+            }
+          >>
+          r4
+          |
+          <es'_~ g^~>2 4. <g, bes>8
+          |
+          <<
+            \relative c''' {
+              <es_~ g^~>2 4 s4
+              |
+              \ottava #1
+              \set Staff.ottavation = "8"
+              <fis_~ a^~>2 4. <fis, a>8
+              |
+              <fis'^~ a^~>2 4. <fis, b>8
+              |
+              \bar "||"
+              \key c \major
+              <gis'^~ b^~>2 4. <gis, b>8
+              |
+              <gis'^~ b^~>2 4. cis,8
+              |
+              cis'2^~ 4. cis,8
+              |
+              cis'2^~ 4. <fis,, a d>8
+              |
+              d''4.
+            }
+            \\
+            \relative c''' {
+              \relative c'' { b4\rest b8\rest }
+              g8
+              c4
+              \relative c'' b8\rest
+              <fis a>8
+              |
+              s1
+              |
+              \relative c'' { b4\rest b8\rest }
+              a,8 d4. s8
+              |
+              <b_~ d_~ f!_~>2 4. s8
+              |
+              <b_~ d_~ f!_~>2 4. <e, g! b>8
+              |
+              <e'_~ g_~ b_~>2 4. <e, g! b>8
+              |
+              <e'_~ g_~ b_~>2 4. s8
+              |
+              <d fis a>4.
+            }
+          >>
+          d'8 d'4. d,8
+          |
+          d'4. d,8^( d'4.) d,8^(
+          |
+          d'4.) d,8^( d'4.) d,8^(
+          |
+          d'4.) d,8^( d'4.) dis,8
+          |
+          \bar "||"
+          \key b \minor
+          
         }
       }
       %---------------------------------------------------------------------
@@ -1344,6 +1555,63 @@ one-section-one = {
           |
           \clef treble r4 r8 <g' b>8 4. \clef bass <g, b>8
           |
+          4. <g, b>8 4 r4 \clef treble
+          |
+          r4 es''''8-[^( d)] r4 es,8-[^( d)]
+          |
+          r4 es,8-[_( d)] r4 es'8-[^( d)]
+          |
+          % TODO is this ff on the rigth note?
+          c,4.\ff <c' es>8 4. <c, es>8
+          |
+          4. \clef bass <c, es>8 4 r4 \clef treble
+          |
+          r4 f'''8^(-[ es]) r4 f,8^(-[ es])
+          |
+          r4 f,8_(-[ es]) r4 f'8^(-[ es])
+          |
+          bes4. <bes' d>8 4. <bes, d>8
+          |
+          4. \clef bass <bes, d>8 4 r4 \clef treble
+          |
+          r4 g'''8^(-[ f]) r4 g,8^(-[ f])
+          |
+          r4 g,8_(-[ f]) r4 g'8^(-[ f])
+          |
+          <es, es'>4. <es' g>8 4. <es, g>8
+          |
+          4. \clef bass <es, es'>8 4 r4 \clef treble
+          |
+          r4 r8 <d' d'>8 4. \clef bass <d, d'>8
+          |
+          4. <d, d'>8 4 r4 \clef treble
+          |
+          \key c \major
+          r4 r8
+          <d'' f gis b d>8 4. \clef bass
+          <d, f gis b d>8
+          |
+          4. <d, f gis b d>8 4 r4 \clef treble
+          |
+          r4 r8
+          <d'' g! bes e>8 4. \clef bass
+          <d, g bes e>8
+          |
+          4. <d, g bes e>8 4 r4
+          |
+          \clef treble
+          r4 r8 <d'' fis a d>8 4. \clef bass
+          <d, d'>8
+          |
+          4. <d, d'>8 4. \stemUp d'8_(
+          |
+          d,4.)
+          \stemNeutral
+          \repeat unfold 3 { d''8^( d,4.) }
+          \clef treble d''8
+          |
+          \key b \minor
+          
         }
       }
     >>
