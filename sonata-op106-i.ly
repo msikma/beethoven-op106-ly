@@ -966,11 +966,69 @@ one-section-one = {
           |
           d'4.) d,8^( d'4.) d,8^(
           |
-          d'4.) d,8^( d'4.) dis,8
+          d'4.) d,8^( d'4.) \ottava #0
+          dis,,8
           |
           \bar "||"
           \key b \minor
-          
+          <<
+            \relative c''' {
+              dis1
+              |
+              e2 g,
+              |
+              b1^(
+              |
+              <e, g>2 e)
+            }
+            \\
+            \relative c''' {
+              dis2 dis,2
+              |
+              e1
+              |
+              fis2 dis
+              |
+              b2 b
+            }
+          >>
+          |
+          d!2^( dis
+          |
+          fis e4 cis)
+          |
+          dis4_( d, dis2)
+          |
+          fis2_( e4 cis)
+          |
+          <b' dis>8 e d cisis
+          d e fis eis
+          |
+          g fis eis f
+          % Todo: force a grace natural-sharp on the cis
+          e dis e cis!
+          |
+          <<
+            \relative c'' {
+              % todo: is the position of the 2 rest correct?
+              dis4 d4\rest d2\rest
+            }
+            \\
+            \relative c' {
+              dis8 e d cisis
+              d e fis eis
+            }
+          >>
+          |
+          g8 fis eis fis
+          e dis e fis
+          |
+          <fis, cis' e>4 r4 r2
+          |
+          \bar "||"
+          \key gis \minor
+          r2 r4 r8 fis'8\p
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -1611,6 +1669,68 @@ one-section-one = {
           \clef treble d''8
           |
           \key b \minor
+          \showTupletBracket
+          \explicitTuplets
+          \tuplet 3/2 { b,4 b' ais }
+          \tuplet 3/2 { b fis b }
+          \hideTupletBracket
+          \implicitTuplets
+          |
+          \tuplet 3/2 { g b g }
+          \tuplet 3/2 { b e, b' }
+          |
+          \tuplet 3/2 { dis, b' dis, }
+          \tuplet 3/2 { b' b, b' }
+          |
+          \tuplet 3/2 { b, e b }
+          \tuplet 3/2 { g' e g }
+          |
+          \tuplet 3/2 { fis b fis }
+          \tuplet 3/2 { b fis b }
+          |
+          \tuplet 3/2 { fis ais fis }
+          \tuplet 3/2 { ais fis ais }
+          |
+          \tuplet 3/2 { fis b fis }
+          \tuplet 3/2 { b fis b }
+          |
+          \tuplet 3/2 { ais cis ais }
+          \tuplet 3/2 { cis ais cis }
+          |
+          \tuplet 3/2 { fis, b fis }
+          \tuplet 3/2 { b fis b }
+          |
+          \tuplet 3/2 { fis ais fis }
+          \tuplet 3/2 { ais fis ais }
+          |
+          \tuplet 3/2 { fis b fis }
+          \tuplet 3/2 { b fis b }
+          |
+          \showTupletBracket
+          \explicitTuplets
+          \tuplet 3/2 { ais cis ais }
+          \hideTupletBracket
+          \implicitTuplets
+          cis4 r8
+          \clef bass
+          fis,,,,8\f
+          |
+          <<
+            \relative c {
+              d2\rest d4\rest d8\rest
+              fis8
+              |
+              \key gis \minor
+              ais4. 8 4 b8 ais\p
+            }
+            \\
+            \relative c, {
+              ais4. 8 4 b8 ais
+              |
+              ais4 fis4
+            }
+          >>
+          |
           
         }
       }
