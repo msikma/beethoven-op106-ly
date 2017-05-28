@@ -1029,6 +1029,84 @@ one-section-one = {
           \key gis \minor
           r2 r4 r8 fis'8\p
           |
+          cis'4. 8 4
+          <<
+            \relative c'' {
+              dis8 cis
+              |
+              cis4 ais b2\rest
+              |
+              s2.. ais8\p
+              |
+              e'4. 8 4 f4\rest
+              |
+              s2.. cis8
+              |
+              ais'4. 8 4 b4\rest
+              |
+              s4 s8
+            }
+            \\
+            \relative c' {
+              \relative c' e8\rest cis8
+              |
+              e4. 8 4 fis8 e
+              |
+              e8 cis8 s4 s4 s4
+              |
+              s4. e8 cis'4. 8
+              |
+              4 s2.
+              |
+              s4 g8\rest cis,8 ais'4. 8
+              |
+              4 g8\rest
+            }
+          >>
+          s8 cis,2_~
+          |
+          cis4. g8 e'2_~
+          |
+          e8 g, e'4. g'8^( e'4)
+          |
+          gis,,,!8_( e'4.) gis'!8^( e'4.)
+          |
+          ais,,,8_( e'4.) ais'8^( e'4.)
+          |
+          ais,,,8_( f'4.) ais'8^( f'4.)
+          |
+          \bar "||"
+          \key bes \major
+          <d, f bes d>4.\ff 8 4 <d f bes es>8 <d f bes d>8
+          |
+          4 <bes d f bes>4 r4 r8 <d f>8
+          |
+          <f bes f'>4. <f bes d f>8 4 <f bes d g>8 <f bes d f>8
+          |
+          4 <d f bes d>4 r4
+          <g bes>8\p <a c>
+          |
+          <f bes d>2 <f a c>4
+          <<
+            \relative c'' {
+              <a c>8^( <b d>)
+              |
+              <g c e>2^( <g bes d>4) d'8 es
+              |
+              f4.^( g8\noBeam) f8^( es4 f8)
+              |
+            }
+            \\
+            \relative c' {
+              f4
+              |
+              s2. bes4_~
+              |
+              bes4 <g bes>4 g a
+              |
+            }
+          >>
+          
         }
       }
       %---------------------------------------------------------------------
@@ -1722,6 +1800,7 @@ one-section-one = {
               |
               \key gis \minor
               ais4. 8 4 b8 ais\p
+              |
             }
             \\
             \relative c, {
@@ -1731,7 +1810,80 @@ one-section-one = {
             }
           >>
           |
-          
+          ais''4 fis r4 s4
+          |
+          % todo should this fis point down
+          r2 r4 r8 fis,,8\ff
+          |
+          <<
+            \relative c, {
+              s4 \relative c' a8\rest fis8 e'4. s8
+              |
+              s1
+              |
+              s4 \relative c' a8\rest cis8 ais'4. s8
+              |
+              s1
+              |
+              % todo this probably needs more rests to indicate the rhythm.
+              s4. e8 s2
+              |
+            }
+            \\
+            \relative c, {
+              e4. 8 4 s8 e'8
+              |
+              4
+              \relative c { d4\rest d4\rest d8\rest }
+              cis,8
+              |
+              ais'4. 8 4. ais'8
+              |
+              ais4 s2 \relative c d8\rest \stemUp e,8_(
+              |
+              \stemDown cis'2_~) 4. g8
+              |
+            }
+          >>
+          % todo no tie here?
+          e''2_~ 4. g,8_(
+          |
+          \stemUp
+          e'4.)
+          \clef treble
+          \relative c'' { g8_( e'4.) }
+          \clef bass
+          \relative c { gis!8_( | e'4.) }
+          \clef treble
+          \relative c'' { gis!8_( e'4.) }
+          \clef bass
+          % todo: I think a slur is missing so I added it
+          \relative c { ais8_( | e'4.) }
+          \clef treble
+          \relative c'' { ais8_( e'4.) }
+          \clef bass
+          \relative c { ais8_( | f'4.) }
+          \clef treble
+          \relative c'' { ais8_( f'4.) }
+          \clef bass
+          \stemNeutral
+          <bes, bes'>8\f
+          |
+          \key bes \major
+          <bes' bes'>4 c'8 bes f4 g8 f
+          |
+          d4 es8 d bes4 c8 bes
+          |
+          \grace { d,16-[ d'] } d'4 es8 d bes4 d8 bes
+          |
+          f4 bes8 f d8 bes es c
+          |
+          bes4 c8 bes <f f'>4 es'8 d
+          |
+          c4 d8 c <g g'>4 <f' as>8 <es g>
+          |
+          <d f>4 <des fes> <c es> <f,! c'>4
+          |
         }
       }
     >>
