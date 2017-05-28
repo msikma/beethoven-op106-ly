@@ -55,7 +55,7 @@ The Hammerklavier is the only sonata for which Beethoven included explicit tempo
 
 **1st movement**
 
-* Stretches of a tenth occur in M 16, 76-79.
+* Stretches of a tenth occur in M 16, 76-79, 165, 167.
 * 16 u: the first chord, which stretches a tenth, appears as an arpeggio in some editions.
 
 **2nd movement**
