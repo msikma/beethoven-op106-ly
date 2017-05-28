@@ -620,6 +620,7 @@ two-section-one = {
               \voiceTwo
               \once \override Slur.height-limit = #4
               \once \override Slur.positions = #'(0 . 3)
+              % Todo: move to lower staff
               <a, c>8.^(\p <c es>16 | <c es>2_\textDecresc "dimin." <bes d>4 |
               <a c>4 <g bes>4 <f_~ a^~>4 |
               <f a>4 <e g>4 <es_~ c'^~>4\pp |
@@ -910,11 +911,12 @@ two-section-one = {
             }
           >>
           r8 \clef treble
-          c''8.^( es16 | es4 c8) r8 \clef bass
+          c''8.^( es16) | es4^( c8) r8 \clef bass
           <g,,_~ g'^~>4 | <g g'>2
           <c,_~ c'^~>4 | <c c'>2
           \once \override Slur.positions = #'(0 . 3.5)
           \once \override Slur.eccentricity = #0.5
+          % Todo: check this slur.
           <f,_~ f'^~>4_( | <f f'>4
           <f' f'>8) r8 <bes, bes'>8 r8 |
           <bes bes'>8 r8 r4 \clef treble
@@ -964,7 +966,7 @@ two-section-one = {
             }
           >>
           r8
-          c''8.^( es16 | es4 c8) r8
+          c''8.^( es16) | es4^( c8) r8
           <g_~ g'^~>4 | <g g'>2
           <c,_~ c'^~>4 | <c c'>2
           <f,_~ f'^~>4 | <f f'>2
