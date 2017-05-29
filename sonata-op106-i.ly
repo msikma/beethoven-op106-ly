@@ -1095,6 +1095,24 @@ one-section-one = {
               |
               f4.^( g8\noBeam) f8^( es4 f8)
               |
+              es8-[ d <f, as d f> <es g c es>] <c a' c>4\fermata d'8^( es
+              |
+              f4. g8 es4. f8)
+              |
+              es8-[^( d f es]) c4 es8^( f)
+              |
+              g4.^( a8 f4. g8)
+              |
+              f8-[^( es g f]) d4 f8 ges8
+              |
+              a4. bes8 ges4 8-[ as]
+              |
+              bes4. ces8 a!4^( bes8-[ ces])
+              |
+              des4. es8\noBeam des8 ces4 des8
+              |
+              ces8^( bes4 ces8) bes8-[ as bes ces]
+              |
             }
             \\
             \relative c' {
@@ -1103,6 +1121,25 @@ one-section-one = {
               s2. bes4_~
               |
               bes4 <g bes>4 g a
+              |
+              bes4 s2.
+              |
+              g8\rest a8 bes4_~ 8-[ ges] a4_~
+              |
+              8-[ bes]
+              f4_~ f4 es8-[_( f]
+              |
+              g!8-[ a] bes4.) a8 bes4_~
+              |
+              bes4 4_~ 4 g4\rest
+              |
+              g8\rest a8 bes4_~ 4 ges8-[ as]
+              |
+              bes8-[ c] des4_~ des8-[ f ges as]
+              |
+              bes4 ges4_~ ges4 f_~
+              |
+              f_( ges) ges8-[ f g as]
               |
             }
           >>
@@ -1884,6 +1921,55 @@ one-section-one = {
           |
           <d f>4 <des fes> <c es> <f,! c'>4
           |
+          <g bes>4 <d b'>8 <e c'> <f c>4\fermata
+          <<
+            \relative c' {
+              b8-[ c]
+              |
+              d4. es8 c4. d8
+              |
+              c8-[ bes d c]
+              a4
+              \clef treble
+              c8-[ d]
+              |
+              es4. f8 d4. es8
+              |
+              d8-[ c es d]
+              bes4 d8-[ es]
+              |
+              f4. ges8 es4 es8-[ f]
+              |
+              ges4. as8 f8-[ ces' bes as]
+              |
+              ges4 bes4_~ bes as4^~
+              |
+              as4 ges4 des' ces
+              |
+            }
+            \\
+            \relative c {
+              f4
+              |
+              f1_~
+              |
+              f2_~
+              f4
+              bes4
+              |
+              bes1_~
+              |
+              bes4 bes4_~ 4 4
+              |
+              2 es4 des4
+              |
+              des1
+              |
+              des1
+              |
+              des1
+            }
+          >>
         }
       }
     >>
