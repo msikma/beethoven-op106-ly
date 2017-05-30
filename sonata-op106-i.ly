@@ -1113,6 +1113,23 @@ one-section-one = {
               |
               ces8^( bes4 ces8) bes8-[ as bes ces]
               |
+              es-[ des es des]
+              des-[ ces des ces]
+              |
+              ces-[ bes ces bes]
+              bes-[ as bes ces]
+              |
+              es8^( des des, des')
+              des^( ces ces, ces')
+              |
+              ces bes bes, bes'
+              bes as bes ces
+              |
+              es8\noBeam^( des4 eses8\noBeam^~ eses8-[ es e f])
+              a8-[^( ges f es])
+              % Todo: shouldn't these have staccato too? as lower voice?
+              des4 <des f>
+              |
             }
             \\
             \relative c' {
@@ -1139,11 +1156,29 @@ one-section-one = {
               |
               bes4 ges4_~ ges4 f_~
               |
-              f_( ges) ges8-[ f g as]
+              f_( ges) ges8-[ f ges as]
+              |
+              as8-[ f] ges4_~ ges8-[ fes] f4_~
+              |
+              f8-[ des] ges4_~ ges8-[ f ges as]
+              |
+              % todo: is the placement of the overlapping notes correct?
+              f8-[ ges] ges4
+              fes8-[ f] f4
+              |
+              f8-[ ges] ges4
+              b,4\rest
+              des4
+              |
+              % todo: check des/d
+              des8-[ ges] <f ces'>4 <ges bes> <f bes>
+              |
+              <ges bes>4\f 4 <f as>-. 4-.
               |
             }
           >>
-          
+          |
+          <ges bes des ges>2\f <bes,, des ges>
         }
       }
       %---------------------------------------------------------------------
@@ -1946,6 +1981,18 @@ one-section-one = {
               |
               as4 ges4 des' ces
               |
+              ces8 bes ces bes bes as bes as
+              |
+              as ges es' des des4
+              ces4
+              |
+              a!8 bes ces bes
+              g as bes as
+              |
+              f ges as ges
+              ges f ges as
+              |
+              
             }
             \\
             \relative c {
@@ -1968,8 +2015,34 @@ one-section-one = {
               des1
               |
               des1
+              |
+              des1
+              |
+              des1
+              |
+              des2 des2
+              |
+              des2 4 ces4
+              |
             }
           >>
+          |
+          <bes' bes'>4 <as as'>4
+          \clef bass
+          <es es'>4 <d! d'!>
+          |
+          <des des'>4
+          <<
+            \relative c {
+              des4^~ des8 ces bes a
+            }
+            \\
+            \relative c, {
+              \voiceOne des4_~ \voiceTwo des4 des
+            }
+          >>
+          <ges,, ges'>8 <des'' ges bes>8-[ 8 8] r8
+          <bes des ges>8-[ 8 8]
         }
       }
     >>
