@@ -1179,6 +1179,12 @@ one-section-one = {
           >>
           |
           <ges bes des ges>2\f <bes,, des ges>
+          |
+          <des ges bes>4\p <bes des ges> <des ges bes> <ces d f a>
+          |
+          <as'' ces d as'>2\f
+          <ces,, d f as>2
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -2043,6 +2049,13 @@ one-section-one = {
           >>
           <ges,, ges'>8 <des'' ges bes>8-[ 8 8] r8
           <bes des ges>8-[ 8 8]
+          |
+          r8 <des ges bes>8 r8 <bes des ges>
+          r8 <des ges bes> r8 <ces d f as>
+          |
+          <ges, ges'>8 <d''! f as ces>8-[ 8 8]
+          r8 <ces d f as>8-[ 8 8]
+          |
         }
       }
     >>
