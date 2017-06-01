@@ -1185,6 +1185,83 @@ one-section-one = {
           <as'' ces d as'>2\f
           <ces,, d f as>2
           |
+          <d f as ces>4
+          <ces d f as>
+          <d f as ces>
+          <des fes g bes>
+          |
+          <bes'' des fes bes>2\f
+          <des,, fes g! bes>2
+          |
+          <fes g bes des>4\p
+          <des fes g bes>
+          <fes g bes des>
+          <eses ges ces>
+          |
+          <ces'' eses ges ces>2\f
+          <eses,, ges ces>
+          |
+          <f! as ces d>4
+          <d! f as ces>
+          <f as ces d>
+          <fes g bes des>
+          |
+          <g bes des fes>
+          <fes g bes des>
+          <g bes des fes>
+          <ges ces eses>
+          |
+          <ges ces eses ges>
+          <ges ces eses>
+          <ges ces eses ges>
+          <as ces des f!>
+          |
+          <as' as'>\sf
+          <ges ges'>
+          % Todo: proper grace neutral
+          <es! es'!>\sf
+          <des des'>
+          |
+          <ces ces'>\sf
+          <bes bes'>
+          <as as'>\sf
+          <ges ges'>
+          |
+          <es es'>\sf
+          <des des'>
+          <ces ces'>\sf
+          <bes bes'>
+          |
+          <as as'>\sf
+          <ges ges'>
+          <es es'>\sf
+          <des des'>
+          |
+          f'4
+          \relative c' des
+          a
+          \relative c' des
+          |
+          des
+          \relative c' des
+          f
+          \relative c' des
+          |
+          a
+          \relative c' des
+          des
+          \relative c' des
+          |
+          des
+          \relative c' des
+          cis4.\fermata r8
+          |
+          \key b \minor
+          \bar "||"
+          r4 r8 <d, fis b d>8 4 <d fis b e>8-[ <d fis b d>]
+          |
+          4 <b d f b> r4.\fermata r8
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -2055,6 +2132,55 @@ one-section-one = {
           |
           <ges, ges'>8 <d''! f as ces>8-[ 8 8]
           r8 <ces d f as>8-[ 8 8]
+          |
+          r8 <d f as ces>8 r8 <ces d f as>
+          r8 <d f as ces>8 r8 <des fes g bes>
+          |
+          <ges,, ges'>8 <fes'' bes des>8-[ 8 8]
+          r8 <des fes g bes>8-[ 8 8]
+          |
+          r8 <fes g bes d>8-[ r8 <des fes g bes>]
+          r8 <fes g bes d>8-[ r8 <eses g ces>]
+          |
+          <ges,, ges'>8 <ges'' ces eses>8-[ 8 8]
+          r8 <eses ges ces>8-[ 8 8]
+          |
+          r8 <f as ces d!>8-[ r8 <d! f as ces>]
+          r8 <f as ces d>8-[ r8 <fes g bes des>]
+          |
+          r8 <g bes des fes>-[ r8 <fes g bes des>]
+          r8 <g bes des fes>-[ r8 <ges ces eses>]
+          |
+          r8 8 r8 8 r8 8 r8 <as ces des f>
+          |
+          % NOTE: as per M 27
+          r8 <as as'>-[ r8 <ges ges'>]
+          r8 <es es'>-[ r8 <des des'>]
+          |
+          r8 <ces ces'>-[ r8 <bes bes'>]
+          r8 <as as'>-[ r8 <ges ges'>]
+          |
+          r8 <es es'>-[ r8 <des des'>]
+          r8 <ces ces'>-[ r8 <bes bes'>]
+          |
+          r8 <as as'>-[ r8 <ges ges'>]
+          r8 es'8-[ r8 \relative c, des8]
+          |
+          r8 f8-[ r8 \relative c, des8]
+          r8 as8-[ r8 \relative c, des8]
+          |
+          r8 des8-[ r8 \relative c, des8]
+          r8 f8-[ r8 \relative c, des8]
+          |
+          r8 as8-[ r8 \relative c, des8]
+          r8 des8-[ r8 \relative c, des8]
+          |
+          r8 des8 r8 \relative c, des8 r8 <fis, cis'>4\fermata\pp b,,8\ff
+          |
+          \key b \minor
+          <fis'' b d>4. 8 4 8-[ 8]
+          |
+          4 <d fis b>4 r4\fermata r8 b8\pp
           |
         }
       }
