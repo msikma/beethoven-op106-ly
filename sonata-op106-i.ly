@@ -1262,6 +1262,85 @@ one-section-one = {
           |
           4 <b d f b> r4.\fermata r8
           |
+          % TODO: put \pp on the rest, or on the first note?
+          r4 <d fis b d>4\pp r4 4
+          |
+          r4 <d g b d>4 r4 4
+          |
+          r4 4 r4 4
+          |
+          r4 <es g c es>4 r4 4
+          |
+          \bar "||"
+          \key c \major
+          r4 <es g c es>4 r4 4
+          |
+          r4 <es a c es> r4 4
+          |
+          r4 4 r4
+          \ottava #1
+          \set Staff.ottavation = "8"
+          <a c es a>
+          |
+          r4 <c es a c> r4 <es a c es>
+          |
+          \bar "||"
+          \key bes \major
+          4
+          \ottava #0
+          <c es>8-[ <b d>] <c es>4 <a, c>8-[ <bes des>]
+          |
+          <a c>4 <c es>8-[ <b d>] <c es>4 a'8-[ c]
+          |
+          es^( f es d es f g es
+          |
+          c d es c a bes c a
+          |
+          \stemDown es f g es bes c d bes
+          |
+          a bes c a \stemNeutral <c, es f>4) r4
+          |
+          d''8^( es d c d es f d
+          |
+          bes c d bes f a bes f
+          |
+          d es f d bes c d bes 
+          |
+          \stemDown f a bes d, bes' c d bes) \stemNeutral
+          |
+          <f a c>4 g''8-[ f] g f es g
+          |
+          es d c es c bes a c
+          |
+          ges f es ges
+          es d c es
+          |
+          c bes a c
+          es, d c es
+          |
+          <f bes>4^( f''8-[ es] f8 es d f
+          |
+          d c bes d f, es d f)
+          |
+          <<
+            \relative c''' {
+              \stemDown
+              bes^( g f bes
+              f es d f
+              |
+              \stemUp
+              d' c bes d
+              es c d es)
+            }
+            \\
+            \relative c'' {
+              s1
+              |
+              d2 ges
+            }
+          >>
+          
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -2173,14 +2252,113 @@ one-section-one = {
           r8 f8-[ r8 \relative c, des8]
           |
           r8 as8-[ r8 \relative c, des8]
+          \stemUp
           r8 des8-[ r8 \relative c, des8]
+          \stemNeutral
           |
           r8 des8 r8 \relative c, des8 r8 <fis, cis'>4\fermata\pp b,,8\ff
           |
           \key b \minor
           <fis'' b d>4. 8 4 8-[ 8]
-          |
+          | 
           4 <d fis b>4 r4\fermata r8 b8\pp
+          |
+          \relative c' d4.
+          b8
+          \relative c' d4.
+          b8
+          |
+          \relative c' d4.
+          g8
+          \relative c' b4.
+          g8
+          |
+          \relative c' b4.
+          g8
+          \relative c' b4.
+          g8
+          |
+          \relative c' b4.
+          c,8
+          \relative c es4.
+          c8
+          |
+          \key c \major
+          \relative c es4.
+          c8
+          \relative c es4.
+          c8
+          |
+          \relative c es4.
+          g8
+          \relative c a4.
+          g8
+          |
+          \relative c a4.
+          f'8
+          c4.
+          f8
+          |
+          a,4.
+          f'8
+          ges,4.
+          f'8
+          |
+          \key bes \major
+          <f, f'>4
+          \clef treble
+          ges''''8-[ f] ges4
+          f8-[ e]
+          |
+          f4 ges,8-[ f] ges4
+          f8-[ e]
+          |
+          <f, a c es>4 r8 f8_( a4) r8 c8_(
+          |
+          f4) r8 \stemUp a8_( c4) \stemNeutral es8-[ c]
+          |
+          g8_( a bes g es f g es
+          |
+          c d es c a bes c a)
+          |
+          \clef bass
+          <f bes d>4 r8 f8^( bes4)
+          r8 d8^(
+          |
+          % TODO clef position ok?
+          f4) \clef treble r8
+          bes8^( d4) d,8-[ bes8]
+          |
+          bes'8 c d bes
+          d, es f d
+          |
+          bes c d bes
+          d' es f d
+          |
+          es f es d
+          es f g es
+          |
+          c d es c
+          a bes c a
+          |
+          es f ges es
+          c d es c
+          |
+          a bes c a
+          c' bes a c
+          |
+          d es d c
+          d es f d
+          |
+          bes c d bes
+          f a bes f
+          |
+          \clef bass
+          d es f d
+          bes c d bes
+          |
+          f a bes f
+          es bes' f es
           |
         }
       }
@@ -2188,7 +2366,6 @@ one-section-one = {
     \layout {
       \context {
         \Score
-        % Set the score to a default note value of one crotchet.
         \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8)
         \consists #Span_stem_engraver
       }
