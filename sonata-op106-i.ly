@@ -1330,7 +1330,9 @@ one-section-one = {
               |
               \stemUp
               d' c bes d
-              es c d es)
+              es\cresc c d es)
+              |
+              <f, f'>4\p
             }
             \\
             \relative c'' {
@@ -1339,8 +1341,81 @@ one-section-one = {
               d2 ges
             }
           >>
-          
+          r4 r2
           |
+          r4
+          <a c>4^( <bes d>)
+          \ottava #1
+          \set Staff.ottavation = "8"
+          bes'8 a
+          |
+          bes4
+          <g, bes g'>4 <f a f'> <e g e'>
+          |
+          <g bes g'> <f a f'> <a f'>
+          \ottava #0
+          <<
+            \relative c'' {
+              f8^( es)
+              |
+              d4^( bes' g8) f8\rest
+              es'8^( c)
+              |
+              a4^( f' d8) f,8\rest bes8^( a)
+              |
+              bes4 \stemNeutral <g g'>4 <es g es'> <d a' d>
+              |
+              \stemUp d'2. s4
+              |
+              c2. s4
+              |
+              bes2. s4
+              |
+              % TODO: shouldn't be a 2.?
+              as2 s2
+              |
+              as8 g4 c8 ges8 f4 bes8
+              |
+              s1
+              |
+              s2 bes,4 g'!8^( f)
+              |
+              s1
+              |
+              s2 bes,4 g'!8^( f)
+              |
+            }
+            \\
+            \relative c'' {
+              bes8 c
+              |
+              s4 bes4. s8 es8 g
+              |
+              s4 f4_( 8) s8 s4
+              |
+              s1
+              |
+              % TODO: is this really a tie?
+              d4 c'8^( bes) bes4^. <bes_~ des g>
+              |
+              bes4 bes8^( as) as4^. <as ces f>4
+              |
+              as4 as8^( g) g4^. <g_~ bes e>4
+              |
+              % TODO: really no tie on these 8ths?
+              g4 g8 f f4^. <f as d>
+              |
+              f4 es es d
+              |
+              f8-[^( f' e es] c8-[ a ges f]
+              |
+              e8-[ es c a)] ges8-[_( f)] bes4
+              |
+              f'8-[^( f' e es] c8-[ a ges f]
+              |
+              e8-[ es c a)] ges8-[_( f)] bes4
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -2359,6 +2434,66 @@ one-section-one = {
           |
           f a bes f
           es bes' f es
+          |
+          <<
+            \relative c {
+              d4^( bes'4 g8) a8\rest es'8^( c
+              |
+              % TODO: position of clef correct?
+              a4) f'4 d \relative c d4\rest \clef treble
+              |
+              \relative c'' b4\rest
+              <bes d e g>4 <c f a> <g' bes>8-[ c]
+              |
+              c4 d8.-[ e16] f4 s4
+              |
+            }
+            \\
+            \relative c {
+              s4 bes4 es8 s4.
+              |
+              s4 f4 bes4 s4
+              |
+              s4 s4 s4 c4
+              |
+              f4 f f g8-[ a]
+              |
+            }
+          >>
+          |
+          bes''4^( <d, f> <es! g>8) r8 c'8-[ es]
+          |
+          f4^( <a, c> <bes d>8) r8 g8-[^( fis])
+          |
+          g4 \stemUp <g bes es>4 <g c>4 <fis a>
+          |
+          <fis a>4 <d fis> <g bes> <f as>8-[ <e g>]
+          |
+          4 <c e>4 <f as> <e ges>8-[ <d f>]
+          |
+          4 <bes d> <e g!> <d f>8-[ <cis e>]
+          |
+          4 <a cis> <d f> <c es>8-[ <b d>]
+          \clef bass
+          |
+          <<
+            \relative c' {
+              d4 e c d
+            }
+            \\
+            \relative c' {
+              b4 c8 bes a4 bes8-[ d,]
+            }
+          >>
+          |
+          <c,_~ f_~ es'^~>1
+          |
+          2
+          <d f d'>2
+          |
+          <c,_~ f_~ es'^~>1
+          |
+          2 <d f d'>2
           |
         }
       }
