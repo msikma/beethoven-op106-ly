@@ -1384,6 +1384,52 @@ one-section-one = {
               |
               s2 bes,4 g'!8^( f)
               |
+              f8^( bes d c)
+              bes2^~
+              |
+              bes2 a4 s4
+              |
+              s1
+              |
+              s2 bes4 g'!8^( f)
+              |
+              s1
+              |
+              s2
+              bes,,4 g'!8^( f)
+              |
+              f-[ bes d c]
+              bes2^~
+              |
+              bes2 a4 bes
+              |
+              bes8-[ es g f]
+              es2^~
+              |
+              es2
+              d4 es
+              |
+              \ottava #1
+              \set Staff.ottavation = "8"
+              es4^( as) as2^~
+              |
+              2 bes^~
+              |
+              bes4
+              \stemNeutral
+              <g, bes es g>4
+              <d' f>4 <es g>8 <f as>
+              |
+              <g bes>4
+              <es g>4
+              \relative c''' b2\rest
+              |
+              \relative c''' b4\rest
+              <g, bes es g>4
+              <d' f>4 <es g>8 <f as>
+              |
+              <g bes>4
+              \ottava #0
             }
             \\
             \relative c'' {
@@ -1414,6 +1460,118 @@ one-section-one = {
               f'8-[^( f' e es] c8-[ a ges f]
               |
               e8-[ es c a)] ges8-[_( f)] bes4
+              |
+              s8 d8-[ f es]
+              d-[ fis g d]
+              |
+              des8-[ fis g dis]
+              c-[ f]
+              f-[ f']
+              |
+              f
+              \ottava #1
+              \set Staff.ottavation = "8"
+              f' e es
+              c a ges f
+              |
+              \ottava #0
+              e es c a
+              ges-[_( f])
+              bes4
+              |
+              \relative c'' b8\rest
+              f'8-[ e es]
+              c a ges f
+              |
+              e es c a
+              ges-[_( f])
+              bes4
+              |
+              s8
+              d8-[ f es]
+              d fis g d
+              |
+              des fis g des
+              c f! bes, es
+              |
+              s8
+              g8-[ bes as]
+              g b c g
+              |
+              ges b c ges
+              f bes es, as
+              |
+              \relative c''' g8\rest
+              c8-[ es des]
+              des ces bes ces
+              |
+              ces fes f ces
+              bes d es bes
+              |
+              g4
+            }
+          >>
+          % TODO: no \sf here?
+          <bes, c g' bes>4
+          r4
+          <bes e g bes>4
+          |
+          r4
+          <bes d f bes>4
+          r4
+          <bes c e bes'	>4
+          |
+          <bes d f bes>2
+          <d_~ f^~>2
+          |
+          4^( d8) r8
+          f8 a bes d
+          |
+          \ottava #1
+          \set Staff.ottavation = "8"
+          e8 f g f
+          a bes c bes
+          |
+          cis d es d
+          f4
+          \ottava #0
+          <c,,! es!>4\p
+          |
+          <<
+            \relative c'' {
+              f2\rest
+              d'2^(
+              |
+              es2 ges)
+              |
+              bes,1
+              |
+              s1
+              |
+              
+            }
+            \\
+            \relative c'' {
+              d1
+              |
+              es2 ges
+              |
+              \relative c'' b2\rest
+              s2
+              |
+              ges2 es2
+              |
+            }
+            \\
+            \relative c'' {
+              s1
+              |
+              s1
+              |
+              s2 \stemDown <d f>2^(
+              |
+              \stemUp bes'4)^( ges'4 es2)
+              |
             }
           >>
         }
@@ -2486,6 +2644,7 @@ one-section-one = {
             }
           >>
           |
+          \stemNeutral
           <c,_~ f_~ es'^~>1
           |
           2
@@ -2494,6 +2653,82 @@ one-section-one = {
           <c,_~ f_~ es'^~>1
           |
           2 <d f d'>2
+          |
+          <d d'>2 <g g'>
+          |
+          <e e'> <f f'>4
+          r4
+          |
+          \clef treble
+          <c''_~ f_~ es'^~>1
+          |
+          2 <d f d'>2
+          \clef bass
+          |
+          \stemNeutral
+          <c,_~ f_~ es'^~>1
+          |
+          2 <d f d'>2
+          |
+          <d d'>2
+          <g g'>
+          |
+          <e e'> <f f'>4 <ges ges'>
+          |
+          \clef treble
+          <g g'>2 <c c'>
+          |
+          <a a'> <bes bes'>4 <ces ces'>
+          |
+          <c c'>2 <fes fes'>
+          |
+          <d d'> <es es'>
+          \clef bass
+          |
+          <es,, es'>4 4 r2
+          |
+          \clef treble r4
+          <es'' g>4\sf <d f> <e g>8 <f as>
+          |
+          <g bes>4
+          \clef bass
+          <es,, es'>4 r2
+          |
+          r4 <e e'>4
+          r4 <c c'>4
+          |
+          r4 <f f'>4
+          r4 <g g'>4
+          |
+          \stemNeutral
+          f8 a bes d
+          f a bes d
+          |
+          \clef treble
+          f a bes d
+          r2
+          |
+          e8 f g f a bes c bes
+          |
+          cis d es d
+          f4
+          \explicitTuplets
+          \tuplet 3/2 { f,,8 g a }
+          |
+          \showTupletBracket
+          \tuplet 3/2 { bes,4 bes' a }
+          \tuplet 3/2 { bes a bes }
+          |
+          \implicitTuplets
+          \hideTupletBracket
+          \tuplet 3/2 { ges bes ges }
+          \tuplet 3/2 { bes es, bes' }
+          |
+          \tuplet 3/2 { d, bes' f }
+          \tuplet 3/2 { bes, bes' f }
+          |
+          \tuplet 3/2 { es bes' es, }
+          \tuplet 3/2 { ges bes ges }
           |
         }
       }
