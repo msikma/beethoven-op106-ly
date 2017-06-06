@@ -1660,9 +1660,41 @@ one-section-one = {
           \relative c''' { a a' }
           \relative c''' { c c' }
           |
-          \relative c''' { bes8 bes' }
+          \relative c''' { bes8\f bes' }
           \relative c'' { f f' }
           \ottava #0
+          a,\sf a' c, c'
+          |
+          bes,\sf bes' f, f'
+          b,\sf b' d, d'
+          |
+          c,\sf c' g, g'
+          b,\sf b' d, d'
+          |
+          c,\sf c' g, g'
+          c,\sf c' es, es'
+          |
+          d,\sf d' a, a'
+          cis,\sf cis' e, e'
+          |
+          d,\sf d' a, a'
+          d,\sf d' f, f'
+          |
+          es,!\sf es'! bes, bes'
+          d,\sf d' f, f'
+          |
+          es,\sf es' bes, bes'
+          es,\sf es' ges, ges'
+          |
+          f,\sf f' c, c'
+          es, es' ges, ges'
+          |
+          des,\sf des' a, a'
+          c, c' es, es'
+          |
+          ges,,\sf ges' f, f'
+          a, a' es es'
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -2865,6 +2897,39 @@ one-section-one = {
           |
           bes, bes'
           f, f'
+          a,, a' c, c'
+          |
+          bes, bes' f, f'
+          b, b' d, d'
+          |
+          c, c' g, g'
+          b, b' d, d'
+          |
+          c, c' g, g'
+          c, c' es, es'
+          |
+          d, d' a, a'
+          cis, cis' e, e'
+          |
+          d, d' a, a'
+          d, d' f, f'
+          |
+          es,! es'! bes, bes'
+          d, d' f, f'
+          |
+          es, es' bes, bes'
+          es, es' ges, ges'
+          |
+          f, f' c, c'
+          es, es' ges, ges'
+          |
+          des, des' a, a'
+          c, c' es, es'
+          |
+          ges,, ges' f, f'
+          a, a' es es'
+          |
+          
         }
       }
     >>
