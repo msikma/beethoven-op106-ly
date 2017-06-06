@@ -498,7 +498,7 @@ one-section-one = {
                 % 1.335 = 1.5 * our magnification of 89/100.
                 \once \override TrillSpanner.Y-offset = #1.335
                 \once \override NoteColumn.force-hshift = #0.91
-                g1\startTrillSpan
+                g1-\tweak bound-details.left.text #'() \startTrillSpan
                 |
                 g1
                 |
@@ -1538,9 +1538,9 @@ one-section-one = {
           <c,,! es!>4\p
           |
           <<
-            \relative c'' {
-              f2\rest
-              d'2^(
+            \relative c''' {
+              a2\rest
+              d2^(
               |
               es2 ges)
               |
@@ -1548,7 +1548,23 @@ one-section-one = {
               |
               s1
               |
-              
+              \stemNeutral
+              <des, des'>2^( <d d'>
+              |
+              <f f'>2 <es es'>4. <c c'>8)
+              |
+              \stemUp
+              <d^~ d'^~>2 <d d'>
+              |
+              <es es'>2 <g g'>
+              |
+              bes'1
+              |
+              <g, g'>2 <es es'>
+              |
+              des'4^( d2 f4)
+              |
+              f2^~ f8 es c f
             }
             \\
             \relative c'' {
@@ -1561,6 +1577,29 @@ one-section-one = {
               |
               ges2 es2
               |
+              s1
+              |
+              s1
+              |
+              % Todo: optimize position
+              \trillSpanUp
+              \once \override TrillSpanner.bound-details.left.padding = #-0.5
+              \once \override TrillSpanner.bound-details.right.padding = #0.0
+              \once \override TrillSpanner.outside-staff-priority = ##f
+              % 0.445 = 0.5 * our magnification of 89/100.
+              \once \override TrillSpanner.Y-offset = #2.225
+              \once \override NoteColumn.force-hshift = #0.91
+              bes'1-\tweak bound-details.left.text #'() \startTrillSpan
+              |
+              bes1
+              |
+              bes1
+              |
+              bes1
+              |
+              bes1\stopTrillSpan
+              |
+              a1
             }
             \\
             \relative c'' {
@@ -1572,8 +1611,58 @@ one-section-one = {
               |
               \stemUp bes'4)^( ges'4 es2)
               |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              s1
+              |
+              \stemDown
+              des,4 d2 f4
+              |
+              
             }
           >>
+          <f a d f>4\ff
+          \ottava #1
+          \set Staff.ottavation = "8"
+          <f' a d f>2
+          <es f a es'>4-.
+          |
+          <d f as d>-.
+          <es f as es'>-.
+          <f as f'>-.
+          <d f g d'>-.\p
+          |
+          <es g es'>-.
+          <d f g d'>-.
+          <es g es'>-.
+          <c g' c>-.
+          |
+          <c g' bes>-.
+          <c e bes>-.
+          <c es a>-.
+          <c es c'>-.
+          |
+          <bes d bes'>-.
+          <f d' f>-.
+          <a es' f a>-.
+          <c es f c'>-.
+          |
+          \relative c''' { bes8 bes' }
+          \relative c'' { f f' }
+          \relative c''' { a a' }
+          \relative c''' { c c' }
+          |
+          \relative c''' { bes8 bes' }
+          \relative c'' { f f' }
+          \ottava #0
         }
       }
       %---------------------------------------------------------------------
@@ -2730,6 +2819,52 @@ one-section-one = {
           \tuplet 3/2 { es bes' es, }
           \tuplet 3/2 { ges bes ges }
           |
+          \tuplet 3/2 { f bes f }
+          \tuplet 3/2 { b f b }
+          |
+          \tuplet 3/2 { f c' a }
+          \clef bass
+          \tuplet 3/2 { f, c' a }
+          |
+          bes,8 bes' d bes
+          f bes bes' bes,
+          |
+          g bes bes' bes,
+          es, bes' g' bes,
+          |
+          d, bes' f' bes,
+          bes, bes' d bes
+          |
+          es, bes' g' bes,
+          g bes bes' bes,
+          |
+          f bes a bes
+          f d c bes
+          |
+          f g a bes
+          c d es f
+          |
+          \repeat unfold 7 { bes,, bes' }
+          b, b'
+          |
+          c, c'
+          b, b'
+          c, c'
+          es, es'
+          |
+          e, e'
+          g, g'
+          f, f'
+          f, f'
+          |
+          f, f' bes, bes'
+          f, f' f f'
+          |
+          bes,, bes' f, f'
+          a, a' c, c'
+          |
+          bes, bes'
+          f, f'
         }
       }
     >>
