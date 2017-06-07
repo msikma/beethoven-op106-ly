@@ -1645,15 +1645,15 @@ one-section-one = {
           <es g es'>-.
           <c g' c>-.
           |
-          <c g' bes>-.
-          <c e bes>-.
-          <c es a>-.
-          <c es c'>-.
+          <c g' bes>
+          <c e bes>
+          <c es a>
+          <c es c'>
           |
-          <bes d bes'>-.
-          <f d' f>-.
-          <a es' f a>-.
-          <c es f c'>-.
+          <bes d bes'>
+          <f d' f>
+          <a es' f a>
+          <c es f c'>
           |
           \relative c''' { bes8 bes' }
           \relative c'' { f f' }
@@ -1694,6 +1694,95 @@ one-section-one = {
           |
           ges,,\sf ges' f, f'
           a, a' es es'
+          |
+          <<
+            \relative c'' {
+              d1^(
+              |
+              ges1
+              |
+              bes
+              |
+              ges2
+              es)
+              |
+              d1^(
+              |
+              es2. g4)
+              |
+              bes2.^( as4
+              |
+              g4 f es d)
+              |
+              es2.^( d4
+              |
+              f es2 d4)
+              |
+              \once \override TrillSpanner.bound-details.right.padding = #-1.8
+              \afterGrace <bes d>1_\p_\espressivo^\startTrillSpan\fermata { c8\stopTrillSpan }
+              |
+            }
+            \\
+            \relative c'' {
+              % TODO: change to regular notes?
+              \repeat tremolo 2 { ces8_( bes8 }
+              \repeat tremolo 2 { ces8 bes8) }
+              |
+              \repeat tremolo 2 { ces8_( bes8 }
+              \repeat tremolo 2 { ces8 bes8) }
+              |
+              \repeat tremolo 2 { ces8 bes8 }
+              \repeat tremolo 2 { ces8 bes8 }
+              |
+              ces8 bes ces bes ces-[ bes]
+              \naturalTrill
+              \once \override TrillSpanner.bound-details.right.padding = #2.8
+              \once \override Voice.Stem.length = #4.8
+              bes4_~\startTrillSpan
+              |
+              bes1_~
+              |
+              bes1_~
+              |
+              bes1_~
+              |
+              bes1_~
+              |
+              bes1_~
+              |
+              bes1
+              |
+              s4\stopTrillSpan
+            }
+          >>
+          |
+          d,8^( es d c bes a bes c
+          |
+          d es f g a bes c d
+          |
+          es f es d c bes a g
+          |
+          f es d c bes a g f)
+          |
+          <f d'>4.\pp 8 4 r8 <d f g>8\f
+          |
+          <es g es'>4. 8 4 r8 <f g>\pp
+          |
+          <g es'>4. 8 4 r8 <e g a>8\f
+          |
+          <f a f'>4. 8 4 r8 <g a>8\pp
+          |
+          <a f'>4. 8 4 r8 <f as bes>8\f
+          |
+          <g bes g'>4. 8 4 r4
+          |
+          r2 r4 r8 <g es'>8\ff
+          |
+          <a c es a>4. 8 4 r4
+          |
+          R1
+          |
+          r4 r8 <d f bes d>8\p 4-. <d f bes es>8-. <d f bes d>-.
           |
         }
       }
@@ -2929,7 +3018,90 @@ one-section-one = {
           ges,, ges' f, f'
           a, a' es es'
           |
-          
+          <bes, bes'>2 <as' as'>2
+          |
+          <ges ges'>2 <es es'>
+          |
+          <d d'> <bes bes'>
+          |
+          <es es'>
+          <ges' bes>4
+          <<
+            \relative c' {
+              \naturalTrill
+              \once \override TrillSpanner.bound-details.right.padding = #2.8
+              \stemDown bes4^~\startTrillSpan \stemNeutral
+              |
+              bes1^~
+              |
+              bes1^~
+              |
+              bes1^~
+              |
+              bes1^~
+              |
+              bes1^~
+              |
+              bes1
+              |
+              s4\stopTrillSpan
+              \regularTrill
+            }
+            \\
+            \relative c' {
+              g4
+              |
+              f4 g as f
+              |
+              g as g es
+              |
+              d es f d
+              |
+              es f g as
+              |
+              g2. as4
+              |
+              g2. f4
+              |
+              <f bes d>1^\fermata
+            }
+          >>
+          |
+          \clef treble
+          r4
+          bes'8^( a g f g a
+          |
+          bes c d es f g a bes)
+          |
+          \clef bass
+          r8
+          f,,,-[^( g a] bes c d es
+          |
+          f g a bes c d es d)
+          |
+          <bes d>4. 8 4 r8
+          <b,, b'>8
+          |
+          <a a'>4. 8 4 r8 <b'' d>8
+          |
+          <c es>4. 8 4 r8 <cis,, cis'>8
+          |
+          <d d'>4. 8 4 r8 \clef treble <cis'' e>\p
+          |
+          <d f>4. 8 4 r8 \clef bass <d,, d'>8
+          |
+          <es es'>4. 8 4 r4
+          |
+          r2 r4 r8 <es es'>8
+          |
+          <f, f'>4. 8 4 r4
+          |
+          r2 r4
+          ges8^\p f
+          |
+          ges8 f ges f
+          a bes a bes
+          |
         }
       }
     >>
