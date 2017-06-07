@@ -57,6 +57,13 @@ flatTrill = \override TrillSpanner.bound-details.left.text = \markup {
   \halign #5.30 \raise #0.65 \teeny \flat \musicglyph #"scripts.trill"
 }
 
+% Override trill spanners to have a natural sign. Undo with \regularTrill.
+% Using \once does not work for trill spanners that cross over to
+% the next line, hence the need to use a separate \regularTrill command.
+naturalTrill = \override TrillSpanner.bound-details.left.text = \markup {
+  \halign #7.20 \raise #0.97 \teeny \natural \musicglyph #"scripts.trill"
+}
+
 % Revert the trill spanners back to having a standard trill symbol.
 regularTrill = \override TrillSpanner.bound-details.left.text = \markup {
   \musicglyph #"scripts.trill"
