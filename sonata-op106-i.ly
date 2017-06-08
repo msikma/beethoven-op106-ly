@@ -1784,6 +1784,46 @@ one-section-one = {
           |
           r4 r8 <d f bes d>8\p 4-. <d f bes es>8-. <d f bes d>-.
           |
+          4-. <bes d f bes>-. <d, f bes d>-.\f <bes d bes'>-.
+          |
+          <f'' bes d f>4.-. 8 4-. <f bes d g>8-. <f bes d f>-.
+          |
+          4 <d f bes d>-. \stemUp <f, bes d f>-.\f <d f bes d>-. \stemNeutral
+          |
+          <d'' f>4-.\p <bes d>-. <d, f>4-.\f <bes d>-.
+          |
+          <bes' d>4-.\p <f bes>-. <bes, d>-.\f <f bes>-.
+          |
+          <f' bes>4-.\p <d f>-. <f, bes>-.\f <d f>-.
+          |
+          <a' es'>1\p
+          |
+          <d f>4-.\p <bes d>-. <d, f>-.\f <bes d>-.
+          |
+          <bes' d>-.\p <f bes>-. <bes, d>-.\f <f d'>-.
+          |
+          % Staccato stops here.
+          <f' bes>\p <d f> <f, bes>\f <d f>
+          |
+          <a' es'>1\p
+          |
+          r4 r8 <a es' ges>8 4-. <bes d f>-.
+          |
+          r4 r8 <ges a c es>8 4-. <f bes d>-.
+          |
+          r4 r8 <ges a c es>8 4-. <f bes d>-.
+          |
+          \clef bass r4 r8 <es ges a c>8 4-. <d f bes>-.
+          |
+          r4 r8 <d f bes d>8 4 <d f bes>4
+          |
+          r4 <d f bes d>4\ppp r2
+          |
+          \clef treble
+          r2 <bes''' d f bes>4\ff r4
+          |
+          <bes,, bes'>1\fermata
+          \bar "|."
         }
       }
       %---------------------------------------------------------------------
@@ -3067,8 +3107,8 @@ one-section-one = {
             }
           >>
           |
-          \clef treble
           r4
+          \clef treble
           bes'8^( a g f g a
           |
           bes c d es f g a bes)
@@ -3102,6 +3142,127 @@ one-section-one = {
           ges8 f ges f
           a bes a bes
           |
+          ges8 f ges f
+          <<
+            \relative c {
+              ges8 f ges f
+            }
+            \\
+            \relative c, {
+              bes2
+            }
+          >>
+          |
+          ges8 f ges f
+          a bes a bes
+          |
+          ges f ges f
+          <<
+            \relative c {
+              ges8 f ges f
+            }
+            \\
+            \relative c, {
+              bes2
+            }
+          >>
+          |
+          ges8 f ges f
+          <<
+            \relative c {
+              ges8 f ges f
+            }
+            \\
+            \relative c, {
+              bes2
+            }
+          >>
+          |
+          ges8 f ges f
+          <<
+            \relative c {
+              ges8 f ges f
+            }
+            \\
+            \relative c, {
+              bes2
+            }
+          >>
+          |
+          ges8 f ges f
+          <<
+            \relative c {
+              ges8 f ges f
+            }
+            \\
+            \relative c, {
+              bes2
+            }
+          >>
+          |
+          <<
+            \relative c' {
+              ges8 f ges f
+              ges8 f ges f
+              |
+              b,4\rest ges,8\p f
+              ges'8 f ges f
+              |
+              ges,8 f ges f
+              ges'8 f ges f
+              |
+              ges,8 f ges f
+              ges'8 f ges f
+            }
+            \\
+            \relative c {
+              bes1
+              |
+              s2 bes,2\f
+              |
+              s2 bes2
+              |
+              s2 bes2
+            }
+          >>
+          |
+          <<
+            \relative c {
+              ges8 f ges f
+              ges8 f ges f
+              |
+              a bes a bes
+              a bes a bes
+              |
+              ges f ges f
+              ges f ges f
+              
+            }
+            \\
+            \relative c, {
+              bes1
+              |
+              s1
+              |
+              bes1
+            }
+          >>
+          |
+          a8 bes a bes
+          a bes a bes
+          |
+          ges f ges f
+          ges f <bes f'> f
+          |
+          <bes f'> f <bes f'> f
+          <bes f'> f <bes f'> f
+          |
+          f' bes, f' bes, f' bes, <f' bes> bes,
+          |
+          <f' bes> bes, <f' bes> bes,
+          <bes' d f bes>4 r4
+          |
+          <bes, bes'>1\fermata
         }
       }
     >>
