@@ -7,7 +7,7 @@ Feel free to open an issue if you have suggestions for improvements.
 
 **Mvmt. I:**
 
-* [ ] Input all notes
+* [x] Input all notes
 * [ ] Check correctness
 * [ ] Dynamics and other events
 * [ ] Fix/check all todos
