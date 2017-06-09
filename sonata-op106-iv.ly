@@ -48,7 +48,7 @@ four-section-one = {
           \override Tie.minimum-length = #2.75
           \autoBeamOff
           \tuplet 3/2 {
-            r32^\markup { \italic "tutte le corde" } r
+            r32 r
             \once \override Slur.positions = #'(1 . 2)
             f_( \noBeam
           }
@@ -88,9 +88,9 @@ four-section-one = {
               \set stemRightBeamCount = #1
               des
               \set stemLeftBeamCount = #1
-              ges des ges bes,] \stemUp es4)-5
+              ges des ges bes,)] \stemUp es4-5
               \bar "" \break
-              es16-[ des8\finger \markup \tied-finger-up #"4" #"5" ces16-4]
+              es16-[^( des8\finger \markup \tied-finger-up #"4" #"5" ces16-4])
               bes16-[-3 es aes,^~-3 aes32. bes64]
             }
             \\
@@ -116,7 +116,9 @@ four-section-one = {
           \set Timing.measureLength = #(ly:make-moment 160/64)
           <es_~ ges^~ es'^~>32 32\fermata
           \key b \major
-          r32^\markup { "Un poco più vivace" } r16 r8 r32
+          r32
+          \tempo "Un poco più vivace"
+          r16 r8 r32
           \set subdivideBeams = ##t
           \set baseMoment = #(ly:make-moment 1/8)
           \set beatStructure = #'(6 6)
@@ -124,23 +126,25 @@ four-section-one = {
           b-[ fis' gis ais b cis dis e] dis-[ cis b ais gis fis e dis]
           cis-[ b ais gis fis e' dis gis] fis-[ b ais e']
           <e, ais e'>16.\fermata \noBeam
-          <dis_~ fis_~ b^~ dis^~>32\p^\markup { \italic "Tempo I" } \noBeam
+          \tempo "Tempo I"
+          <dis_~ fis_~ b^~ dis^~>32\p \noBeam
           16 r16 r16.
           <dis_~ gis_~ b^~ dis^~>32
+          \tempo "Allegro"
           % End of the second measure.
           |
           \time 4/4
           \bar "||"
           \set subdivideBeams = ##f
-          16^\markup { \italic "Allegro" } dis^( gis, dis'
-          e dis gis, dis' e2)^~ |
+          16\fp dis gis, dis'
+          e dis gis, dis' e2^~ |
           e16 ais, dis cisis dis ais dis cis bis dis bis gis' cis, gis' dis gis |
-          e4 e,4_~_( e16 cis fis eis fis cis fis e |
-          dis8)
+          e4 e,4_~ e16 cis fis eis fis cis fis e |
+          dis8
           <<
             \relative c''' {
               s4 s4 s8 b4^~ |
-              b16 gis^( a cis e, a dis, gis dis gis dis fisis dis gis dis ais')
+              b16 gis a cis e, a dis, gis dis gis dis fisis dis gis dis ais'
             }
             \\
             \relative c'' {
@@ -148,11 +152,12 @@ four-section-one = {
               e4 a,8 b b cis b ais
             }
           >>
+          \tempo "Tempo I"
           |
           % Move the tempo text above the fermata.
           \once \override Staff.TextScript.outside-staff-priority = #500
           \once \override Staff.Script.outside-staff-priority = #0
-          r8..\fermata^\markup { \italic "Tempo 1" }
+          r8..\fermata
           <b'_~ dis_~ gis^~ b^~>32 16 r16 r16.
           <b_~ e_~ gis^~ b^~>32 16 r16 r16.
           <cis_~ e_~ gis^~ cis^~>32 16 r16 r16.
@@ -175,10 +180,10 @@ four-section-one = {
           }
           \tuplet 3/2 {
             \once \override Slur.positions = #'(-2 . 0)
-            a_~^( <a_~ a'^~>) <a_~ a'^~>
+            a_~^( <a_~ a'^~> <a_~ a'^~>
           }
           \tuplet 3/2 { <a a'>8 <gis gis'> <e e'> }
-          \tuplet 3/2 { <dis dis'> <d d'> <b b'> }
+          \tuplet 3/2 { <dis dis'> <d d'> <b b'>) }
           |
           % Another looooong measure.
           \set Timing.measureLength = #(ly:make-moment 352/64)
@@ -231,15 +236,16 @@ four-section-one = {
           \once \override Slur.positions = #'(6.1 . 0)
           \once \override Slur.eccentricity = #1.25
           \once \override Slur.height-limit = #6.5
-          f2^~^( \startTrillSpan | f16\f \stopTrillSpan
+          f2^~ \startTrillSpan | f16\f \stopTrillSpan
           es d c bes\ff a g f es d c f |
-          <bes,, d f bes>8\sf) r8 r8 g'16-[\p^( f] es d c bes
+          <bes,, d f bes>8\sf r8 r8 g'16-[\p f] es d c bes
           \clef bass |
           \break
           % Start of the fuga section.
+          % "Three part fugue with some license"
           a16^\markup { "Fuga a tre voci, con alcune licenze" } bes a g
           f g f es d es d c |
-          bes4) r4 r4 |
+          bes4 r4 r4 |
           R2. |
           R2. \clef treble |
           R2. |
@@ -248,8 +254,15 @@ four-section-one = {
           R2. |
           R2. |
           R2. |
-          b'8 r8 \afterGrace e'2-2^(\sf\>\startTrillSpan { d16\!\stopTrillSpan e } |
-          f4) r8 f16 e d c bes a |
+          b'8 r8 \afterGrace e'2\sf\>\startTrillSpan { d32\!\stopTrillSpan e } |
+          f4 r8 f16 e d c bes a |
+          d4 r8 d16 c bes a g f |
+          bes4 r8 bes16 a g a g f |
+          e f e d c d e f fis g a g |
+          f! g a bes b c d c bes a g f |
+          e f e d c d e f fis g a f |
+          e f c' bes a bes c bes gis a bes a |
+          g as e' d c cis d cis b c d c |
         }
       }
       %---------------------------------------------------------------------
@@ -291,7 +304,7 @@ four-section-one = {
           \set stemRightBeamCount = #1
           f
           \set stemLeftBeamCount = #1
-          aes f aes des,] ges16 c, des aes)
+          aes f aes des,)] ges16 c, des aes
           % End of the first measure
           |
           r16\sustainOn <ges ges'> r16\sustainOff r16
@@ -303,27 +316,27 @@ four-section-one = {
           \set baseMoment = #(ly:make-moment 1/8)
           \set beatStructure = #'(6 6)
           \stemDown
-          fis''32^(-[ gis ais b cis dis e] dis-[ b fis' e dis cis b ais]
-          b)-[ fis^( gis ais b cis dis e]
+          fis''32-[ gis ais b cis dis e] dis-[ b fis' e dis cis b ais]
+          b-[ fis gis ais b cis dis e]
           % Force another break to the next page.
           \bar "" \break
-          dis-[) \clef treble dis'^( fis e dis cis b ais]
+          dis-[ \clef treble dis' fis e dis cis b ais]
           b-[ ais dis cis b ais gis fis] \clef bass e-[ dis cis b ais cis b e] dis-[ d cis fis,]
-          <fis cis' fis>16.\fermata)\sustainOn
+          <fis cis' fis>16.\fermata\sustainOn
           \stemNeutral
           r32\sustainOff r16 <b,, b'>16\sustainOn r16\sustainOff r16\sustainOn
           \bar "||"
           <b b'>8\sustainOff r8 r4 \clef treble r16
           \set subdivideBeams = ##f
-          gis'''16_( cis, gis' ais gis cis, gis' |
-          fisis4.) fis8_~^( fis8 8 e dis \clef bass |
-          cis16) gis^( cis, gis' a gis cis, gis' a4.)
+          gis'''16 cis, gis' ais gis cis, gis' |
+          fisis4. fis8_~ fis8 8 e dis \clef bass |
+          cis16 gis^( cis, gis' a gis cis, gis' a4.)
           <<
             \relative c' {
               \once \override Slur.positions = #'(1 . 2)
-              gis8^( |
+              gis8 |
               ais!16 cis ais dis e dis ais dis gis, b gis b cis b gis b |
-              e,8) cis'4^( b8) \noBeam 8^( ais gis fisis)
+              e,8 cis'4 b8 \noBeam 8 ais gis fisis
             }
             \\
             \relative c {
@@ -371,8 +384,8 @@ four-section-one = {
           <f,, f'>8 r8 <f'' a c f>8 r8 <f,, f'>8 r8 |
           <f'' a c f> r8 <f,, f'>4. g'16 a |
           <bes, d f bes>8 r8 r4 r4 |
-          f''8 r8 \clef treble \afterGrace a'2\startTrillSpan { g16 a\stopTrillSpan } |
-          bes4 r8 bes16 a g f es d |
+          f''8 r8 \clef treble \afterGrace a'2\startTrillSpan { g32 a\stopTrillSpan } |
+          bes4 r8 bes16-2 a g-1 f es d |
           g4-. r8 g16 f es d c bes |
           es4-. r8 es16 d c d c bes |
           a bes a g f g a bes b c d c |
@@ -382,22 +395,28 @@ four-section-one = {
           bes, g' a g fis g a g e f g f |
           e f g f d es f es cis d es d |
           cis d es d b c d c a bes c bes |
-          <<
-            {
-              b'8\rest a,8_. a'4.^\sf b8\rest
-            }
-            \\
-            {
-              R2.
-            }
-          >>
+          r8 a8_. a'4.\sf r8 |
+          r8 f,8-. f'4.\sf r8 |
+          \clef bass
+          r8 d,8-[ d' c bes b]
+          |
+          c8 r8 bes!4. bes8
+          |
+          bes8-[^( a g f e f)]
+          |
+          c'8 r8 bes4. a8
+          |
+          d8 r8 cis4. c8
+          |
+          f8 r8 e4. es8
+          |
+          
         }
       }
     >>
     \layout {
       \context {
         \Score
-        % Set the score to a default note value of one crotchet.
         \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8)
         \consists #Span_stem_engraver
       }
