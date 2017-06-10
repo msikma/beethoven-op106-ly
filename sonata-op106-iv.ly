@@ -261,8 +261,66 @@ four-section-one = {
           e f e d c d e f fis g a g |
           f! g a bes b c d c bes a g f |
           e f e d c d e f fis g a f |
-          e f c' bes a bes c bes gis a bes a |
-          g as e' d c cis d cis b c d c |
+          <<
+            \relative c' {
+              e f c' bes a bes c bes gis a bes a
+              |
+              g as e' d c cis d cis b c d c
+              |
+              gis a bes a e f g f b c d c
+              |
+              \relative c'' d8\rest d,8 es'4.^\sf \relative c'' f8\rest
+              |
+              \relative c'' f8\rest bes,8 bes'4.^\sf \relative c'' f8\rest
+              |
+              \relative c'' f8\rest g8_.-[ g' f es e]
+              |
+              f8 \relative c'' f8\rest es4. es8
+              |
+              es8-[^( d c bes a bes])
+              |
+              \relative c'' f8\rest b8-[ c ges] f4
+              |
+              bes'8 \relative c''' a8\rest g4. f8
+              |
+              \relative c''' a8\rest
+              % Neutral as per London. Es in original edition.
+              e8-[ g des] c4
+              |
+              f'8 \relative c''' f8\rest es!4.^\sf d8
+              |
+              bes'8 \relative c'''' b8\rest g4.^\sf f8
+            }
+            \\
+            \relative c' {
+              d8 b8\rest cis4. c8
+              |
+              f8 e8\rest e4. es8
+              |
+              e2 f4_~
+              |
+              f8 \relative c' { a8\rest c8\rest } a8 bes4
+              |
+              \relative c' { c4\rest e8\rest } fis8 g4
+              |
+              \relative c' { c4\rest e8\rest } b8-[ c g]
+              |
+              d'8-[ f,] d'8-[ ges,] f4_~
+              |
+              f8 f es d c d
+              |
+              f8 \relative c' { e8\rest } es4._\sf d8
+              |
+              \relative c'' { b8\rest } bes'8-[ e bes_~] bes4
+              |
+              c8 \relative c'' { g8\rest } bes4._\sf a8
+              |
+              \relative c'' { b8\rest } a'8-[ c bes] g4
+              |
+              \relative c'' { b8\rest } bes8-[ e bes_~] bes8-[ d]
+              |
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -395,20 +453,68 @@ four-section-one = {
           bes, g' a g fis g a g e f g f |
           e f g f d es f es cis d es d |
           cis d es d b c d c a bes c bes |
-          r8 a8_. a'4.\sf r8 |
-          r8 f,8-. f'4.\sf r8 |
-          \clef bass
-          r8 d,8-[ d' c bes b]
+          <<
+            \relative c' {
+              \relative c'' b8\rest a8_. a'4.^\sf \relative c'' b8\rest |
+              \relative c'' b8\rest f,8_. f'4.^\sf \relative c'' b8\rest |
+              \clef bass
+              \relative c d8\rest d,8-[ d' c bes b]
+              |
+              c8 \relative c \relative c' c8\rest bes!4. bes8
+              |
+              bes8-[^( a g f e f)]
+              |
+              c'8 \relative c' c8\rest bes4. a8
+              |
+              
+            }
+            \\
+            \relative c' {
+              \override MultiMeasureRest.staff-position = #-8
+              R2.
+              |
+              R2.
+              |
+              \override MultiMeasureRest.staff-position = #-2
+              R2.
+              |
+              R2.
+              |
+              R2.
+              |
+              R2.
+              |
+              R2.
+              |
+              R2.
+              |
+              \trillSpanUp
+              \stemUp f,,8 \stemDown \relative c d8\rest \afterGrace a'2\sf\startTrillSpan { \stemUp g32\stopTrillSpan a \stemNeutral }
+            }
+          >>
+          bes4 r8 bes16 a g f es d
           |
-          c8 r8 bes!4. bes8
+          g4 r8 g16 f es d c bes
           |
-          bes8-[^( a g f e f)]
+          es4 r8 es16 d c d c bes
           |
-          c'8 r8 bes4. a8
+          a bes a g f g a bes b c d c
           |
-          d8 r8 cis4. c8
+          bes! c d es e f g f es d c bes
           |
-          f8 r8 e4. es8
+          a bes a g f g a bes a bes c d
+          |
+          es f g es cis d e cis d f bes d
+          |
+          fis, g a g dis e f! e f a c f
+          |
+          b, c d c gis a bes a bes a g! f
+          |
+          es f g es d cis bis cis d
+          % Unsure whether this should be an es or an e.
+          % Henle is unsure too.
+          es
+          f fis
           |
           
         }
