@@ -269,7 +269,7 @@ four-section-one = {
               |
               gis a bes a e f g f b c d c
               |
-              \relative c'' d8\rest d,8 es'4.^\sf \relative c'' f8\rest
+              \relative c'' f8\rest d,8 es'4.^\sf \relative c'' f8\rest
               |
               \relative c'' f8\rest bes,8 bes'4.^\sf \relative c'' f8\rest
               |
@@ -289,7 +289,30 @@ four-section-one = {
               |
               f'8 \relative c''' f8\rest es!4.^\sf d8
               |
-              bes'8 \relative c'''' b8\rest g4.^\sf f8
+              bes'8 \relative c'''' b8\rest g4.^\sf f8^~
+              |
+              f8-[ f^~]
+              f8-[ e] es4^~
+              |
+              es8-[ d] des8-[ des,^~] des16-[ g bes des]
+              |
+              des8-[ c16 bes] a-[ bes c bes] a g a bes
+              |
+              c bes a g f g f es! d! cis' d cis
+              |
+              es8-[ d16 c!] b c d c b a b c
+              |
+              d16 c b as g as g f! es4
+              |
+              \relative c''' b4\rest
+              es4.\sf des16-[ es]
+              |
+              f16 ges f es des c bes as des4^~
+              |
+              des16 es des c bes as g f bes4^~
+              |
+              bes4. bes8^. c8-[^. des!^.]
+              |
             }
             \\
             \relative c' {
@@ -299,7 +322,7 @@ four-section-one = {
               |
               e2 f4_~
               |
-              f8 \relative c' { a8\rest c8\rest } a8 bes4
+              f8 \relative c' { g8\rest b8\rest } a8 bes4
               |
               \relative c' { c4\rest e8\rest } fis8 g4
               |
@@ -319,6 +342,33 @@ four-section-one = {
               |
               \relative c'' { b8\rest } bes8-[ e bes_~] bes8-[ d]
               |
+              b8-[ g] c-[ g] c-[ f,_~]
+              |
+              f8 bes!_~ bes bes,
+              s4
+              |
+              \trillSpanDown
+              e2\sf\startTrillSpan f4\stopTrillSpan
+              |
+              \relative c'' { g4\rest g4\rest }
+              d,8
+              \relative c'' g8\rest
+              |
+              fis'2\startTrillSpan g4\stopTrillSpan
+              |
+              \relative c' { e4\rest e4\rest }
+              g,16 b c des
+              |
+              es des c b as b as ges f4
+              |
+              \bar "||"
+              \key f \minor
+              \relative c' { e4\rest e4\rest }
+              des16-[ es e f]
+              |
+              ges4 \relative c' e4\rest bes,16-[ c des d]
+              |
+              es d es f ges8-[ g] as \relative c'' g8\rest
             }
           >>
         }
@@ -411,7 +461,7 @@ four-section-one = {
           \tuplet 3/2 { r32 a a' } r16 r16
           \tuplet 3/2 { r32 r32 <a, a'> }
           <a_~ d_~ e^~ b'^~>2 |
-          <a_~ d_~ e^~ b'^~>1 2\fermata
+          <a_~ d_~ e_~ b'_~>1 2\fermata
           % Modulation section.
           r16 <a a'>16 r32. <a a'>64 r16 r16 <a a'>16 r32.
           <fis fis'>64 r16 r16
@@ -516,7 +566,39 @@ four-section-one = {
           es
           f fis
           |
-          
+          g a bes b c, e! g c
+          f, g as a
+          |
+          bes, d f bes
+          e, g bes e
+          <<
+            \relative c' {
+              bes8 d8\rest
+            }
+            \\
+            \relative c'' {
+              g,16 e g e
+            }
+          >>
+          |
+          r4 r4 f,,8 r8
+          |
+          \trillSpanUp
+          a'2_\sf\startTrillSpan bes4\stopTrillSpan
+          |
+          r4 r4 g,8 r8
+          |
+          b'2_\sf\startTrillSpan c8\stopTrillSpan-[ as,]
+          |
+          \afterGrace c'2_\sf\startTrillSpan { bes16-[\stopTrillSpan c] } des4
+          |
+          \key f \minor
+          r8 des16-[ c] bes as ges f bes4
+          |
+          r8 bes16-[ as] ges f es des ges4
+          |
+          r8 ges16-[ f] es f es des c des c bes
+          |
         }
       }
     >>
