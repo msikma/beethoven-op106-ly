@@ -313,6 +313,15 @@ four-section-one = {
               |
               bes4. bes8^. c8-[^. des!^.]
               |
+              \stemDown <ges, es'>4._\sf 8 8-[^( <f des'>]
+              |
+              \stemUp
+              c'8-[ des] es,8-[ f16 ges?)] as bes c des
+              |
+              s2.
+              |
+              s2 as8 b8\rest
+              |
             }
             \\
             \relative c' {
@@ -354,7 +363,7 @@ four-section-one = {
               d,8
               \relative c'' g8\rest
               |
-              fis'2\startTrillSpan g4\stopTrillSpan
+              fis'2\startTrillSpan_\sf g4\stopTrillSpan
               |
               \relative c' { e4\rest e4\rest }
               g,16 b c des
@@ -366,9 +375,18 @@ four-section-one = {
               \relative c' { e4\rest e4\rest }
               des16-[ es e f]
               |
-              ges4 \relative c' e4\rest bes,16-[ c des d]
+              ges4 \relative c' c4\rest bes,16-[ c des d]
               |
               es d es f ges8-[ g] as \relative c'' g8\rest
+              |
+              s2.
+              |
+              es8-[ des] c-[ des] c-[ es]
+              |
+              d'16 es f es des c bes as des es f ges
+              |
+              g! as bes as ges f es des c, des c bes
+              |
             }
           >>
         }
@@ -461,7 +479,7 @@ four-section-one = {
           \tuplet 3/2 { r32 a a' } r16 r16
           \tuplet 3/2 { r32 r32 <a, a'> }
           <a_~ d_~ e^~ b'^~>2 |
-          <a_~ d_~ e_~ b'_~>1 2\fermata
+          <a_~ d_~ e^~ b'^~>1 2\fermata
           % Modulation section.
           r16 <a a'>16 r32. <a a'>64 r16 r16 <a a'>16 r32.
           <fis fis'>64 r16 r16
@@ -598,6 +616,14 @@ four-section-one = {
           r8 bes16-[ as] ges f es des ges4
           |
           r8 ges16-[ f] es f es des c des c bes
+          |
+          as16 bes c des d es f es des es f ges
+          |
+          g! as bes as ges f es des as8 r8
+          |
+          <ges es'>4.^\sf 8 8-[_( <f des'>]
+          |
+          \stemUp <es c'>8-[ <des des'>] <c' es>-[ <des f>)] r4 \stemNeutral
           |
         }
       }
