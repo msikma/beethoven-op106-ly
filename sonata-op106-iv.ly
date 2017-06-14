@@ -322,6 +322,23 @@ four-section-one = {
               |
               s2 as8 b8\rest
               |
+              % Todo: put sf in parentheses
+              ges4.^\sf f8 bes4
+              |
+              \relative c'' { f4\rest f4\rest } des8^\sf \relative c''' a8\rest
+              |
+              c4.^\sf bes8 es4
+              |
+              \relative c''' { a4\rest a4\rest } f8 \relative c''' a8\rest
+              |
+              f8^\sf^.-[ es^.] \relative c'' f4\rest des8 \relative c'' f8\rest
+              |
+              des8-[ c] \relative c'' f8\rest des8 g'4^~\startTrillSpan
+              |
+              g4 as4\stopTrillSpan \relative c''' a8\rest as16-[ g]
+              |
+              f es des c f4 \relative c''' { a8\rest } f16-[ es]
+              |
             }
             \\
             \relative c' {
@@ -387,6 +404,21 @@ four-section-one = {
               |
               g! as bes as ges f es des c, des c bes
               |
+              as bes c des d es c des e f ges f
+              |
+              d es g as fis g as g a bes c bes
+              |
+              g as! bes as fis g as g a bes c bes
+              |
+              as! bes c des c des b c b c des c
+              |
+              a bes c bes d, es f es g as! bes as
+              |
+              g as bes as g as bes b c bes a bes
+              |
+              bes as! e as \relative c'' { g4\rest g8\rest } g8_.
+              |
+              as4 \relative c'' { g4\rest g8\rest } e8_.
             }
           >>
         }
@@ -625,6 +657,22 @@ four-section-one = {
           |
           \stemUp <es c'>8-[ <des des'>] <c' es>-[ <des f>)] r4 \stemNeutral
           |
+          r4 r4 <des, des'>8 r8
+          |
+          <c c'>4.\sf <bes bes'>8 <es es'>4
+          |
+          r4 r4 <g g'>8 r8
+          |
+          % Todo: put \sf in parentheses
+          <f f'>4._\sf <es es'>8 <as as'>4
+          |
+          r4 <g g'>8 r8 <g g'>8_.-[ <f f'>-.]
+          |
+          r4 <es' es'>8 r8 es'8-[ des]
+          |
+          des-[ c] r8 \stemDown c,8_. c'4_\sf
+          |
+          r4 r8 as,8_. as'4_\sf
         }
       }
     >>
