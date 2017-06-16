@@ -339,6 +339,26 @@ four-section-one = {
               |
               f es des c f4 \relative c''' { a8\rest } f16-[ es]
               |
+              des c bes as des4 \relative c''' { a8\rest } des16-[ c]
+              |
+              bes16 c bes as g as g f es f g as
+              |
+              a bes c bes as bes c des d es f es
+              |
+              des c bes as bes8
+              \relative c''' { a8\rest }
+              <bes, des>4^~
+              |
+              <bes des>8-[ <f des'>] <f des'>_( <es c'> <des bes'> <c as'>
+              |
+              <bes g'>8-[ <c as'>])
+              a'16 bes c des es f ges f
+              |
+              es des c bes
+              <ges es'>8_(\sf <f des'> <es c'> <des bes'>
+              |
+              <c a'> <des bes'>)
+              
             }
             \\
             \relative c' {
@@ -419,6 +439,16 @@ four-section-one = {
               bes as! e as \relative c'' { g4\rest g8\rest } g8_.
               |
               as4 \relative c'' { g4\rest g8\rest } e8_.
+              |
+              f4 \relative c'' { g4\rest g8\rest } es'8
+              |
+              des8-[ bes] bes8
+              \relative c'' { g8\rest } s4
+              |
+              s2.
+              |
+              s4 des8 s8 s4
+              |
             }
           >>
         }
@@ -673,6 +703,26 @@ four-section-one = {
           des-[ c] r8 \stemDown c,8_. c'4_\sf
           |
           r4 r8 as,8_. as'4_\sf
+          |
+          r4 r8 f,8_. f'8^.-[ a^.]
+          |
+          bes8-[ d] es8 r8 <bes_~ des^~>4_\sf
+          |
+          <bes des>8-[ 8] 8-[^( <as c>] <des, bes'>-[ <c as'>]
+          |
+          <bes g'>-[ <c as'>])
+          g16 as g f es f g as
+          |
+          a bes c bes g as bes c des es f es
+          |
+          des c bes as
+          <ges' es'>8\sf^( <f des'> <es c'> <des bes'>
+          |
+          <c a'> <des bes'>)
+          a16 bes c des es f ges f
+          |
+          es des c bes
+          
         }
       }
     >>
