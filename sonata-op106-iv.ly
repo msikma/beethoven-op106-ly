@@ -347,7 +347,7 @@ four-section-one = {
               |
               des c bes as bes8
               \relative c''' { a8\rest }
-              <bes, des>4^~
+              <bes,_~ des^~>4
               |
               <bes des>8-[ <f des'>] <f des'>_( <es c'> <des bes'> <c as'>
               |
@@ -357,8 +357,17 @@ four-section-one = {
               es des c bes
               <ges es'>8_(\sf <f des'> <es c'> <des bes'>
               |
-              <c a'> <des bes'>)
-              
+              <c a'>-[ <des bes'>])
+              s2
+              |
+              s2.
+              |
+              s4
+              \stemDown
+              <ces' es>8\sf-[^( <bes des> <as ces> <ges bes>]
+              |
+              <f as>-[ <ges bes>]) \stemNeutral <fes' des'>\sf-[ <es ces'> <des bes'> <ces as'>]
+              |
             }
             \\
             \relative c' {
@@ -448,6 +457,62 @@ four-section-one = {
               s2.
               |
               s4 des8 s8 s4
+              |
+            }
+          >>
+          <bes g'>8-[ <ces_~ as'^~>]
+          <ces as'>8-[ <as'_~ ces^~>]
+          <as ces> <g bes>
+          |
+          <des fes>4.\f 8\sf 8-[ <ces es>]
+          |
+          <bes des>^( <as ces> <g bes> <as ces> <bes des> <ces_~ es^~>)
+          |
+          <ces es>8\f-[ 8] 4.\sf <bes_~ des^~>8
+          |
+          \stemDown
+          <bes des>-[^( <as ces> <ges bes> <f as> <ges bes> <as ces>])
+          \stemNeutral
+          |
+          <<
+            \relative c'' {
+              des8 es4 des des8
+              |
+              \bar "||"
+              \key ges \major
+              des16-[ bes, des ges]
+              % TODO: staccato marks here?
+              bes8-[ ces] des4
+              |
+              \relative c''' { a4\rest c16\rest }
+              ges16-[ f es] f8-[ ges16 as^~]
+              |
+              as4 as16-[ f' es des] c8-[ des16 es]
+              |
+              as,8 s8 s2
+              |
+              f8-[^. ges^.] as4^~ as16-[ f es d]
+              |
+            }
+            \\
+            \relative c'' {
+              ges8-[ ges f ges]
+              as16 ges f as
+              |
+              bes8\p s8 \relative c' { e16\rest }
+              ges16-[ f es]
+              f8-[ ges16 as]
+              |
+              bes4 s4 s4
+              |
+              f'16-[ f, as des]
+              f8-[ ges]
+              as4\sf
+              |
+              f4_~ f16 f es des c bes as ges
+              |
+              f8\f \relative c'' { g8\rest b16\rest }
+              as16-[ bes c] d8-[ bes]
               |
             }
           >>
@@ -722,7 +787,71 @@ four-section-one = {
           a16 bes c des es f ges f
           |
           es des c bes
-          
+          <<
+            \relative c {
+              d16 es f g as bes ces bes
+              |
+              as g f es e f g as bes c! des c
+              |
+              bes as g f
+            }
+            \\
+            \relative c {
+              as8\sf_( g f es
+              |
+              d-[ es)] bes'8\sf_( as g f
+              |
+              e-[ f)]
+            }
+          >>
+          f'16 ges as bes ces des es des
+          |
+          ces bes as ges g, as bes ces des es fes es
+          |
+          des ces bes as ges fes es d es g bes es
+          |
+          % TODO: the trill is on the top note.
+          % This is as per Artaria but it it's not very clear.
+          <g, g'>2\startTrillSpan <as as'>4\stopTrillSpan
+          |
+          <as as'>4 <es es'> <des des'>
+          |
+          <f f'>2\startTrillSpan <ges ges'>4\stopTrillSpan
+          |
+          <des des'>4 <es es'>
+          <<
+            \relative c {
+              ces4^~
+              |
+              ces8-[ bes as bes ces des]
+            }
+            \\
+            \relative c, {
+              \voiceOne ces4_~
+              \voiceTwo
+              |
+              ces8-[ bes as bes ces]
+              \once \hide Flag
+              \voiceOne des
+            }
+          >>
+          |
+          \key ges \major
+          \stemNeutral <ges, ges'>4 r4 r16 d''16-[ es f]
+          |
+          g16-[ bes, des g]
+          bes8-[ ces] des4
+          |
+          r4 r4 r16 as16-[ bes ces]
+          |
+          des16-[ f, as des]
+          % TODO: staccato marks here?
+          f,8-[ ges] as4\sf_~
+          |
+          as16-[ f' es des]
+          c bes as g
+          f8-[ as]
+          |
         }
       }
     >>
