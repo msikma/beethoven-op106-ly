@@ -493,6 +493,13 @@ four-section-one = {
               |
               f8-[^. ges^.] as4^~ as16-[ f es d]
               |
+              es4 \relative c''' { c16\rest } ges'16-[ f es]
+              d ces bes as
+              |
+              ges4 \relative c''' { c4\rest c4\rest }
+              |
+              ges8^.-[ as^.] bes4^~^\sf bes16-[ g f es]
+              |
             }
             \\
             \relative c'' {
@@ -514,6 +521,13 @@ four-section-one = {
               f8\f \relative c'' { g8\rest b16\rest }
               as16-[ bes c] d8-[ bes]
               |
+              bes16 ges, bes es
+              ges8_.-[ as_.] bes4\sf
+              |
+              bes8-[ ges^~] ges16 ges' f es
+              d ces bes as
+              |
+              ges4 \relative c'' { g4\rest g4\rest }
             }
           >>
         }
@@ -851,6 +865,14 @@ four-section-one = {
           as16-[ f' es des]
           c bes as g
           f8-[ as]
+          |
+          g16 r16 r8 r4 r16 d'16-[ es f]
+          |
+          es16-[ ges, bes es,] ges8^.-[ as^.]
+          bes4^~\sf
+          |
+          bes16-[ ges f es] d-[ ces bes as]
+          a8_.-[ bes_.]
           |
         }
       }
