@@ -500,6 +500,18 @@ four-section-one = {
               |
               ges8^.-[ as^.] bes4^~^\sf bes16-[ g f es]
               |
+              es'16 ces bes as as' f es d as'4^\sf^~
+              |
+              as16 as, g f as f es d f bes, a bes
+              |
+              bes' f e f f' bes, a bes bes' as! g f
+              |
+              g4
+              % TODO: double check height of these rests.
+              \relative c''' { e4\rest e4\rest }
+              |
+              s4 d8 \relative c''' { e8\rest } es4
+              |
             }
             \\
             \relative c'' {
@@ -528,6 +540,28 @@ four-section-one = {
               d ces bes as
               |
               ges4 \relative c'' { g4\rest g4\rest }
+              |
+              % TODO: check position of rest
+              \override MultiMeasureRest.staff-position = #-2
+              R2.
+              |
+              % TODO: r2 here?
+              s2
+              \trillSpanDown
+              % TODO: end this trill at the bar line.
+              c4\startTrillSpan
+              |
+              c2.
+              |
+              c2\stopTrillSpan
+              \relative c'' { b4\rest }
+              |
+              es8 <es, des'!>_.-[ <es ces'>_. <des bes'>_. <ces as'>_. <bes ges'>_.]
+              |
+              <es ces'>2
+              \relative c'' { b4\rest }
+              |
+              
             }
           >>
         }
@@ -874,6 +908,33 @@ four-section-one = {
           bes16-[ ges f es] d-[ ces bes as]
           a8_.-[ bes_.]
           |
+          bes8_.-[ ces_.] ces'4^~\sf ces16 as ges f
+          |
+          <<
+            \relative c' {
+              bes2
+            }
+            \\
+            \relative c {
+              es4 d
+            }
+          >>
+          r4
+          |
+          R2.
+          |
+          r4
+          % TODO: display in voice one?
+          ces4_. ces'4^~\sf
+          |
+          ces8
+          s8 s2
+          |
+          r4
+          as,4_. as'4\sf
+          |
+          % TODO: second as shouldn't be an 8 like the preceding?
+          
         }
       }
     >>
