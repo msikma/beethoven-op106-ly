@@ -510,7 +510,33 @@ four-section-one = {
               % TODO: double check height of these rests.
               \relative c''' { e4\rest e4\rest }
               |
-              s4 d8 \relative c''' { e8\rest } es4
+              s4 d8 \relative c''' { e8\rest } es4^~
+              |
+              es4 s2
+              |
+              s4 bes8 \relative c''' { c8\rest } ces4^~
+              |
+              ces4 s2
+              |
+              s4
+              bes4 ces4^~
+              |
+              ces4 bes as^~
+              |
+              as2 as'4^\sf^~
+              |
+              as8
+              \relative c'''' g8\rest
+              ges8
+              \relative c'''' g8\rest
+              f8
+              \relative c''' e8\rest
+              |
+              es8
+              \relative c''' e8\rest
+              d
+              \relative c''' a8\rest
+              as,8-[ ges]
               |
             }
             \\
@@ -561,7 +587,26 @@ four-section-one = {
               <es ces'>2
               \relative c'' { b4\rest }
               |
-              
+              <es ces'>8_.-[ <des bes'>_. <ces as'>_. <bes ges'>_.]
+              <as f'>8_.-[ <ges es'>_.]
+              |
+              <ces as'>2
+              \relative c'' b4\rest
+              |
+              <ces as'>8_.-[ <bes ges'>_.]
+              <as f'>_.-[ <bes ges'>_.]
+              <as f'>_.-[ <ges es'>_.]
+              |
+              s2.
+              |
+              s2.
+              |
+              s2
+              <f' a>8\sf-[ <ges bes>]
+              |
+              <as ces>\sf-[ <ges bes>]
+              <ces, as'>\sf-[ <bes ges'>]
+              f'\sf-[ es]
             }
           >>
         }
@@ -931,9 +976,31 @@ four-section-one = {
           s8 s2
           |
           r4
-          as,4_. as'4\sf
+          as,4_. as'4^~\sf
           |
           % TODO: second as shouldn't be an 8 like the preceding?
+          as4 s2
+          |
+          r4
+          % TODO: does this not have a staccato?
+          f,4 f'4^~\sf
+          |
+          f4 s2
+          |
+          <f d'>8\sf-[ <ges es'>]
+          <f d'>\sf-[ <es c'>]
+          <d bes'>\sf-[ <es c'>]
+          |
+          <f d'>\sf-[ <ges es'>]
+          <g e'>\sf-[ <as f'>]
+          <bes ges'>\sf-[ <as f'>]
+          |
+          <ges! es'>\sf-[ <as f'> <bes ges'>\sf <ces as'>]
+          s4
+          |
+          s2
+          <bes,,_~ bes'^~>4
+          |
           
         }
       }
