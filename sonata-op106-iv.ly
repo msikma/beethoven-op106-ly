@@ -538,6 +538,23 @@ four-section-one = {
               \relative c''' a8\rest
               as,8-[ ges]
               |
+              <as, f'>8\sf-[ <bes ges'> <as f'>\sf <ges es'> <f d'>\sf <g es'>]
+              |
+              f'8-[^\sf ges as^\sf bes c^\sf d]
+              |
+              es-[^\sf f ges^\sf g]
+              as-[^\sf bes]
+              |
+              c-[^\sf bes as^\sf ges!]
+              es8
+              \relative c'' { f8\rest }
+              |
+              des8
+              \relative c'' { f8\rest }
+              c8
+              \relative c'' { f8\rest }
+              es,4_\sf
+              |
             }
             \\
             \relative c'' {
@@ -607,6 +624,22 @@ four-section-one = {
               <as ces>\sf-[ <ges bes>]
               <ces, as'>\sf-[ <bes ges'>]
               f'\sf-[ es]
+              |
+              s2.
+              |
+              d8-[ es f ges es f]
+              |
+              ges-[ as bes ces]
+              f-[ ges]
+              |
+              % TODO: c or ces?
+              as-[ ges c, bes]
+              % TODO: sf up or down?
+              as-[_\sf ges]
+              |
+              f-[_\sf es des_\sf c]
+              s4
+              |
             }
           >>
         }
@@ -1001,7 +1034,27 @@ four-section-one = {
           s2
           <bes,,_~ bes'^~>4
           |
-          
+          <bes bes'>2 <as_~ as'^~>4
+          |
+          <as as'>2 <as_~ as'^~>4
+          |
+          <as as'>8 r8 <ges ges'> r8
+          <f f'>8 r8
+          |
+          <es es'>8 r8
+          <d d'>8 r8
+          <es es'>8 bes'''8\noBeam
+          |
+          as-[ ges f es]
+          <<
+            \relative c' {
+              bes8-[ a]
+            }
+            \\
+            \relative c {
+              des8-[ c!]
+            }
+          >>
         }
       }
     >>
