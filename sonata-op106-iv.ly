@@ -553,8 +553,61 @@ four-section-one = {
               \relative c'' { f8\rest }
               c8
               \relative c'' { f8\rest }
-              es,4_\sf
+              es,4_~_\sf
               |
+              \bar "||"
+              \key bes \minor
+              es2
+              a'4^~\startTrillSpan
+              |
+              \afterGrace a2. { g16-[\stopTrillSpan a] }
+              |
+              bes2.
+              |
+              bes8-[ as! ges! f es des]
+              |
+              ges2 \relative c''' { a4\rest }
+              |
+              ges8-[ f es des]
+              g16-[ des' bes g]
+              |
+              % TODO: e or es?
+              es-[ bes' ges es]
+              des-[ ges es des]
+              c-[ ges' es c]
+              |
+              des-[ bes' ges e]
+              c4
+              s4
+              |
+              bes'2
+              <bes,, ges'>4\startTrillSpan
+              |
+              2 f'4\stopTrillSpan
+              |
+              s2.
+              |
+              % TODO: move sf next to note
+              es''2^\sf
+              c,4^~\startTrillSpan
+              |
+              c2
+              bes4\stopTrillSpan
+              |
+              \relative c''' { c4\rest c4\rest }
+              des'4^~^\sf
+              |
+              des2
+              bes,4\startTrillSpan
+              |
+              bes2.
+              |
+              \afterGrace bes2 { a16-[\stopTrillSpan bes] }
+              f'4^~
+              |
+              f8-[^( es des c b c])
+              |
+              <a es'>8-[ <bes! des> <es, bes'> bes' a bes]
             }
             \\
             \relative c'' {
@@ -592,7 +645,7 @@ four-section-one = {
               s2
               \trillSpanDown
               % TODO: end this trill at the bar line.
-              c4\startTrillSpan
+              c4_\sf\startTrillSpan
               |
               c2.
               |
@@ -639,6 +692,57 @@ four-section-one = {
               |
               f-[_\sf es des_\sf c]
               s4
+              |
+              s2
+              des'8-[ c!]
+              |
+              f-[ es] des-[ c] ges'-[ c,]
+              |
+              \trillSpanDown
+              \afterGrace es2.\startTrillSpan { des16-[\stopTrillSpan es] }
+              |
+              des8-[\sf c bes\sf as ges\sf f]
+              |
+              es'-[ es, f ges as bes_~]
+              |
+              bes-[ as ges f] e'4
+              |
+              \relative c' { e4\rest e4\rest }
+              bes4_~
+              |
+              bes2
+              \relative c'' { b4\rest }
+              |
+              s2.
+              |
+              s2 
+              c,8-[ es'8]^~
+              |
+              es2
+              \stemUp
+              c,4^~\startTrillSpan
+              |
+              \stemDown
+              c2 es4_~\stopTrillSpan
+              |
+              es4 e4 f8-[ des'^~\sf]
+              |
+              \key as \major
+              des2
+              bes,4\startTrillSpan
+              |
+              \afterGrace bes2 { a16-[\stopTrillSpan bes] }
+              des4_~
+              |
+              des2
+              g4^~
+              |
+              g8-[_( f es des c des])
+              |
+              b-[ c bes as g' as]
+              |
+              s4.
+              des,4 des8
               |
             }
           >>
@@ -1049,12 +1153,105 @@ four-section-one = {
           <<
             \relative c' {
               bes8-[ a]
+              |
+              ges-[ f es des]
             }
             \\
             \relative c {
               des8-[ c!]
+              |
+              \key bes \minor
+              bes-[ as ges f]
             }
           >>
+          <es_~ es'^~>4\f
+          |
+          <es es'>2
+          % TODO: these are not tied, should they be?
+          % TODO: the trill is played on the top note in practice.
+          % Should be break this up into two voices?
+          <c,, c'>4\startTrillSpan
+          |
+          \afterGrace <c c'>2. { bes'16-[\stopTrillSpan c] }
+          |
+          bes2
+          r4
+          |
+          % TODO: stem up here since we are splitting into voices later, should we?
+          \stemUp
+          bes8
+          <c, c'>8-[ <des des'> <es es'> <f f'> <ges ges'>]
+          |
+          <des des'>2
+          <c_~ c'^~>4
+          |
+          <c c'>2
+          <<
+            \relative c {
+              \once \override TrillSpanner.bound-details.right.padding = #2.0
+              e4\startTrillSpan
+              |
+              % TODO: should we really move back to voice two?
+              \voiceTwo
+              e2
+              % TODO: trill y position is a bit ugly
+              \trillSpanUp
+              g4\stopTrillSpan
+              \startTrillSpan
+              |
+              g2
+            }
+            \\
+            \relative c, {
+              e4
+              |
+              e2
+            }
+          >>
+          f4_~
+          |
+          f2
+          % Make sure the trill stops before the note ends.
+          % TODO: maybe just make this length 2, instead of 2.
+          <<
+            \relative c, {
+              a'4_~
+              |
+              a2.
+            }
+            \\
+            \relative c {
+              \trillSpanUp
+              s4\startTrillSpan
+              |
+              s2 s4\stopTrillSpan
+            }
+          >>
+          |
+          r4\stopTrillSpan r4 bes4_~\sf
+          |
+          bes2
+          \stemNeutral
+          des'4^~
+          |
+          \bar "||"
+          \key as \major
+          \afterGrace des2 { c16-[ des] }
+          es4
+          |
+          es2
+          as4^~
+          |
+          as8-[ g f es d es]
+          |
+          es2.
+          |
+          es2
+          es4\startTrillSpan
+          |
+          es2
+          f8-[\stopTrillSpan g]
+          |
         }
       }
     >>
