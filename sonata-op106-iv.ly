@@ -608,6 +608,44 @@ four-section-one = {
               f8-[^( es des c b c])
               |
               <a es'>8-[ <bes! des> <es, bes'> bes' a bes]
+              |
+              \stemDown
+              des,8-[ c]
+              \stemUp
+              \relative c''' { c16\rest } as''16-[ g f]
+              % TODO: the only 8th beamed notes that don't have staccato, correct?
+              es8-[ g]
+              |
+              as8 \relative c''' { a8\rest c16\rest } c16-[ bes as] g4
+              |
+              as16-[ c, es as] c8^.-[ des^.] es4_\sf
+              |
+              \relative c''' { c16\rest } c,16-[ bes as] g4 as4^~
+              |
+              as16-[ as c f] as8^.-[ bes^.] c4^~
+              |
+              c4 \relative c''' { c16\rest } as16-[ g f] e8-[ f]
+              |
+              as8^.-[ bes^.] c4^~ c16-[ as g f]
+              |
+              a8^.-[ bes^.] c4^~ c16-[ as g f]
+              |
+              bes8^.-[ c^.] des4^~ des16-[ bes ges f]
+              |
+              a4 \relative c'''' { g16\rest } as16-[ c des] es4
+              |
+              \relative c''' { e4\rest e4\rest } des,16-[ f ges a]
+              |
+              g!16-[ bes as! g] f-[ es d c] bes4
+              |
+              \relative c''' { c4\rest c4\rest }
+              g16-[ bes c des]
+              |
+              c16-[ c' bes as] g-[ f es des] c4
+              |
+              % TODO: I added a rest here since it's a space in the original. check
+              \relative c''' { a8\rest } g'8 as4. c8
+              |
             }
             \\
             \relative c'' {
@@ -742,7 +780,44 @@ four-section-one = {
               b-[ c bes as g' as]
               |
               s4.
-              des,4 des8
+              des,4 des8_(
+              |
+              \stemUp
+              es4)_\p
+              \relative c' { e4\rest g16\rest }
+              \stemDown
+              bes'16-[ c des]
+              |
+              c16-[ c, es as] c8_.-[ des_.] es4
+              |
+              es4 s2
+              |
+              c,8_.-[ des_.] es4_\sf_~ es16-[ c bes as]
+              |
+              % TODO: should this be a 4?
+              c8_\f \relative c'' { s8 b16\rest } f'16-[ es des] c4
+              |
+              c16-[ as g f] as4 as16-[ c bes as]
+              |
+              \relative c'' { g4\rest b16\rest } c16-[ d e] f4
+              |
+              \relative c'' { g4\rest b16\rest } c16-[ d e] f4
+              |
+              \relative c'' { g4\rest b16\rest } f16-[ g a] bes4
+              |
+              es,8_.-[ f_.] ges4_~ ges16-[ es des c]
+              |
+              f16-[ bes a g!] f-[ es d c] bes4_~
+              |
+              bes8
+              \relative c'' { g8\rest g8\rest }
+              es,8_~ es16-[ g as bes]
+              |
+              es,16-[ es' des! c] bes-[ as g f] es4
+              |
+              es8 \relative c' { e8\rest e4\rest } es8_.-[ g_.]
+              |
+              as8-[ bes] c-[ des] es4_\sf
               |
             }
           >>
@@ -1251,6 +1326,47 @@ four-section-one = {
           |
           es2
           f8-[\stopTrillSpan g]
+          |
+          as16-[ c, es as] c8^.-[ des^.] es4
+          |
+          r4 r4 r16 bes16-[ c des]
+          |
+          c4 r16 as16-[ g f]
+          <<
+            \relative c' {
+              \relative c' { e16\rest } g16-[ as bes]
+            }
+            \\
+            \relative c {
+              es4
+            }
+          >>
+          |
+          r4 r16
+          des16-[ c bes] c8-[ d16 e16]
+          |
+          f4 r4 r16 e16-[ f g]
+          |
+          as8^.-[ bes^.] c4^~ c16-[ as g f]
+          |
+          c'16-[ f e d] c-[ bes as g] f8 r8
+          |
+          c'16-[ es des c] bes-[ a g f] es4
+          |
+          des16-[ des' c bes] a-[ g f es] des4
+          |
+          c16-[ c' bes a] ges16-[ f es des] c4
+          |
+          \stemNeutral
+          <d, d'>8^.-[ <es es'>^.] <f_~ f'^~>4^\sf <f f'>16-[ d' c bes]
+          |
+          <es, es'>8_.-[ <f f'>_.] <g_~ g'^~>4_\sf <g g'>16-[ es' ces bes]
+          |
+          <g g'>8^.-[ <as as'>^.] <bes_~ bes'^~>4_\sf <bes bes'>16-[ g' f es]
+          |
+          <as, as'>8^.-[ <bes bes'>^.] <c_~ c'^~>4_\sf <c c'>16-[ as' es c]
+          |
+          as'16-[ es c as] es'-[ c as es] ges-[ es' c ges]
           |
         }
       }
