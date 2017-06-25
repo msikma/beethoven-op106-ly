@@ -706,6 +706,30 @@ four-section-one = {
               a-[ b a gis]
               g-[ fis e dis])
               |
+              e^( fis e dis d cis b a b cis d cis
+              |
+              d e fis e fis-[ g])
+              r8
+              s4
+              |
+              s2.
+              |
+              s2.
+              |
+              s2 ais,8 \relative c'' b8\rest
+              |
+              fis'4^( e cis
+              |
+              e d2_~
+              |
+              d4)^( cis2_~
+              |
+              cis4 b2_~
+              |
+              b2) e,8-[^( d]
+              |
+              cis8-[ d] \clef bass
+              cis8-[ d] e-[ eis])
             }
             \\
             \relative c'' {
@@ -937,7 +961,32 @@ four-section-one = {
               |
               s4 s4 \relative c' { b8\rest } a8
               |
-              b8-[ g fis eis] fis4
+              b8-[ g fis eis] fis4_~
+              |
+              fis4 e! s4
+              |
+              s2 g'4
+              |
+              d16-[ e fis g] a-[ b]
+              \relative c'' f8\rest b4
+              |
+              fis16-[ g a b] cis-[ d] \relative c'' f8\rest d4
+              |
+              \trillSpanUp
+              cis2\startTrillSpan s4\stopTrillSpan
+              |
+              \trillSpanDown
+              ais,2.\startTrillSpan
+              |
+              b2\stopTrillSpan fis4
+              |
+              e2 cis4
+              |
+              e4 d cis_~
+              |
+              cis b b
+              |
+              b4 fis4 d'4
             }
           >>
         }
@@ -1533,6 +1582,47 @@ four-section-one = {
           cis'2\startTrillSpan d4\stopTrillSpan
           |
           r4 r4 a4
+          |
+          g2
+          <<
+            \relative c' {
+              g4
+              |
+              b a g4^~
+              |
+              g4 fis g
+              |
+              g8-[^( fis e fis] gis-[ a])
+              |
+              g2 fis8 r8
+              |
+            }
+            \\
+            \relative c {
+              e4
+              |
+              fis2 e4
+              |
+              e d d
+              |
+              d4_( a fis'
+              |
+              e ais,) r4
+              |
+            }
+          >>
+          |
+          r4 r4 fis16 e d cis
+          |
+          b cis d e fis g fis eis e d cis b
+          |
+          cis^( d cis bis b ais gis fis gis ais b ais
+          |
+          b cis d cis d e) r8 e4
+          |
+          b16-[ cis d e] fis-[ g] r8 g4
+          |
+          d16-[^( e fis gis] ais-[ b]) r8 ais4
           |
         }
       }
