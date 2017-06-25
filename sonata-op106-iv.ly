@@ -646,6 +646,66 @@ four-section-one = {
               % TODO: I added a rest here since it's a space in the original. check
               \relative c''' { a8\rest } g'8 as4. c8
               |
+              des4
+              \relative c''' { c4\rest }
+              as,8^.-[ c^.]
+              |
+              des4.^\sf e8-[ f ges^~]
+              |
+              ges16-[ bes as ges]
+              f-[ es! des ces]
+              bes4
+              |
+              \bar "||"
+              \key es \minor
+              s8
+              ces8 des4. bes'8
+              |
+              b8
+              \relative c''' { a8\rest a4\rest }
+              fis,8-[ ais]
+              |
+              \bar "||"
+              \key b \minor
+              bis4. cis8-[ d e]
+              |
+              fis-[ ais^.] b4. cis8^.
+              |
+              d8-[ e] fis8^\sf
+              % TODO: check length of decresc
+              \relative c''' { a8\rest^\> }
+              fis,8
+              \relative c'' { f8\rest\! }
+              |
+              \relative c'' { f4\rest f4\rest }
+              fis4^\p
+              |
+              e2^( cis4
+              |
+              d2 c4^~
+              |
+              c4 b b)
+              |
+              b^( fis d')
+              |
+              % TODO: this measure is totally incorrect. fix it.
+              cis4 fis,8 \relative c'' g8\rest ais'4^~\startTrillSpan
+              |
+              % TODO: added a slur here
+              \afterGrace ais4 { gis16-[\stopTrillSpan ais] }
+              b4 \relative c''' { a8\rest }
+              b16-[^( ais]
+              |
+              g-[ fis e fis] g-[ a g fis]
+              e-[ d cis d]
+              |
+              e-[ d cis b] a-[ gis a g]
+              fis-[ a b cis]
+              |
+              d-[ e fis g]
+              a-[ b a gis]
+              g-[ fis e dis])
+              |
             }
             \\
             \relative c'' {
@@ -819,6 +879,65 @@ four-section-one = {
               |
               as8-[ bes] c-[ des] es4_\sf
               |
+              des16-[ f es des]
+              c-[ bes as ges]
+              f4
+              |
+              s8 ges8 as4._\sf bes8_~
+              |
+              bes4
+              \relative c' { e4\rest }
+              des,8-[ f]
+              |
+              ges4. as8 bes8-[ ges'_(]
+              |
+              fis16-[) d cis bes] ais-[ g fis e]
+              des4
+              |
+              s8 e8 fis4._\sf cis'8
+              |
+              d8 cis16-[ b] d-[ b g fis]
+              b-[ fis e d]
+              |
+              fis-[ d cis b]
+              d-[ b
+              \change Staff = "left"
+              \stemUp
+              g fis]
+              g-[ fis gis ais]
+              \change Staff = "right"
+              \stemDown
+              |
+              b-[_( cis d e]
+              fis-[ g fis eis]
+              e-[ d cis b])
+              |
+              cis16-[ d cis bis]
+              b-[ ais gis fis]
+              gis-[ ais b ais]
+              |
+              b-[ cis d cis]
+              d-[ e] \relative c' e8\rest e4
+              |
+              b16-[ cis d e] fis-[ g] \relative c'' g8\rest g4
+              |
+              d16-[ e fis gis] ais-[ b] \relative c'' g8\rest b4
+              |
+              \afterGrace ais2\startTrillSpan { gis16-[\stopTrillSpan ais] }
+              \stemUp s8 \stemDown
+              s8
+              |
+              \relative c' { e4\rest }
+              b,8
+              \relative c' { b8\rest }
+              d'4_~\startTrillSpan
+              |
+              d4\stopTrillSpan
+              e4 g,
+              |
+              s4 s4 \relative c' { b8\rest } a8
+              |
+              b8-[ g fis eis] fis4
             }
           >>
         }
@@ -1367,6 +1486,53 @@ four-section-one = {
           <as, as'>8^.-[ <bes bes'>^.] <c_~ c'^~>4_\sf <c c'>16-[ as' es c]
           |
           as'16-[ es c as] es'-[ c as es] ges-[ es' c ges]
+          |
+          <f f'>8^.-[ <ges ges'>^.] <as_~ as'^~>4\sf <as as'>16-[ f' des as]
+          |
+          f'-[ des as f] des'-[ as f des] as'-[ f es des]
+          |
+          <bes' bes'>8^.-[ <ces ces'>^.] <des_~ des'^~>4\sf <des des'>16-[ bes' g des]
+          |
+          \key es \minor
+          bes'16-[ ges des bes] ges'-[ des bes ges] des'-[ bes as ges]
+          |
+          <d d'>8^.-[ <e e'>^.] <fis_~ fis'^~>4 <fis fis'>16-[ d' b fis]
+          |
+          \key b \minor
+          d'16-[ b fis d] b'-[ fis d b] fis'-[ d cis b]
+          |
+          fis8 r8 r4 r4
+          |
+          \once \override MultiMeasureRest.staff-position = #-2
+          R2.
+          |
+          R2.
+          |
+          R2.
+          |
+          R2.
+          |
+          R2.
+          |
+          R2.
+          |
+          <<
+            \relative c {
+              s4 s4 fis8 a8\rest
+            }
+            \\
+            \relative c {
+              R2.
+            }
+          >>
+          |
+          R2.
+          |
+          r4 r4 \stemDown a'8 \relative c b8\rest
+          |
+          cis'2\startTrillSpan d4\stopTrillSpan
+          |
+          r4 r4 a4
           |
         }
       }
