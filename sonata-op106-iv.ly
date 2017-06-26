@@ -730,6 +730,30 @@ four-section-one = {
               |
               cis8-[ d] \clef bass
               cis8-[ d] e-[ eis])
+              |
+              fis2
+              \clef treble
+              fis'4
+              |
+              \trillSpanUp
+              d2\startTrillSpan
+              b8-[\stopTrillSpan eis,]
+              |
+              fis2 \stemDown fis8-[\< gis16 ais]
+              |
+              b16-[ cis d e]\> fis-[ gis]\!
+              % TODO: should the decresc touch the piano?
+              \relative c'' b8\rest gis4\p
+              \stemUp
+              |
+              fis2\startTrillSpan
+              d4\stopTrillSpan
+              |
+              b2 g4
+              |
+              e16-[^( fis g a] b-[ cis]) r8 cis4
+              |
+              g16-[^( a b cis] d-[ e]) r8 e4
             }
             \\
             \relative c'' {
@@ -987,8 +1011,28 @@ four-section-one = {
               cis b b
               |
               b4 fis4 d'4
+              |
+              cis4 fis,4 r4_\<
+              |
+              % TODO: stop the descresc a little early, maybe.
+              r4\> r4 d'4_(\!
+              |
+              cis4 fis,4) s4
+              |
+              s2.
+              |
+              s2.
+              |
+              \trillSpanDown
+              d'2\startTrillSpan cis4\stopTrillSpan
+              |
+              r4 \relative c' { b8\rest } cis16-[ d] e-[ fis g a]
+              |
+              r4 \relative c' { b8\rest } e16-[ fis] g-[ a b cis]
             }
           >>
+          |
+          
         }
       }
       %---------------------------------------------------------------------
@@ -1622,7 +1666,56 @@ four-section-one = {
           |
           b16-[ cis d e] fis-[ g] r8 g4
           |
-          d16-[^( e fis gis] ais-[ b]) r8 ais4
+          d16-[^( e fis gis] ais-[ b]) r8 b4
+          |
+          ais2\startTrillSpan
+          fis,8-[\stopTrillSpan gis16 ais]
+          |
+          b-[ cis d e] fis8 r8
+          <<
+            \relative c' {
+              \stemDown
+              b4
+              |
+              \trillSpanDown
+              % TODO: ensure trill and cresc play nicely
+              ais2\startTrillSpan
+              \stemUp
+              fis4\stopTrillSpan
+              |
+              \trillSpanUp
+              d2\startTrillSpan
+              b8-[\stopTrillSpan bes]
+              |
+              a4 \relative c' { a4\rest } fis'4
+            }
+            \\
+            \relative c, {
+              s4
+              |
+              s2 fis4
+              |
+              r4 r4 r8
+              cis8
+              |
+              d16-[_( e fis g] a-[ b])
+              \relative c { b8\rest } b4
+            }
+            \\
+            \relative c {
+              % TODO: check this cresc
+              s4_\<
+              |
+              s4 s4_\>
+              s4\!
+            }
+          >>
+          |
+          g,16-[_( a b cis] d-[ e]) r8 e4
+          |
+          cis16-[_( d e fis] g-[ a]) r8 a4
+          |
+          e16-[_( fis g a] b-[ cis]) r8 cis4
           |
         }
       }
