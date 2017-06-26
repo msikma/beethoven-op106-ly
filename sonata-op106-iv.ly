@@ -1032,7 +1032,75 @@ four-section-one = {
             }
           >>
           |
-          
+          <<
+            \relative c''' {
+              g16-[^( fis e d] cis-[ b]) r8 b4^.
+              |
+              e16-[^( d cis b] a-[ g]) \relative c'' { d8\rest } g4^.
+              |
+              fis4^\markup { \italic "non ligato" } \relative c'' { d8\rest } fis16-[ g] a-[ b cis d]
+              |
+              a4 r8 a16-[ b] cis-[ d e fis]
+              |
+              b,4 r8 b16-[ cis] d-[ e fis g]
+              |
+              % TODO: no rest here for some reason. added it.
+              g4 \relative c''' { a8\rest } g16-[ a] b-[ cis d e]
+              |
+              fis-[ e d cis] b-[ a] \relative c''' { a8\rest } a4
+              |
+              d16-[ cis b a] g-[ fis] r8 fis4
+            }
+            \\
+            \relative c'' {
+              \relative c' { e4\rest e8\rest }
+              g16-[ fis] e-[ d cis b]
+              |
+              \relative c' { c4\rest c8\rest }
+              e16-[ d] cis-[ b a g]
+              |
+              d'16-[_\f cis b a] g-[ fis]
+              \relative c' { a8\rest } s4
+              |
+              fis'16-[_\sf e d cis] b-[ a]
+              % TODO: check if this is a desirable position for r8.
+              \relative c' { a8\rest } a4
+              |
+              g'16-[_\sf fis e d] cis-[ b]
+              \relative c' { c8\rest } g'4
+              |
+              e'16-[_\sf d cis b] a-[ g]
+              \relative c'' { g8\rest } g'4
+              |
+              fis4 \relative c'' { g8\rest }
+              s8 s4
+              |
+              % TODO: another missing rest, added it.
+              d4 \relative c'' { g8\rest }
+              s8 s4
+            }
+          >>
+          |
+          % Todo: should this be stem up?
+          r4 r8 \stemUp d16-[ e] fis-[ g a ais]
+          |
+          b-[\sf a g fis] e-[\sf d g fis] e-[\sf d c b]
+          |
+          e16-[\sf d cis b] a-[\sf gis]
+          <<
+            \relative c'' {
+              g4.^~
+              |
+              % TODO: \sf on the correct side?
+              g4 fis2^\sf
+            }
+            \\
+            \relative c' {
+              e16-[ d] cis-[ b a gis]
+              |
+              e'-[ d cis d] e4_~ e16-[ cis d e]
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -1716,6 +1784,59 @@ four-section-one = {
           cis16-[_( d e fis] g-[ a]) r8 a4
           |
           e16-[_( fis g a] b-[ cis]) r8 cis4
+          |
+          e16-[ d cis b] a-[ g] r8 g4
+          |
+          cis16-[ b a g] fis-[ e] r8 e4
+          |
+          d,16-[ e fis g] gis-[ a] r8
+          <<
+            \relative c {
+              fis4
+            }
+            \\
+            \relative c {
+              a4
+            }
+          >>
+          |
+          fis16-[ g a b] cis-[ d] r8 d4
+          |
+          g,16-[ a b cis] d-[ e] r8 e4
+          |
+          cis16-[ d e fis] g-[ a] r8 a4
+          |
+          d,16-[ cis b a] g-[ fis]
+          <<
+            \relative c {
+              fis16-[ g] a-[ b cis d]
+              |
+              s4 s8
+              d,16-[ e] fis-[ g a b]
+              |
+              b16-[ a g fis] e-[ d]
+              s8 d4
+            }
+            \\
+            \relative c {
+              g8\rest g4\rest
+              |
+              b16-[ a g fis] e-[ d]
+              e8\rest e4\rest
+              |
+              g'16-[ fis e d] cis-[ b]
+              \relative c d8\rest
+              b4
+            }
+          >>
+          |
+          g16-[ a b c] d-[ e
+          b c] d-[ e fis g]
+          |
+          a,-[ b cis d] e-[ f]
+          a,-[ b] cis-[ d cis b]
+          |
+          ais4_~ ais16-[ gis fis fis] ais4
           |
         }
       }
