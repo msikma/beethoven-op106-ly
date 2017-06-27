@@ -1093,14 +1093,88 @@ four-section-one = {
               |
               % TODO: \sf on the correct side?
               g4 fis2^\sf
+              |
+              fis4 b2^~^\sf
+              |
+              b8 a4 gis8-[ g f^~]
+              |
+              f8-[ e]
+              bes4. \clef bass bes8_~
+              |
+              bes16-[ gis a8_~] a16-[ cis d8_~] d16-[ cis d8_~]
+              |
+              d16-[ eis, fis8^~] fis16-[ fis g8^~] g16-[ a b!8^~]
+              |
+              b16-[ ais b8^~] b16-[ dis e8^~] e16-[ fis g8^~]
+              |
+              g8-[ gis8] \clef treble a4.^\sf g8
+              |
+              fis4 \relative c'' { g8\rest } fis8-[ dis b8_~]
+              |
+              b8-[ b'] c4.^\sf b8
+              |
+              a8 r8 r8 a8-[ fis d]
+              |
+              d8-[ d'16 c] b4_~ b8-[ e^~]
+              |
+              % TODO: really c slurred to cis?
+              e8-[ 16^( d]) c4^( cis8)-[ g'^~]
+              |
+              g8-[ 16 fis] e4^~ e8-[ b16 b'^~]
+              |
+              b8-[^( 16 g] fis8-[ a gis a])
+              |
+              c8_\ff r8
+              a,2\startTrillSpan
+              |
+              g4_\sf\stopTrillSpan
             }
             \\
             \relative c' {
               e16-[ d] cis-[ b a gis]
               |
               e'-[ d cis d] e4_~ e16-[ cis d e]
+              |
+              % TODO: fix this overlap
+              d2 \stemDown \relative c' gis16 \stemUp d16-[ b f']
+              |
+              \stemDown
+              fis4 d16-[ fis] f16-[ d bes e d a]
+              |
+              bes4 s2
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s4 r8 g'8-[ e c_~]
+              |
+              c8-[ cis] d4._\sf c8
+              |
+              b16-[ c b a] g-[ a b c] cis-[ d gis, d']
+              |
+              \bar "||"
+              \key g \major
+              c!16-[ d c b] a-[ b c d] dis-[ e ais, e']
+              |
+              d!-[ e d cis] b-[ cis d e] f-[ fis g f]
+              |
+              e-[ f e d] c d e d c d c b
+              |
+              s2 fis'4
             }
           >>
+          r8 g16-[ a] b-[ c d e]
+          |
+          b4\sf r8 b16-[ c] d-[ e fis g]
+          |
+          d4\sf r8 d16-[ e] fis-[ e fis g]
         }
       }
       %---------------------------------------------------------------------
@@ -1838,6 +1912,97 @@ four-section-one = {
           |
           ais4_~ ais16-[ gis fis fis] ais4
           |
+          b16-[ cis b a] gis-[ d' b f']
+          s16 \relative c' { e16\rest c8\rest }
+          |
+          a,16-[ fis' d a'] fis-[ d']
+          <<
+            \relative c {
+              b8-[ cis d]
+              |
+              s4 r8 g8 e4
+              |
+              f8.-[ eis16] f8.-[ g16] a8.-[ ais16]
+              |
+              \change Staff = "right"
+              \stemDown
+              b8.-[ c,16] d8.-[ dis16] e8.-[ fis16]
+              |
+              g8.-[ fis16] g8.-[ a16] b8.-[ bes16]
+              |
+              a4 \relative c' a8\rest
+              \change Staff = "left"
+              \stemUp
+              e'8-[ cis a^~]
+              |
+              a8-[ ais] b4.^\sf a8
+              |
+              g8 r8
+            }
+            \\
+            \relative c, {
+              s4.
+              |
+              g8_\ff \relative c, { c8\rest }
+              cis'2\startTrillSpan
+              |
+              d4\stopTrillSpan \relative c { g8\rest }
+              d16-[ cis] b-[ a g fis]
+              |
+              b4 \voiceOne \relative c { d8\rest }
+              b16-[ a] g16-[ fis e d]
+              |
+              g4 r8 g16-[ fis] e16-[ dis e d]
+              |
+              \voiceTwo cis-[ d cis b] a-[ b cis d] dis-[ e fis e]
+              |
+              d-[ e d cis] b-[ cis d e] eis-[ fis g fis]
+              |
+              e-[ f e d] c-[ d e f] fis-[ g a g]
+              |
+              fis-[ g fis e] d-[ e f g] gis-[ a b a]
+              |
+              g8 \relative c d8\rest g'8-[ f] e8 \relative c d8\rest
+              |
+            }
+          >>
+          \bar "||"
+          \key g \major
+          gis,4^( a8-[ g] fis8) r8
+          |
+          ais4^( b8-[ a] g) r8
+          |
+          b4^( c8-[ b a g])
+          |
+          <<
+            \relative c' {
+              a16-[ b a g]
+              fis4 s4
+              |
+              \relative c' { a4\rest a8\rest }
+              a8 g4
+              |
+              \relative c' { a4\rest a8\rest }
+              f8 e8-[ d]
+              |
+              c8
+            }
+            \\
+            \relative c {
+              % TODO: really ces?
+              d8-[ c] ces16-[ b a b] ces-[ b ces a]
+              |
+              \relative c { b8\rest }
+              b'8^. b,4._\sf
+              \relative c { b8\rest }
+              |
+              \relative c { b8\rest }
+              g'8^. g,4._\sf b8
+              |
+              a8-[ c' <c, e> <b d> <a c> <g b>]
+              |
+            }
+          >>
         }
       }
     >>
