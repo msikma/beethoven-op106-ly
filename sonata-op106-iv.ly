@@ -1238,8 +1238,55 @@ four-section-one = {
               |
               f16-[ g as a] bes4 as16-[ g f es]
               |
+              \override TrillSpanner.to-barline = ##t
               c'8_\ff r8 as,2_\sf\startTrillSpan
               |
+              f'16\stopTrillSpan g as bes c d es e f-[ g as8]
+              |
+              bes8
+              \relative c''' { a8\rest }
+              g,2\startTrillSpan
+              |
+              es16\stopTrillSpan f g as bes c des d e f ges g
+              |
+              as8
+              \relative c''' { e8\rest }
+              f,2
+              |
+              \relative c''' { c16\rest }
+              bes16-[ c d] es d es f g f g as
+              |
+              bes8
+              \relative c''' { e8\rest }
+              g,2
+              |
+              \relative c''' { a8\rest }
+              c16-[ e] f g as g f es d c
+              |
+              s8
+              d,8-[
+              \once \override Script.extra-offset = #'(0 . 1)
+              b,^\trill]
+              %\undo \override Dynamics.extra-offset;
+              \relative c''' { e8\rest g8\rest }
+              g''8
+              |
+              e,8^\trill
+              \relative c''' { e8\rest g8\rest }
+              c''8-[
+              \once \override Script.extra-offset = #'(0 . 1)
+              a,^\trill]
+              s8
+              |
+              s8
+              d'8-[
+              \once \override Script.extra-offset = #'(0 . 1)
+              bes,^\trill]
+              \relative c'''' { g8\rest d'8\rest }
+              g''8
+              |
+              e,8^\trill
+              \relative c'''' { b8\rest g'8\rest }
             }
             \\
             \relative c' {
@@ -1302,8 +1349,74 @@ four-section-one = {
               bes16-[ c d es] f es d es
               |
               s2.
+              |
+              as8
+              \relative c'' { g8\rest }
+              \override TrillSpanner.to-barline = ##t
+              f,2\startTrillSpan
+              |
+              s4\stopTrillSpan
+              d16_\sf es f g as16-[ a bes8]
+              |
+              s2.
+              |
+              bes'16 as g f es d c bes a bes f as
+              |
+              g8
+              \relative c'' { b8\rest }
+              bes'2
+              |
+              \relative c'' { b8\rest }
+              as16-[ g] f e des c b c g bes
+              |
+              as8
+              \relative c'' { b8\rest }
+              c'4.
+              fis,8
+              |
+              <g b>8
+              s4
+              g,,8-[ b'^\trill] s8
+              |
+              s8 c,8-[ es'^\trill]
+              s4
+              d,8
+              |
+              fis'8^\trill
+              s4
+              g,8-[ bes'^\trill]
+              s8
+              |
+              \bar "||"
+              \key d \minor
+              s8
+              cis,8-[ e'^\trill]
             }
           >>
+          \stemNeutral
+          <a a'>8-[ <f f'>]
+          <d d'>
+          |
+          <a a'>\sf-[ <f f'> <d d'>\sf <a a'> <gis d' gis>\sf <gis' d' gis>]
+          |
+          <ais cis ais'>8^. r8 <ais' cis e ais>^. r8 r4
+          |
+          R2.
+          \break
+          |
+          \bar "||"
+          \key d \major
+          <<
+            \relative c'' {
+              d4\rest^\markup { \italic "una corda" } a4 gis
+            }
+            \\
+            \relative c'' {
+              \override MultiMeasureRest.staff-position = #-4
+              R2.
+            }
+          >>
+          |
         }
       }
       %---------------------------------------------------------------------
@@ -2232,20 +2345,21 @@ four-section-one = {
             }
           >>
           |
+          \override TrillSpanner.to-barline = ##t
           as8 r8 f,2\sf\startTrillSpan
           |
           \bar "||"
           \key es \major
           es4\stopTrillSpan
-          \relative c { a8\rest }
+          \relative c { b8\rest }
           es16 f g as bes c
           |
           g4
-          \relative c { a8\rest }
+          \relative c { b8\rest }
           g16 as bes c d es
           |
           bes4
-          \relative c { a8\rest }
+          \relative c { b8\rest }
           bes16 c d c d es
           |
           f e f g as g f es d es d c
@@ -2254,6 +2368,52 @@ four-section-one = {
           |
           as, bes c d es f g as bes-[ b c8]
           |
+          s2.
+          |
+          g16 as bes c
+          s2
+          |
+          g8_\f
+          \trillSpanDown
+          r8 \stemUp e,2^\sf\startTrillSpan
+          \trillSpanUp
+          |
+          \stemNeutral b8_\f\stopTrillSpan
+          r8
+          d'2_\sf\startTrillSpan
+          |
+          e,8_\f\stopTrillSpan
+          r8
+          g'2_\sf\startTrillSpan
+          |
+          c,,8\stopTrillSpan r8 e'2\startTrillSpan
+          |
+          f,8\stopTrillSpan r8 as'2\startTrillSpan
+          |
+          \stemDown
+          g8\stopTrillSpan
+          b8-[ g,]^\trill r8 r8 e''8
+          |
+          c,^\trill
+          r8 r8 a'8-[ fis,^\trill] r8
+          |
+          r8
+          b'8-[ g,]^\trill r8 r8 e''8
+          |
+          \bar "||"
+          \key d \minor
+          cis,8^\trill r8 r8
+          as'8-[ f] d8
+          |
+          as-[ f d <as as'> <bes bes'> <bes bes'>]
+          |
+          <as cis es as>8 r8 8 r8 r4
+          |
+          R2.
+          |
+          \bar "||"
+          \key d \major
+          R2.
         }
       }
     >>
