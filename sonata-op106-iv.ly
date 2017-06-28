@@ -1175,6 +1175,135 @@ four-section-one = {
           b4\sf r8 b16-[ c] d-[ e fis g]
           |
           d4\sf r8 d16-[ e] fis-[ e fis g]
+          |
+          a16-[ gis a b] c b a gis fis es d e
+          |
+          fis e d c b a g a b c d dis
+          |
+          e g fis e d! g fis g
+          <<
+            \relative c'' {
+              cis4
+              |
+              c2 b4
+              |
+              cis8-[ d e fis] g4_\sf_~
+              |
+              g8-[ fis e g16 fis] fis,4
+              |
+              \relative c'' { b4\rest b8\rest }
+              e'16-[ d] d,4
+              |
+              \relative c'' { b4\rest b8\rest }
+              b''16-[ a] fis-[ d cis b]
+              |
+              % TODO: check bes
+              bes4 a4. bes8
+              |
+              cis16-[ bis cis d] e dis e fis g fis e d
+              |
+              cis bes a b c b a g fis g a b
+              |
+              c!2\startTrillSpan b4\stopTrillSpan
+              |
+              a2\startTrillSpan gis16\stopTrillSpan b gis e
+              |
+              g!2\startTrillSpan fis16\stopTrillSpan a fis d
+              |
+              \relative c''' { a4\rest a8\rest }
+              b''8
+              \relative c''' { c8\rest } e8
+              |
+              \relative c''' { a4\rest a8\rest }
+              a,8
+              \relative c''' { c8\rest } d8
+              |
+              \relative c'' { f4\rest f8\rest }
+              g,8
+              \relative c''' { a8\rest } c8
+              |
+              c16-[_\ff e, fis g] as8
+              \relative c'' { f8\rest a16\rest }
+              bes,16-[ c d]
+              |
+              \bar "||"
+              \key es \major
+              es4\relative c'' { f4\rest } e16-[ d c bes]
+              |
+              es bes es d c bes as g g'4^~^\sf
+              |
+              g16 f as g f es d c bes4^~
+              |
+              bes4^~ bes16-[ c d es] f4^~
+              |
+              f16-[ g as a] bes4 as16-[ g f es]
+              |
+              c'8_\ff r8 as,2_\sf\startTrillSpan
+              |
+            }
+            \\
+            \relative c' {
+              \stemUp
+              \change Staff = "left"
+              bes16-[
+              \change Staff = "right"
+              \stemDown
+              g' fis g]
+              |
+              a8-[ es fis a_~] a8-[ g]
+              |
+              \relative c' { e4\rest } g8 \relative c' { e8\rest } s4
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              cis,16 bis cis dis e dis e fis g fis e d
+              |
+              s2.
+              |
+              s2.
+              |
+              s2 g4
+              |
+              s2 e4
+              |
+              s2 d4
+              |
+              fis16 e fis g a b c dis e8
+              \relative c'' { b8\rest }
+              |
+              e,16-[ d e fis]
+              g a b cis d8
+              \relative c'' { b8\rest }
+              |
+              d,16 c d es f g a b c8
+              \relative c'' { b8\rest }
+              |
+              \relative c' { e4\rest g16\rest }
+              e,16-[ fis g] as4_~
+              |
+              as16-[ g bes as]
+              g f es d
+              es4_~\sf
+              |
+              % TODO: no rest here?
+              es4 s4 es'16 d c bes
+              |
+              d4
+              \relative c' { e4\rest }
+              f,16-[ g f es]
+              |
+              d c d es f4_~ f16 g as a
+              |
+              bes4_~
+              bes16-[ c d es] f es d es
+              |
+              s2.
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -1985,7 +2114,63 @@ four-section-one = {
               \relative c' { a4\rest a8\rest }
               f8 e8-[ d]
               |
-              c8
+              c8 s8 s4 s4
+              |
+              a4 \relative c' { c8\rest }
+              e'8-[ fis g]
+              |
+              a8-[ b c b a g^~]
+              |
+              g8 c4 b8 s8 s8
+              |
+              s2.
+              |
+              s2
+              % TODO: I added a tie here.
+              d,4^~\startTrillSpan
+              |
+              \afterGrace d4 { cis16-[\stopTrillSpan d] } cis4
+              s8
+              d16-[ e]
+              |
+              fis-[ g a b]
+              fis4 r8 fis16-[ g]
+              |
+              a16-[ b c d] a4 \relative c' { c8\rest } a16-[ b]
+              |
+              s2.
+              |
+              a16-[ gis a b]
+              cis8-[ cis,16 d] e4^~
+              |
+              e8-[ fis16 g] a-[ g fis e] d-[ e fis g]
+              |
+              a16-[ b c d]
+              e16-[ d
+              \stemDown
+              \change Staff = "right"
+              e fis]
+              \change Staff = "left"
+              \stemUp
+              s4
+              |
+              fis,16-[ e fis g] a-[ b
+              \stemDown
+              \change Staff = "right"
+              cis dis]
+              \change Staff = "left"
+              \stemUp
+              s4
+              |
+              e,16-[ d e fis] g-[ a
+              \stemDown
+              \change Staff = "right"
+              b cis]
+              \change Staff = "left"
+              \stemUp
+              s4
+              |
+              s2.
             }
             \\
             \relative c {
@@ -2001,8 +2186,74 @@ four-section-one = {
               |
               a8-[ c' <c, e> <b d> <a c> <g b>]
               |
+              fis8-[ es'] d2_~_\sf
+              |
+              d4. d8-[ c b]
+              |
+              c4 d e
+              |
+              fis16-[ a g fis] e d e fis g d g fis
+              |
+              e fis e d cis d cis b a8-[ gis]
+              |
+              a2 \relative c { b8\rest } b8
+              |
+              a4 \relative c { g4\rest g8\rest } g8
+              |
+              fis'4 \relative c { b4\rest b8\rest } d8
+              |
+              e16-[ dis e fis]
+              g fis g a
+              b a g gis
+              |
+              a,8 r8 r8 a4 b8
+              |
+              cis8-[ d_~] d4
+              \relative c, { e4\rest }
+              |
+              \relative c { g4\rest g8\rest }
+              d8 g16-[ b g e]
+              |
+              \relative c, { e4\rest e8\rest }
+              b8 e4
+              |
+              \relative c, { e4\rest e8\rest }
+              a8 d4
+              |
+              \trillSpanUp
+              a2\startTrillSpan
+              gis16-[\stopTrillSpan b gis e]
+              |
+              g2\startTrillSpan
+              fis16-[\stopTrillSpan a fis d]
+              |
+              f2\startTrillSpan
+              es16-[\stopTrillSpan g es c]
             }
           >>
+          |
+          as8 r8 f,2\sf\startTrillSpan
+          |
+          \bar "||"
+          \key es \major
+          es4\stopTrillSpan
+          \relative c { a8\rest }
+          es16 f g as bes c
+          |
+          g4
+          \relative c { a8\rest }
+          g16 as bes c d es
+          |
+          bes4
+          \relative c { a8\rest }
+          bes16 c d c d es
+          |
+          f e f g as g f es d es d c
+          |
+          bes c bes as g as bes c d e f g
+          |
+          as, bes c d es f g as bes-[ b c8]
+          |
         }
       }
     >>
