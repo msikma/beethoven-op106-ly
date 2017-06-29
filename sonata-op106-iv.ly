@@ -1550,12 +1550,107 @@ four-section-one = {
           >>
           <<
             \relative c'' {
+              b4 c d
+              |
+              \voiceOne d, r4 r4
+              |
+              R2.
+              |
+              r4 c'4^( bes
+              |
+              a bes c
+              |
+              \override TrillSpanner.to-barline = ##t
+              f,8) r8 a'2_\f\startTrillSpan
+              |
+              a8\rest\stopTrillSpan bes16-[_\sf a] g! f es d
             }
             \\
             \relative c'' {
+              g4 r8 g16 f es d c b!
+              |
+              % TODO: this is ugly. See if we can fix this.
+              \once \override NoteColumn.force-hshift = 1.5
+              b'8 g8\rest g4_( f4
+              |
+              e f g
+              |
+              c, d e
+              |
+              f g a
+              |
+              es!8) c'4 f ges8
+              |
+              r4 r4
             }
           >>
-          
+          r4
+          |
+          \stemUp
+          % TODO: fix these rests, they are not in the right position
+          r4 r8 g16\sf f es d c bes
+          |
+          r2 r8 f'16\sf e
+          |
+          des c bes a r2
+          |
+          r8 d'16 c bes a g fis r4
+          |
+          r4 r8 es16 d c bes a g
+          |
+          <<
+            \relative c' {
+              f16-[ e bes'8] \relative c'' { b4\rest b4\rest }
+              |
+              R2.
+              |
+              R2.
+              |
+              \relative c'' { g8\rest }
+              f16 e d c bes a c4
+              |
+              \relative c'' { g8\rest }
+              d16-[ c]
+              s2
+              |
+              \relative c'' { g8\rest }
+              bes'16 a g\sf a g f
+              s4
+              |
+              s2.
+              |
+              \relative c''' { a4\rest } es'8
+              \relative c''' { a8\rest }
+              c,4
+            }
+            \\
+            \relative c' {
+              \relative c' { b8\rest }
+              d16 c bes-[ a
+              \change Staff = "left"
+              \stemUp
+              g f]
+              es d c' bes
+              \change Staff = "right"
+              \stemDown
+              |
+              s2.
+              |
+              \trillSpanUp
+              e2_\sf\startTrillSpan f4\stopTrillSpan
+              |
+              s2.
+              |
+              s2.
+              |
+              s2
+              e16 f e d
+              |
+              c\sf d es f fis\sf g a g f\sf g a bes
+              |
+              b\sf c d c d\ff c bes a
+            }
+          >>
         }
       }
       %---------------------------------------------------------------------
@@ -2639,6 +2734,97 @@ four-section-one = {
           >>
           r4 r4
           |
+          R2.
+          |
+          \override TrillSpanner.to-barline = ##t
+          g4 b'2\startTrillSpan
+          |
+          c4\stopTrillSpan r8 c16 bes a g f e
+          |
+          a4 r8 a16 g f es d c
+          |
+          \stemDown
+          f4 r8 f16 es d c bes a
+          |
+          c bes a g
+          <f, f'>4^\markup { \whiteout \italic "ben marcato" }
+          <es es'>
+          |
+          <<
+            \relative c' {
+              s4 s4 \relative c' c8\rest bes16-[^\sf as]
+              |
+              g f es d s2
+              |
+              \relative c' c8\rest c'16 bes as g f e s4
+              |
+              s4 \relative c' a8\rest a16 g fis es d! c
+              |
+              \relative c' a2\rest
+              \relative c' c8\rest d'16 cis
+              |
+              c!16 bes a g s2
+              
+            }
+            \\
+            \relative c,, {
+              <d d'>4 <es es'> <f f'>
+              |
+              <es es'> <f f'> <g g'>
+              |
+              <e e'>_\markup { \italic "sempre ben marcato" } <f f'> <g g'>
+              |
+              <f f'> <g g'> <a a'>
+              |
+              <fis fis'> <g g'> <a a'>
+              |
+              <g g'> <a a'> bes16 bes' c bes
+            }
+          >>
+          |
+          a'16 g f! e! g f e' d c bes a g
+          |
+          <<
+            \relative c' {
+              a16 g f es d^\ff c e g bes,8 r8
+              |
+              s2.
+              |
+              s2.
+              |
+              s4 a'16 g f es a4
+              |
+              s2.
+              |
+              s2.
+              |
+              s2 es4
+              |
+            }
+            \\
+            \relative c, {
+              f16 e d c
+              \once \override NoteColumn.force-hshift = 1.5
+              % TODO: this is ugly, maybe move it up
+              bes''8
+              \trillSpanDown
+              r8 g,4_~_\sf\startTrillSpan
+              |
+              g4 f4\stopTrillSpan
+              \relative c { b8\rest }
+              f16 g
+              |
+              a bes c d a4 \relative c { b8\rest } a16 bes
+              |
+              c d e f c4 \relative c { b8\rest } c16 d
+              |
+              e16 d e f g f g a bes a g a
+              |
+              bes a g f e d c d es d c bes
+              |
+              d c bes a bes a g f r8 f,8
+            }
+          >>
         }
       }
     >>
