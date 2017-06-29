@@ -1399,24 +1399,163 @@ four-section-one = {
           |
           <a a'>\sf-[ <f f'> <d d'>\sf <a a'> <gis d' gis>\sf <gis' d' gis>]
           |
-          <ais cis ais'>8^. r8 <ais' cis e ais>^. r8 r4
+          <ais cis ais'>8^._\f r8 <ais' cis e ais>^. r8 r4
           |
           R2.
-          \break
           |
           \bar "||"
           \key d \major
           <<
             \relative c'' {
-              d4\rest^\markup { \italic "una corda" } a4 gis
+              d4\rest^\markup { \italic "una corda" } a4^( g
+              |
+              fis g a
+              |
+              d, e fis
+              |
+              g2
+              fis4)
+              |
+              e2
+              a4^~
+              |
+              a2.
+              |
+              b4 cis d
+              |
+              a g fis^~
+              |
+              fis e2^~
+              |
+              e4 e' d
+              |
+              cis d e
+              |
+              a, b c
+              |
+              d2
+              cis4^~
+              |
+              cis4 b a^~
+              |
+              a4 g fis
+              |
+              e2 a4^~
+              |
+              a4 fis b_~
+              |
+              b4^( e d
+              |
+              cis fis e)
+              |
+              d a' g
+              |
+              fis dis fis
+              |
+              b, a b
+              |
+              cis d! e^~
+              |
+              e d cis
+              |
+              b2.^~
+              |
+              b4 a c4^~
+              |
+              c4 b cis^~_\textCresc "ri"
+              |
+              cis d_\textCresc "tar" es^~
+              |
+              es4_\textCresc "dan" d des_\textCrescEnd "do"
+              |
+              \bar "||"
+              \key bes \major
+              % TODO: t.c. markup
+              c8\!^\markup { \italic "t.c." } d8\rest_\pp f4 es
+              |
+              d es f
+            }
+            \\
+            \relative c {
+              \override MultiMeasureRest.staff-position = #-4
+              R2.
+              |
+              R2.
+              |
+              f4\rest d'4_( c
+              |
+              b cis! d_~)
+              |
+              d cis2_(
+              |
+              dis4 e fis_~)
+              |
+              fis e d!_~
+              |
+              d e a,
+              |
+              ais b cis
+              |
+              d a'! b_~
+              |
+              b a g
+              |
+              fis g a
+              |
+              d, e fis
+              |
+              g2 fis4_~
+              |
+              fis e d_~
+              |
+              d cis2
+              |
+              dis2.
+              |
+              e4 s2
+              |
+              s2.
+              |
+              s2.
+              |
+              s4 b'4 a
+              |
+              g fis gis
+              |
+              a b cis
+              |
+              a f e
+              |
+              d2._~
+              |
+              \voiceOne
+              d4 cis dis_~
+              |
+              dis e
+              \voiceTwo
+              g4_~
+              |
+              g4 fis g
+              |
+              s2.
+              |
+              \override TrillSpanner.to-barline = ##t
+              \trillSpanDown
+              s4 a2\startTrillSpan
+              |
+              bes4\stopTrillSpan
+              g8\rest bes16-[ a] g f es d
+              |
+            }
+          >>
+          <<
+            \relative c'' {
             }
             \\
             \relative c'' {
-              \override MultiMeasureRest.staff-position = #-4
-              R2.
             }
           >>
-          |
+          
         }
       }
       %---------------------------------------------------------------------
@@ -2414,6 +2553,92 @@ four-section-one = {
           \bar "||"
           \key d \major
           R2.
+          |
+          R2.
+          |
+          R2.
+          |
+          R2.
+          |
+          r4
+          \stemNeutral
+          a''4_( g
+          |
+          fis g a^~)
+          |
+          a g fis
+          |
+          b cis, d
+          |
+          g, gis a
+          |
+          b fis gis
+          |
+          a b cis
+          |
+          d d' c
+          |
+          b c d
+          |
+          g, a b
+          |
+          e, fis g
+          |
+          gis a g
+          |
+          fis b a
+          |
+          <<
+            \relative c' {
+              s4 c4 b
+              |
+              ais d cis
+            }
+            \\
+            \relative c' {
+              g2_( eis4
+              |
+              fis2 gis8-[ ais])
+            }
+          >>
+          |
+          <b d>4 <g cis> <cis e>
+          |
+          <d fis> fis, dis
+          |
+          e e' d
+          |
+          cis a, g
+          |
+          fis gis a_~
+          |
+          a gis e
+          |
+          a a' fis
+          |
+          g2 e4
+          |
+          es d c
+          |
+          <<
+            \relative c' {
+              a4 bes e,
+              |
+              \bar "||"
+              \key bes \major
+              f4
+            }
+            \\
+            \relative c {
+              f4 bes, bes
+              |
+              a4 c f,
+              |
+              bes
+            }
+          >>
+          r4 r4
+          |
         }
       }
     >>
