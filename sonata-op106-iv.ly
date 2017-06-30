@@ -1621,7 +1621,52 @@ four-section-one = {
               |
               \relative c''' { a4\rest } es'8
               \relative c''' { a8\rest }
-              c,4
+              c,4_~\startTrillSpan
+              |
+              c4 bes4\stopTrillSpan
+              \relative c'' b8\rest
+              bes16-[ c]
+              |
+              d16-[ es f g] es4
+              \relative c'' b8\rest
+              d16-[ es]
+              |
+              f16 g a bes g4
+              \relative c'' d8\rest
+              f16-[ g]
+              |
+              a g a bes c bes c d es d c d
+              |
+              es d cis c bes a g a bes a g f
+              |
+              f fis' g f es d c bes a bes a g
+              |
+              f_\sf g a bes c_\sf cis d c d es f g^~
+              |
+              g c, d e f g a bes c a g f
+              |
+              s2.
+              |
+              s2.
+              |
+              c2\startTrillSpan bes4\stopTrillSpan
+              |
+              bes2\startTrillSpan a8-[\stopTrillSpan as]
+              |
+              a2\startTrillSpan g4\stopTrillSpan
+              |
+              s4. g8-[ e f]
+              |
+              s4. a8-[ fis g]
+              |
+              s4. bes8-[ g a]
+              |
+              c8-[ f^~] f-[ d c bes]
+              |
+              a8-[ as] g'4.^\sf f8
+              |
+              f8-[^( es d c! b! c])
+              |
             }
             \\
             \relative c' {
@@ -1648,7 +1693,55 @@ four-section-one = {
               |
               c\sf d es f fis\sf g a g f\sf g a bes
               |
-              b\sf c d c d\ff c bes a
+              b\sf c d c d\ff c bes a s4
+              |
+              s4 s4 \relative c' a4\rest
+              |
+              \relative c' g8\rest d,16-[ c] bes-[
+              \change Staff = "left"
+              \stemUp
+              a g f] bes4
+              \change Staff = "right"
+              \stemDown
+              |
+              \relative c' b8\rest bes8_~
+              bes16-[ b c d] es4
+              |
+              \relative c' b8\rest
+              es4 e f8_~
+              |
+              % TODO: really a slur?
+              f4. es!8 d4_(
+              |
+              c8) \relative c'' { g8\rest e4\rest c4\rest }
+              |
+              \relative c' { a4\rest e'4\rest } bes'8_\sf \relative c'' g8\rest
+              |
+              s2.
+              |
+              es16 d e fis g a bes c d bes a g
+              |
+              f! es f g a-[ bes c d] es8
+              \relative c'' g8\rest
+              |
+              a,,4 es d8-[ des]
+              |
+              g4 des c8-[ ces]
+              |
+              f4 ces bes8-[ e]
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              a16-[ f g a] bes a bes f g fis g c_~
+              |
+              c16\noBeam s8. g16-[ a b c] cis d es d
+              |
+              s4 fis,16-[ g as g] s4
+              |
             }
           >>
         }
@@ -2800,6 +2893,45 @@ four-section-one = {
               |
               s2 es4
               |
+              es4 d s4
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              g2\startTrillSpan f4\stopTrillSpan
+              |
+              a2\startTrillSpan g4\stopTrillSpan
+              |
+              bes2\startTrillSpan g4\stopTrillSpan
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              % TODO: cross over to right hand staff?
+              des16 c d e f g a bes d bes a g
+              |
+              es d! e fis g a bes c d bes a g
+              |
+              f! es f g a bes c d es c bes a
+              |
+              s2.
+              |
+              s16\> es'16-[ d c]\! b!16 c d es e f! g f
+              |
+              c d es! f s4 f!16 es d es
+              |
             }
             \\
             \relative c, {
@@ -2823,6 +2955,45 @@ four-section-one = {
               bes a g f e d c d es d c bes
               |
               d c bes a bes a g f r8 f,8
+              |
+              a'2_\ff\startTrillSpan bes4\stopTrillSpan
+              |
+              \relative c { d8\rest } bes16 a g f es d g4
+              |
+              \relative c { d8\rest } g16 f es d c b c4
+              |
+              \relative c { d8\rest } es'16 d c d c bes a bes a g
+              |
+              f g a bes c cis d c bes c d es
+              |
+              e es d es f g a bes c bes c d
+              |
+              es d cis c bes a g a bes a g f
+              |
+              e4 bes a
+              |
+              fis'4 c bes
+              |
+              g' d c8-[ fis,]
+              |
+              fis16 g a bes c d e fis g, g' f,! f'!
+              |
+              e, f g a bes c d e f, f' es,! es'!
+              |
+              d, es f g as bes c d es, es' <des, des'>8\noBeam
+              |
+              bes2\startTrillSpan a4\stopTrillSpan
+              |
+              c2\startTrillSpan bes4\stopTrillSpan
+              |
+              d2\startTrillSpan c4\stopTrillSpan
+              |
+              es4\startTrillSpan d4\stopTrillSpan e8-[ e']
+              |
+              f2.
+              |
+              f2.
+              |
             }
           >>
         }
