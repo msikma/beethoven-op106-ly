@@ -1667,6 +1667,32 @@ four-section-one = {
               |
               f8-[^( es d c! b! c])
               |
+              f8 \relative c''' { a8\rest } es4.^\sf 8
+              |
+              es8-[^( d c bes a bes)]
+              |
+              R2.
+              |
+              c8 \relative c'' { f8\rest } bes4.^\sf bes8
+              |
+              a16 bes a g f g a bes b c d c
+              |
+              bes! c d es e f g f b, d es f
+              |
+              b, c d c d es f es a, c d es
+              |
+              e f g f a bes! c bes fis g a g
+              |
+              gis a bes a b c d c e, fis g fis
+              |
+              g gis a g bes! b c bes gis a bes a
+              |
+              cis d es d b c d bes cis,\f d c bes
+              |
+              b8-[^\sf c] bes-[^\sf a] cis-[^\sf d]
+              |
+              c!-[^\sf bes] dis-[^\sf e] fis-[^\sf g]
+              |
             }
             \\
             \relative c' {
@@ -1736,11 +1762,42 @@ four-section-one = {
               |
               s2.
               |
-              a16-[ f g a] bes a bes f g fis g c_~
+              a16-[ f g a] bes a bes f g fis g c,_~
               |
-              c16\noBeam s8. g16-[ a b c] cis d es d
+              c16\noBeam s8. g'16-[ a b c] cis d es d
               |
               s4 fis,16-[ g as g] s4
+              |
+              a16 bes a g f g a bes b c d c
+              |
+              s4 e,16 f g f s4
+              |
+              b,16 c b a g a b c cis d es d
+              |
+              c d e f fis g as g f e des c
+              |
+              R2.
+              |
+              % TODO: check rest postitions
+              \relative c' { c4\rest c4\rest }
+              g'8-[\sf f]
+              |
+              f8-[_( es d c]) s4
+              |
+              % TODO: these rests/spaces don't seem correct
+              \relative c' { e4\rest e4\rest }
+              es'8-[\sf d]
+              |
+              d8-[_( c bes a]) d-[ c]
+              |
+              % TODO: put these together?
+              c8-[_( bes] d-[ es]) d-[ c]
+              |
+              e8-[ f] es-[ d] s4
+              |
+              a16-[ d, g e] d e cis e bes' e, a fis
+              |
+              es! fis d g bes a bes g des' c des bes
               |
             }
           >>
@@ -2920,11 +2977,26 @@ four-section-one = {
               s2.
               |
               % TODO: cross over to right hand staff?
-              des16 c d e f g a bes d bes a g
+              des16 c d e f g
+              \change Staff = "right"
+              \stemDown
+              a bes d bes a g
+              \stemUp
+              \change Staff = "left"
               |
-              es d! e fis g a bes c d bes a g
+              es d! e fis g a
+              \change Staff = "right"
+              \stemDown
+              bes c d bes a g
+              \stemUp
+              \change Staff = "left"
               |
-              f! es f g a bes c d es c bes a
+              f! es f g a bes
+              \change Staff = "right"
+              \stemDown
+              c d es c bes a
+              \stemUp
+              \change Staff = "left"
               |
               s2.
               |
@@ -2932,6 +3004,9 @@ four-section-one = {
               |
               c d es! f s4 f!16 es d es
               |
+              c d c bes a bes c d es e f es
+              |
+              bes! c d es s4 es!16 d c bes
             }
             \\
             \relative c, {
@@ -2994,8 +3069,35 @@ four-section-one = {
               |
               f2.
               |
+              f2.
+              |
+              f2_~ f8-[ fis]
+              |
             }
           >>
+          |
+          <g g'>8\f r8 <f! f'!>4.\sf 8
+          |
+          <f f'>8-[ <es es'> <des des'> <c c'> <b b'> <c c'>]
+          |
+          <f f'>8 r8 <es es'>4.\sf 8
+          |
+          <es es'>8-[_( <d d'> <c c'> <b b'>]) r4
+          |
+          r2 <f' f'>8-[\sf <es es'>]
+          |
+          <es es'>8-[_( <d d'> <c c'> <bes bes'>]) r4
+          |
+          R2.
+          |
+          R2.
+          |
+          r4 r4 <fis fis'>8-[ <g g'>]
+          |
+          <f! f'!>8-[ <e e'>] <g g'>-[ <a a'>] <g g'>-[ <fis fis'>]
+          |
+          <a a'>-[ <bes bes'>] <fis fis'>-[ <g g'>] <dis dis'>-[ <e e'>]
+          |
         }
       }
     >>
