@@ -31,7 +31,7 @@ Feel free to open an issue if you have suggestions for improvements.
 
 **Mvmt. IV:**
 
-* [ ] Input all notes
+* [x] Input all notes
 * [ ] Check correctness
 * [ ] Dynamics and other events
 * [ ] Fix/check all todos
@@ -78,6 +78,10 @@ The Hammerklavier is the only sonata for which Beethoven included explicit tempo
 **4th movement**
 
 * Several of the opening measures are much longer than their prescribed 4/4 time and are to be played with liberal tempo.
+* 43 u: the *e* is neutral as per London first edition.
+* 45 l: Henle notes that the final *es* should possibly be an *e*.
+* 52 l: Sforzante as per London first edition; Altaria has fortissimo here.
+* 369 u: the only time we see 32nd notes instead of grace notes ending a trill.
 
 Copyright
 ---------
