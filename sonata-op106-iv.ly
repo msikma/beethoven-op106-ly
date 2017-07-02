@@ -1728,6 +1728,22 @@ four-section-one = {
               d4 \relative c''' { a8\rest }
               d16 es f g a bes
               |
+              f4 \relative c''' { c8\rest }
+              f16 g a bes c d
+              |
+              g,4 \relative c''' { c8\rest }
+              g16 a bes b c d
+              |
+              es8-[ e^~] e16 f es d c bes! a g
+              |
+              f16 g f es d es f e f8 r8
+              |
+              % TODO: proper spacing of these notes.
+              r4 b,,8 r8 es'4^~\startTrillSpan
+              |
+              \afterGrace es4 { d16-[\stopTrillSpan es] } g4 r8 g16-[ f]
+              |
+              es16 d c b c4 r8 c16 bes
             }
             \\
             \relative c' {
@@ -1867,6 +1883,24 @@ four-section-one = {
               % TODO: height of rests
               \relative c' { e8\rest e4\rest }
               |
+              \relative c' { e8\rest }
+              d,8-[ d']
+              \relative c' { e8\rest e4\rest }
+              |
+              \relative c' { e8\rest }
+              es,8-[ es']
+              \relative c' { e8\rest e4\rest }
+              |
+              s2 a,4_~\startTrillSpan
+              |
+              \afterGrace a4 { g16-[\stopTrillSpan a] } bes4
+              \relative c'' { g8\rest } bes16-[ a]
+              |
+              g f es d g4 r8 g16 f
+              |
+              es d c b es4 r8 es16 d
+              |
+              c16 b a g es'8 g4
             }
           >>
         }
@@ -3204,6 +3238,29 @@ four-section-one = {
           |
           bes4\stopTrillSpan r8 bes16 a g f es d
           |
+          f4 r8 g16 f es d c bes
+          |
+          es4 r8 es16 d c d c bes
+          |
+          <<
+            \relative c {
+              r4 f8 r8
+            }
+            \\
+            \relative c,, {
+              f8-[ a'16 g] f8 r8
+            }
+          >>
+          r4
+          |
+          \stemDown
+          r4 r8 bes'8\noBeam d'8\trill r8
+          |
+          s2.
+          |
+          r4 r8 es,8\noBeam c'8\trill r8
+          |
+          r4 c,,8 r8 e'4\trill
         }
       }
     >>
