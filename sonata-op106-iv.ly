@@ -1722,7 +1722,7 @@ four-section-one = {
               |
               d es f es c des es des b c des c
               |
-              \relative c''' { c8\rest } ges'8
+              \relative c''' { a8\rest } ges'8
               f,16 es f es f es d! es
               |
               d4 \relative c''' { a8\rest }
@@ -1744,6 +1744,37 @@ four-section-one = {
               \afterGrace es4 { d16-[\stopTrillSpan es] } g4 r8 g16-[ f]
               |
               es16 d c b c4 r8 c16 bes
+              |
+              a16 g f e d c bes a a'8 s8
+              |
+              \relative c'' { d4\rest d4\rest d8\rest }
+              es'!16 d
+              |
+              c bes a g f es d c c'8 s8
+              |
+              \relative c'' { f4\rest f4\rest }
+              d16 c f es
+              |
+              d16 c bes a a' g f es bes' a g f
+              |
+              es8 \relative c''' { a8\rest } a'2\startTrillSpan
+              |
+              bes4\stopTrillSpan
+              \relative c''' { a8\rest } bes16 a g f es d
+              |
+              g8 g,
+              \relative c''' { e8\rest }
+              g'16 f es d c bes
+              |
+              es4 \relative c''' { f8\rest } es16 d c d c bes
+              |
+              a bes a g! f g a bes b c d c
+              |
+              bes! c d es f as, a bes c8 bes
+              |
+              bes8-[^( as g f]) s4
+              |
+              s2.
             }
             \\
             \relative c' {
@@ -1900,9 +1931,199 @@ four-section-one = {
               |
               es d c b es4 r8 es16 d
               |
-              c16 b a g es'8 g4
+              c16 b a g es'4 g4
+              |
+              c,4 s4 \relative c' { b8\rest } d16 c
+              |
+              bes16-[ a
+              \stemUp
+              \change Staff = "left"
+              g f]
+              \stemDown
+              \change Staff = "right"
+              s4 s8 \relative c' { b8\rest }
+              |
+              \relative c' { g4\rest g4\rest g8\rest }
+              c'16-[ bes]
+              |
+              \stemUp
+              \change Staff = "left"
+              a g f es d
+              \stemDown
+              \change Staff = "right"
+              c' bes a d8
+              \relative c' { b8\rest }
+              |
+              \relative c' { b4\rest b4\rest } f'4
+              |
+              g,8 c \relative c'' b8\rest c'8 \relative c'' b8\rest e
+              |
+              \relative c'' b8\rest d8 \relative c'' b2\rest
+              |
+              es,,8 \relative c'' g8\rest g'2_~\startTrillSpan
+              |
+              g8\stopTrillSpan gis a8\noBeam s8 s8 e,8
+              |
+              f8 \relative c'' g8\rest <es ges>4.\sf 8
+              |
+              8-[ <d f> <c es> <b d>] s4
+              |
+              g''8-[ f bes, as] <f'' as>-[^(\ff <es g>])
+              |
+              <es g>^(-[ <c es>]) <bes d>-[^( <d f>])
+              <c, es a>8-[^( <bes d bes'>])
             }
           >>
+          |
+          r4
+          <<
+            \relative c''' {
+              as8_\p \relative c''' a8\rest
+              fis,4_\cresc_~\startTrillSpan
+              |
+              fis4\stopTrillSpan ges'8 \relative c''' a8\rest
+              es,4_\ff_~\startTrillSpan
+              |
+              es8.-[ d32\stopTrillSpan es] ges16 s8. s4
+              |
+              ges16^\sf s8. s4 s16 a16-[ c es]
+              |
+              ges16-[ a c es] ges16_\sf s8. s16 a,,,16-[ c es]
+              |
+              % TODO: put this on lower staff?
+              ges16 \clef bass
+              a,,16-[ c es] ges4 <ges,_~ a^~ es'^~>4
+              |
+              8-[ <f as d>] \clef treble
+              bes''16-[\pp as bes as] bes as g as
+              |
+              ces4 \relative c'' f8\rest g'8-[ as] \relative c'' f8\rest
+              |
+              as,4 r8 e'8-[ f] r8
+              |
+              ges,4 \relative c'' d8\rest d'8-[ es] es,8^~
+              |
+              es16 f es d! es des c! b! c b c des
+              |
+              es8 \relative c'' b8\rest c4. c8
+              |
+              s2.
+              |
+              s2.
+              |
+              \afterGrace a''2\startTrillSpan { g16-[\stopTrillSpan a] } bes4
+              |
+              \relative c'' d4\rest <bes, des>4 c4
+              |
+              \relative c'' f4\rest es4 <f, c' es>4
+              |
+              4. g'16-[ f] es d c b
+            }
+            \\
+            \relative c'' {
+              g2\rest
+              |
+              s2.
+              |
+              s2.
+              |
+              \relative c' { b16\rest } a,16-[ c es] ges-[ a c es] ges16_\sf s8.
+              |
+              s4 s16 a,16-[ c es] ges16_\sf s8.
+              |
+              s2.
+              |
+              s2.
+              |
+              r8
+              \change Staff = "left"
+              \stemUp
+              as,,8-[
+              \stemDown
+              \change Staff = "right"
+              as'] ces16-[ bes] as-[ ges f es]
+              |
+              \relative c' b8\rest
+              \change Staff = "left"
+              \stemUp
+              f,8-[
+              \stemDown
+              \change Staff = "right"
+              f'] as16 ges f es d ces
+              |
+              r8
+              \change Staff = "left"
+              \stemUp
+              es,8-[ es']
+              \stemDown
+              \change Staff = "right"
+              ges16 f es des ces bes
+              |
+              \change Staff = "left"
+              \stemUp
+              a8 \relative c' a8\rest ges4. 8
+              |
+              ges8-[ f] f-[ es d! es]
+              |
+              <es c'>-[ <d bes'>] <es a>-[ <d bes'>] <a es' ges>-[ <bes d f>]
+              |
+              <ges' a es'>-[ <f bes d>]
+              \stemUp
+              \change Staff = "right"
+              <es' ges a>-[ <d f bes>]
+              \stemDown
+              <a' es' ges>-[ <bes d f>]
+              |
+              <c es>2 <bes des>4
+              |
+              \afterGrace es,2\startTrillSpan { d16-[\stopTrillSpan es] }
+              f4
+              |
+              \afterGrace a2\startTrillSpan { g16-[\stopTrillSpan a] }
+              s4
+              |
+              s2.
+            }
+          >>
+          |
+          es'4 r8 g,16 f es d c b
+          |
+          es4 r8 \stemUp g'16 f es d c b
+          |
+          g' f es d c bes a g f es d c
+          |
+          \change Staff = "left"
+          bes a g f es d c bes a g f e
+          |
+          <f f'>8
+          \change Staff = "right"
+          r8
+          \stemNeutral
+          <a'' a'>2_\sf\startTrillSpan
+          |
+          <bes bes'>8\stopTrillSpan r8
+          <g, g'>8 r8 <b'_~ b'>4\startTrillSpan
+          |
+          4 <c c'>8\stopTrillSpan r8 <a, a'>8 r8
+          |
+          \afterGrace <cis' cis'>2\startTrillSpan { b'16-[\stopTrillSpan cis] }
+          <d, d'>4
+          |
+          <bes, bes'>8 r8 <d' d'>2\startTrillSpan
+          |
+          <es es'>8\stopTrillSpan r8 <c,! c'!>8 r8 <es'_~ es'^~>4\startTrillSpan
+          |
+          4 <f f'>8\stopTrillSpan r8 <d, d'>8 r8
+          |
+          \afterGrace <fis' fis'>2\startTrillSpan { e'16-[ fis] } <g, g'>8\stopTrillSpan r8
+          |
+          <es,! es'!>8 r8 <a' c es f! a>4. r8
+          |
+          <bes d f bes>4. r8 <a,_~ c_~ es_~ f^~ a^~>4
+          |
+          8 r8 r4 <bes_~ d_~ f^~ bes^~>
+          |
+          2.\fermata
         }
       }
       %---------------------------------------------------------------------
@@ -3260,7 +3481,186 @@ four-section-one = {
           |
           r4 r8 es,8\noBeam c'8\trill r8
           |
-          r4 c,,8 r8 e'4\trill
+          \override TrillSpanner.to-barline = ##f
+          r4 c,,8 r8 e'4_~\startTrillSpan
+          |
+          e4\stopTrillSpan f4 r8 f16 e
+          |
+          d c bes a
+          <<
+            \relative c {
+              e16 d c bes bes'8 s8
+            }
+            \\
+            \relative c' {
+              g4 \relative c { b8\rest } g16 f
+            }
+          >>
+          |
+          es'16 d c bes a'4\sf r8 a16 g
+          |
+          f es d c bes a' g f bes a d c
+          |
+          bes a g f e d c bes g a bes b
+          |
+          c d es d c bes! a g f es d c
+          |
+          \override TrillSpanner.to-barline = ##t
+          bes8 r8 d'2\startTrillSpan
+          |
+          es8\stopTrillSpan r8 s2
+          |
+          r4 r8 e8 f4
+          |
+          r8 f8 s2
+          |
+          s2 d16 es d c
+          |
+          bes c d es e f g f d es f es
+          |
+          b c d es e f g f <f, f'>8-[ <bes, bes'>]
+          |
+          r4 r4 bes8 \relative c b8\rest
+          |
+          <<
+            \relative c'' {
+              % TODO: redo this measure or recheck that it's correct
+              b4\rest s8 s8 c,4\rest
+              |
+              s4 s16 a,16-[ c es] ges-[ a
+              \stemDown
+              \change Staff = "right"
+              c es]
+              \stemUp
+              \change Staff = "left"
+            }
+            \\
+            \relative c {
+              d4^\trill <es es'>8 \relative c b8\rest \clef treble as''4^\trill
+              |
+              \clef bass
+              <ges,,, ges'>8\ff \relative c d8\rest
+              % TODO: elongate span
+              \override TrillSpanner.to-barline = ##f
+              es,2_~\startTrillSpan
+              |
+              es2._~
+              |
+              es2._~
+              |
+              es2\stopTrillSpan
+            }
+          >>
+          <<
+            \relative c,, {
+              \trillSpanDown
+              \stemDown
+              <f_~ bes^~>4\startTrillSpan
+              |
+              <f_~ bes^~>2.
+              |
+              <f_~ bes^~>2.
+              |
+              <f_~ bes^~>2.
+              |
+              <f_~ bes^~>2.
+              |
+              <f_~ bes^~>2.
+              |
+              <f bes>2.
+              |
+              % TODO: only 2?
+              \stemUp
+              % TODO: shorten stem
+              bes2 s4
+              |
+              bes2 \afterGrace s4 { a16-[\stopTrillSpan bes] }
+              |
+              s2.
+              |
+              s2.
+              |
+              \afterGrace c''2\startTrillSpan { bes16-[\stopTrillSpan c] }
+              \stemDown
+              <f, a c>4
+              |
+              4.
+            }
+            \\
+            \relative c,, {
+              s4
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              s2.
+              |
+              f4 4 4
+              |
+              4 4 4
+              |
+              <ges bes ges'>4 <g bes g'>2
+              |
+              \trillSpanUp
+              \afterGrace g''2\startTrillSpan { f16-[\stopTrillSpan g] } a4
+              |
+              \relative c b4\rest f4 s4
+              |
+            }
+          >>
+          r8 r4
+          |
+          r4 r8 g''16-[ f] es d c b
+          |
+          es4 r8
+          \change Staff = "right"
+          \stemDown
+          g'16 f es d c b
+          |
+          \stemDown
+          \change Staff = "left"
+          g'16^\cresc f es d c bes a g f es d c
+          |
+          bes a g f es d c bes a g f e
+          |
+          f8^\ff
+          r8
+          \override TrillSpanner.to-barline = ##f
+          a'2\startTrillSpan
+          |
+          \stemNeutral
+          bes8\stopTrillSpan
+          r8
+          g,8 r8 b'4_~\startTrillSpan
+          |
+          b4 c8\stopTrillSpan r8 a,8 r8
+          |
+          \afterGrace cis'2\startTrillSpan { bis16-[\stopTrillSpan cis] } d4
+          |
+          bes,8 r8 d'2\startTrillSpan
+          |
+          es8\stopTrillSpan r8 c,8 r8 e'4_~\startTrillSpan
+          |
+          e4 f8\stopTrillSpan r8 d,8 r8
+          |
+          \afterGrace fis'2\startTrillSpan { e16-[\stopTrillSpan fis] } g8 r8
+          |
+          <es,! es'!>8 r8 <f' c' es f>4. r8
+          |
+          <bes, d f bes>4. r8 <f_~ bes_~ es_~ f^~>4
+          |
+          8 r8 r4
+          <bes,_~ d_~ f^~ bes^~>4
+          |
+          2.^\fermata
+          \bar "|."
         }
       }
     >>
