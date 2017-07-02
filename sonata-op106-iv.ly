@@ -1693,6 +1693,41 @@ four-section-one = {
               |
               c!-[^\sf bes] dis-[^\sf e] fis-[^\sf g]
               |
+              <e, g bes>8_\ff \relative c'' f8\rest
+              \afterGrace e''2\startTrillSpan { d16-[\stopTrillSpan e] }
+              |
+              g4 \relative c''' { b8\rest }
+              g16-[ f] es-[ d c bes]
+              |
+              \relative c''' { c8\rest }
+              a8-[ a'] s8 s4
+              |
+              \relative c''' { a8\rest }
+              f,8-[ f'] s8 s4
+              |
+              \relative c''' { a8\rest }
+              d,8-[ d' c] bes-[ b]
+              |
+              c8 \relative c''' { a8\rest } b4. b8
+              |
+              f16 g a bes b c d c bes a g f
+              |
+              d'8 \relative c''' { a8\rest } c4. c8
+              |
+              g16 a bes c cis d es d c bes a g
+              |
+              f'8 \relative c''' { a8\rest } es4. es8
+              |
+              bes16 c d es e f g f e f ges f
+              |
+              d es f es c des es des b c des c
+              |
+              \relative c''' { c8\rest } ges'8
+              f,16 es f es f es d! es
+              |
+              d4 \relative c''' { a8\rest }
+              d16 es f g a bes
+              |
             }
             \\
             \relative c' {
@@ -1798,6 +1833,39 @@ four-section-one = {
               a16-[ d, g e] d e cis e bes' e, a fis
               |
               es! fis d g bes a bes g des' c des bes
+              |
+              s4
+              <bes' des>2
+              |
+              \trillSpanDown
+              \override TrillSpanner.to-barline = ##t
+              \relative c'' { g8\rest } bes,,8 e'2_\sf\startTrillSpan
+              |
+              f4\stopTrillSpan \relative c'' { b8\rest } f16-[ es] d-[ c bes a]
+              |
+              d4 \relative c'' { b8\rest } d16-[ c] bes a g f
+              |
+              bes4 \relative c'' { b8\rest } bes16 a g a g f
+              |
+              e f e d c d e f fis g a g
+              |
+              bes8 \relative c'' { g8\rest } a4. a8
+              |
+              fis16 g fis e d e fis g gis a bes a
+              |
+              c8 \relative c'' { b8\rest } bes4. bes8
+              |
+              a16 bes a g f g a bes b c d c
+              |
+              es8 \relative c'' { b8\rest } d4. es16-[ des]
+              |
+              b16 c des c a bes c bes gis a bes a
+              |
+              es8 \relative c'' { b8\rest } <ges_~ bes>2_\sf
+              |
+              ges8-[ <bes, f'> bes']
+              % TODO: height of rests
+              \relative c' { e8\rest e4\rest }
               |
             }
           >>
@@ -3097,6 +3165,44 @@ four-section-one = {
           <f! f'!>8-[ <e e'>] <g g'>-[ <a a'>] <g g'>-[ <fis fis'>]
           |
           <a a'>-[ <bes bes'>] <fis fis'>-[ <g g'>] <dis dis'>-[ <e e'>]
+          |
+          <bes''' d>8 r8
+          <<
+            \relative c {
+              c2
+            }
+            \\
+            \relative c {
+              \afterGrace g2\startTrillSpan { f16-[\stopTrillSpan g] }
+            }
+          >>
+          |
+          s2.
+          |
+          s4 s8 \stemUp e8-[ f] s8
+          |
+          s4 s8 cis8-[ d] s8
+          |
+          s2.
+          |
+          s2.
+          |
+          s2.
+          |
+          s2.
+          |
+          s2.
+          |
+          s2.
+          |
+          s2.
+          |
+          s2.
+          |
+          \override TrillSpanner.to-barline = ##t
+          f,,,8 r8 a'2\startTrillSpan
+          |
+          bes4\stopTrillSpan r8 bes16 a g f es d
           |
         }
       }
