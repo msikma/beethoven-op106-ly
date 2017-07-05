@@ -63,26 +63,26 @@ two-section-one = {
           \once \override Slur.positions = #'(0 . 2.5)
           bes8.(\< <fis d'>16) | <a d>4\>( <bes d,>8)\! r8
           \once \override Slur.positions = #'(0 . 2.5)
-          g8.-[(\< <d bes'>16]) <f bes>4\>( <bes, g'>8)\! r8
+          g8.-[(\< <d bes'>16]) <f bes>4\>^( <bes, g'>8)\! r8
           \once \override Slur.positions = #'(0 . 2.5)
-          <bes g'>8.-[(\< <es a>16]) | <es a>4\>( <bes bes'>8)\! r8
+          <\parenthesize bes g'>8.-[(\< <es a>16]) | <es a>4\>^( <bes bes'>8)\! r8
           <<
             \relative c'' {
-              bes8.(\< c16) | <f,_~ c'>4\>( <f bes d>8)\!
+              bes8.(\< c16) | c4\>( <bes d>8)\!
             }
             \\
             \relative c' {
-              f4
+              f4 | f4 f8
             }
           >>
           r8
           <<
             \relative c'' {
-              d8.(\cresc es16) | \break <bes es>4( \stemNeutral <f bes des f>8) r8 \stemNeutral <g bes c g'>8\f
+              d8.(\cresc es16) | \break es4( \stemUp <bes des f>8) r8 \stemNeutral <g bes c g'>8\f
             }
             \\
             \relative c'' {
-              bes4
+              bes4 | bes4 f8
             }
           >>
           r8 |
@@ -94,7 +94,7 @@ two-section-one = {
             \relative c''' {
               \stemNeutral
               \override Slur.height-limit = #4
-              d8.(\< <a f'>16) | <c f>4\>( <f, d'>8)\!
+              d!8.(\< <a f'>16) | <c f>4\>( <f, d'>8)\!
             }
             \\
             \relative c'' {
@@ -112,14 +112,14 @@ two-section-one = {
             \relative c'' {
               \once \override Slur.positions = #'(0 . 2.5)
               \override Slur.height-limit = #5
-              bes'8.(\cresc c16) | \break <f,_~ c'>4( <f d'>8) r8
+              bes'8.(\cresc c16) | \break c4( d8) r8
               \once \override Slur.positions = #'(0 . 2.5)
-              es'8.( e16) | \stemNeutral <bes e>4( <f a f'>8)
+              es8.( e16) | \stemNeutral <bes e>4( <f a f'>8)
               r8 <g bes e g>8\f
             }
             \\
             \relative c'' {
-              f4 | s4 s4 bes4
+              f4 | f4 f8 bes4
             }
           >>
           r8 | <f' a f'>8 r8 r4
@@ -142,7 +142,9 @@ two-section-one = {
           r8
           \once \override Slur.height-limit = #7
           \once \override Slur.positions = #'(0 . 0)
-          <b, d>8.(\> <es g>16) | <es g>4\!( <c es>8) r8
+          <b, d>8.(\>
+          % Note: Henle has a grace flat on this es
+          <es g>16) | <es g>4\!( <c es>8) r8
           <a c>8.(\> <c es>16) | <c es>4\!( <a c>8) r8
           <a c>8.(\> <des f>16) | \break <d! f>4\!( <bes d>8)
           r8
@@ -155,7 +157,7 @@ two-section-one = {
               \once \override DynamicText.extra-offset = #'(-1.8 . -2.5)
               \once \override DynamicText.self-alignment-X = #LEFT
               <a, c>8.^(^\p <c es>16) | <c es>2^(^\textDecrescEnd "dimin." <bes d>4 |
-              <a c>4 <g bes>4 <f_~ a^~>4 |
+              <a c>4 <g bes>4 <f^~ a^~>4 |
               <f a>4 <e g>4^\pp <es_~ c'^~>4 |
               <es c'>4 <b' d,>4)
               \change Staff = "right"
@@ -173,7 +175,7 @@ two-section-one = {
               \change Staff = "right"
             }
           >>
-          r4 | r4 r4
+          s4 | r4 r4
           b,8.(\pp d16) | d4( b8) r8 \clef treble
           <<
             \relative c'' {
@@ -219,7 +221,7 @@ two-section-one = {
             \relative c''' {
               \voiceTwo
               \once \override Slur.height-limit = #5
-              <a, c>8.^(\p <c es>16 | <c es>2_\textDecrescEnd "dimin." <bes d>4 |
+              <a, c>8.^(\p <c es>16) | <c es>2^(_\textDecrescEnd "dimin." <bes d>4 |
               <a c>4
               \voiceOne
               <g bes>4 <f_~ a^~>4 |
@@ -236,7 +238,10 @@ two-section-one = {
               g2
             }
           >>
-          r4 | r4 r4
+          \noBreak
+          r4 |
+          \break
+          r4 r4
           b,8.(\pp d16) | d4( b8) r8
           <<
             \relative c''' {
@@ -857,33 +862,37 @@ two-section-one = {
           <bes d>8.^( <f c'>16) | <a c>4^( <bes d>8) r8
           <g bes>8.^( <d a'>16) | <fis a>4^( <g bes>8) r8
           <es g>8.^( <bes f'>16) | <d f>4^( <es g>8) r8
-          <es g>8.^( <c f>16) | <c f^~>4_( <d f>8) r8
+          <es g>8.^( <c f>16) |
+          \once \override Slur.positions = #'(-2.3 . 1)
+          <c f^~>4_( <d f>8) r8
           <<
             {
                f4
             }
             \\
             {
-              d8._( a16) | <a f'^~>4_( <aes f'>8)
+              d8._( a16) | \stemUp <a f'^~>4_( <aes f'>8)
             }
           >>
           r8
           \stemUp
           <aes f'>8._( <g es'>16) | <g es'>4_( <f des'>8) r8
           <e c'>8 r8 | <f f'>8 r8 r4 \clef treble
-          <bes'' d>8._( <f c'>16) | <a c>4_( <bes d>8) r8
+          <bes'' d!>8._( <f c'>16) | <a c>4_( <bes d>8) r8
           <g bes>8._( <d bes'>16) | <fis a>4_( <g bes>8) r8
           <e g>8._( <bes f'>16) | <d f>4_( <es g>8) r8
-          <e g>8._( <c f>16) | <c f^~>4_( <d f>8) r8
+          <e g>8._( <c f>16) |
+          % TODO: parenthesize this tie.
+          <c f^~>4_( <d f>8) r8
           \stemNeutral
-          d'8._( <a c>16) | <a c>4_( <aes bes>8) r8
+          d'8.^( <a \parenthesize c>16) | \stemUp <a c>4_( \stemNeutral <aes bes>8) r8
           <<
             {
               bes4
             }
             \\
             {
-              g8._( ges16) | <ges bes>4_( <f c'>8)
+              g8._( ges16) | \stemUp <ges bes>4_( <f c'>8)
             }
           >>
           r8
@@ -893,11 +902,21 @@ two-section-one = {
           <f f'>2 <f_~ f'^~>4 |
           <f f'>2 <f,_~ f'^~>4 |
           \stemDown
-          <f f'>2 <fis_~ fis'^~>4 |
+          <f f'>2 <fis_~ fis'_~>4 |
           <fis fis'>4 <g g'>2_( |
           <a a'>4 <bes bes'> <b b'> |
-          <c c'>2) c4_( |
-          g'2) r4 |
+          <c c'>2) c4 |
+          g'2
+          <<
+            \relative c {
+              r4
+            }
+            \\
+            \relative c {
+              r4
+            }
+          >>
+          |
           \stemNeutral
           R2. |
           r4 r4
@@ -907,7 +926,7 @@ two-section-one = {
             }
             \\
             {
-              g,8._( b16 | b4 g8)
+              g,8._( b16) | b4_( g8)
             }
           >>
           r8 \clef treble
@@ -917,18 +936,17 @@ two-section-one = {
           \once \override Slur.positions = #'(0 . 3.5)
           \once \override Slur.eccentricity = #0.5
           % Todo: check this slur.
-          <f,_~ f'^~>4_( | <f f'>4
-          <f' f'>8) r8 <bes, bes'>8 r8 |
+          <f,_~ f'^~>4 | <f f'>4
+          <f' f'>8 r8 <bes, bes'>8 r8 |
           <bes bes'>8 r8 r4 \clef treble
           <f'''_~ f'^~>4 | <f f'>2 \clef bass
           <f,_~ f'^~>4 | <f f'>2
           <f_~ f'^~>4 | <f f'>2
           <f,_~ f'^~>4 | <f f'>2
-          <fis_~ fis'^~>4 | <fis fis'>4
           <<
             \relative c {
+              s4 | s4 s2 |
               \stemDown
-              s2 |
               <a' c>4 <bes, g' bes>4 <b f'^~ a^~>4 |
               \stemUp
               <f' a>4 <e g>4 <es g^~>4 |
@@ -937,17 +955,21 @@ two-section-one = {
             }
             \\
             \relative c, {
+              \stemUp
+              <fis_~ fis'^~>4 | <fis fis'>4_(
+              \stemDown
               \once \override Slur.height-limit = #5
               \once \override Slur.eccentricity = #1
               \once \override Slur.positions = #'(-2 . -1)
-              <fis' c' es>4_( <g bes d>4 |
+              <fis' c' es>4 <g bes d>4 |
               s2 s4 |
               c,2 \parenthesize c4 |
-              s4 b'4)
+              s4 \stemUp b'4)
             }
             \\
             \relative c {
               \voiceOne
+              s4 | s4
               s2 |
               s2 s4 | s4 s4 c'4^~ |
               c4
