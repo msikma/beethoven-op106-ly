@@ -18,7 +18,7 @@ two-section-one = {
   \key bes \major
   \time 3/4
   \partial 4
-  \tempo "Assai vivace"
+  \tempo "Assai vivace" 2. = 80
 }
 
 \bookpart {
@@ -35,6 +35,7 @@ two-section-one = {
     \new PianoStaff \with {
       \std-staff-spacing
     } <<
+      \override Score.MetronomeMark.extra-offset = #'(0 . 1.5)
       \set PianoStaff.connectArpeggios = ##t
       %---------------------------------------------------------------------
       %    Right hand
@@ -50,8 +51,10 @@ two-section-one = {
           <<
             \relative c'' {
               \stemNeutral
+              \once \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
+                #'((alignment-distances . (11.2)))
               \once \override Slur.positions = #'(2.18 . 3)
-              d8.^(\< <a f'>16) | <c f>4\>^( \stemUp <d f,>8)\!
+              d8.^(\<-2 <a f'>16-4) | <c f>4\>^(-3-5 \stemUp <d f,>8)\!
             }
             \\
             \relative c'' {
@@ -61,14 +64,16 @@ two-section-one = {
             }
           >> r8
           \once \override Slur.positions = #'(0 . 2.5)
-          bes8.(\< <fis d'>16) | <a d>4\>( <bes d,>8)\! r8
+          bes8.(\<-2 <fis d'>16)-1-4 | <a d>4\>(-5 <bes d,>8)\! r8
           \once \override Slur.positions = #'(0 . 2.5)
-          g8.-[(\< <d bes'>16]) <f bes>4\>^( <bes, g'>8)\! r8
+          g8.-[(\<-2 <d bes'>16])-1-4 <f bes>4\>^(-2-4 <bes, g'>8)\!-1-3 r8
           \once \override Slur.positions = #'(0 . 2.5)
-          <\parenthesize bes g'>8.-[(\< <es a>16]) | <es a>4\>^( <bes bes'>8)\! r8
+          <\parenthesize bes g'>8.-[(\<-4 <es a>16]) | <es a>4\>^( <bes bes'>8)\!
+          -\tweak X-offset #-0.1
+          -4 r8
           <<
             \relative c'' {
-              bes8.(\< c16) | c4\>( <bes d>8)\!
+              bes8.(\< c16)-4 | c4\>( <bes d>8)\!
             }
             \\
             \relative c' {
@@ -78,7 +83,13 @@ two-section-one = {
           r8
           <<
             \relative c'' {
-              d8.(\cresc es16) | \break es4( \stemUp <bes des f>8) r8 \stemNeutral <g bes c g'>8\f
+              % Some trickery to clean up the cresc. a little.
+              \set crescendoText = \markup { \italic { "cresc. " } }
+              \set crescendoSpanner = #'text
+              d8.(\<-2-5 es16)-4 \noPageBreak |
+              \once \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
+                #'((alignment-distances . (11)))
+              \break es4( \stemUp <bes des f>8) r8 \stemNeutral <g bes c g'>8\f
             }
             \\
             \relative c'' {
@@ -112,14 +123,20 @@ two-section-one = {
             \relative c'' {
               \once \override Slur.positions = #'(0 . 2.5)
               \override Slur.height-limit = #5
-              bes'8.(\cresc c16) | \break c4( d8) r8
+              \set crescendoText = \markup { \italic { "cresc. " } }
+              \set crescendoSpanner = #'text
+              bes'8.(\< c16) \noPageBreak |
+              \break c4( d8) \relative c'' b8\rest
               \once \override Slur.positions = #'(0 . 2.5)
-              es8.( e16) | \stemNeutral <bes e>4( <f a f'>8)
+              es8.(
+              -\tweak X-offset #-0
+              -\tweak Y-offset #6.5
+              -4 e16) | \stemNeutral <bes e>4(-4 <f a f'>8)
               r8 <g bes e g>8\f
             }
             \\
             \relative c'' {
-              f4 | f4 f8 bes4
+              f4 | f4 f8 s8 bes4_2
             }
           >>
           r8 | <f' a f'>8 r8 r4
@@ -129,7 +146,7 @@ two-section-one = {
             \relative c''' {
               \stemNeutral
               \override Slur.height-limit = #4
-              <b, d>8.(\> <d f>16) | <d f>4\!( <b d>8)\!
+              <b, d>8.(\>-1-2 <d f>16)-2-4 | <d f>4\!( <b d>8)\!
             }
             \\
             \relative c'' {
@@ -142,11 +159,14 @@ two-section-one = {
           r8
           \once \override Slur.height-limit = #7
           \once \override Slur.positions = #'(0 . 0)
-          <b, d>8.(\>
+          <b, d>8.(\>-1-2
           % Note: Henle has a grace flat on this es
-          <es g>16) | <es g>4\!( <c es>8) r8
-          <a c>8.(\> <c es>16) | <c es>4\!( <a c>8) r8
-          <a c>8.(\> <des f>16) | \break <d! f>4\!( <bes d>8)
+          <es? g>16)-3-5 | <es g>4\!(-2-4 <c es>8) r8
+          <a c>8.(\>-1-2 <c es>16) | <c es>4\!( <a c>8) r8
+          <a c>8.(\> <des f>16)-3-5 \noPageBreak |
+          \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
+            #'((alignment-distances . (12.3)))
+          \break <d! f>4\!(-2-4 <bes d>8)
           r8
           <<
             \relative c'' {
@@ -154,11 +174,15 @@ two-section-one = {
               \once \override Slur.height-limit = #4
               \once \override Slur.positions = #'(0 . 3)
               \change Staff = "left"
-              \once \override DynamicText.extra-offset = #'(-1.8 . -2.5)
+              \once \override DynamicText.extra-offset = #'(-2.8 . -4.5)
               \once \override DynamicText.self-alignment-X = #LEFT
-              <a, c>8.^(^\p <c es>16) | <c es>2^(^\textDecrescEnd "dimin." <bes d>4 |
-              <a c>4 <g bes>4 <f^~ a^~>4 |
-              <f a>4 <e g>4^\pp <es_~ c'^~>4 |
+              <a, c>8.^(^\p-1-2 <c es>16)-2-4 |
+              \once \override Slur.height-limit = #3.6
+              <c es>2^(^\textDecrescEnd "dimin."-3-5 <bes d>4-2
+              -\tweak Y-offset #5.3
+              ^4 |
+              <a c>4-1-3 <g bes>4-2-4 <f^~ a^~>4 |
+              <f a>4 <e g>4^\pp-1-2 <es_~ c'^~>4 |
               <es c'>4 <b' d,>4)
               \change Staff = "right"
             }
@@ -180,7 +204,7 @@ two-section-one = {
           <<
             \relative c'' {
               \once \override Slur.height-limit = #4
-              b8.( d16) | \break d4( b8)
+              b8.(-4 d16) | \break d4(-4 b8)
             }
             \\
             \relative c' {
@@ -191,19 +215,19 @@ two-section-one = {
           \once \override Slur.positions = #'(1 . 1)
           c''8.(\pp es16) | es4( c8) r8
           \once \override Slur.positions = #'(0 . 2.5)
-          <d,, b'>8.(\cresc <f d'>16) | <f d'>4( <d b'>8) r8
+          <d,, b'>8.(\cresc-1-4 <f d'>16)-2-5 | <f d'>4( <d b'>8) r8
           \once \override Slur.positions = #'(0 . 2.5)
-          <d b'>8.( <g es'>16) | <g es'>4( <es c'>8) r8
+          <d b'>8.(-1-4 <g es'>16)-2-5 | <g es'>4( <es c'>8) r8
           \once \override Slur.positions = #'(2.2 . 2.5)
           \once \override Slur.height-limit = #9
           \once \override Slur.eccentricity = #-0.55
-          <a c>8.(\f <c a'>16) | <c a'>4( <a f'>8) r8
+          <a c>8.(\f-1-2 <c a'>16)-2-5 | <c a'>4( <a f'>8) r8
           <bes bes'>8 r8 | <bes bes'>8 r8 r4
           <<
             \relative c'' {
               \stemNeutral
               \override Slur.height-limit = #4
-              <b' d>8.(\> <d f>16) | \break <d f>4\!( <b d>8)
+              <b' d>8.(\> <d f>16) \noPageBreak | \break <d f>4\!( <b d>8)
             }
             \\
             \relative c'' {
@@ -221,7 +245,10 @@ two-section-one = {
             \relative c''' {
               \voiceTwo
               \once \override Slur.height-limit = #5
-              <a, c>8.^(\p <c es>16) | <c es>2^(_\textDecrescEnd "dimin." <bes d>4 |
+              <a, c>8.^(\p <c es>16) |
+              \once \override Slur.height-limit = #3.3
+              \once \override Slur.positions = #'(2.18 . 3)
+              <c es>2^(_\textDecrescEnd "dimin." <bes d>4 |
               <a c>4
               \voiceOne
               <g bes>4 <f_~ a^~>4 |
@@ -263,13 +290,13 @@ two-section-one = {
           \bar "||"
           \key bes \minor
           <des,_~ des'^~>4_\sempliceWhiteout |
-          <des des'> <f f'>^( <des_~ des'^~>) |
+          <des des'> <f f'>^( <des_~ des'^~>)-4 |
           <des des'>\!
           \once \override Slur.positions = #'(2 . 5.6)
           \once \override Slur.eccentricity = #0.7
           \once \override Slur.height-limit = #4.5
-          <bes bes'>^( <f f'> |
-          <bes bes'>2\cresc <des des'>4 |
+          <bes bes'>^( <f f'>-4 |
+          <bes bes'>2\cresc-4 <des des'>4\finger \markup \tied-finger-up #"5" #"4" |
           \break
           <f f'>2\< <des des'>4 |
           <bes bes'>2 <aes aes'>4 |
@@ -859,24 +886,24 @@ two-section-one = {
         \clef bass \relative c' {
           \two-section-one
           \override Slur.height-limit = #3
-          <bes d>8.^( <f c'>16) | <a c>4^( <bes d>8) r8
-          <g bes>8.^( <d a'>16) | <fis a>4^( <g bes>8) r8
-          <es g>8.^( <bes f'>16) | <d f>4^( <es g>8) r8
-          <es g>8.^( <c f>16) |
+          <bes d>8.^(_2_3 <f c'>16)_1_5 | <a c>4^(_2_4 <bes d>8) r8
+          <g bes>8.^(_2_3 <d a'>16) | <fis a>4^(_1_4 <g bes>8) r8
+          <es g>8.^(_2_3 <bes f'>16) | <d f>4^(_2_4 <es g>8) r8
+          <es g>8.^(_1_3 <c f>16) |
           \once \override Slur.positions = #'(-2.3 . 1)
-          <c f^~>4_( <d f>8) r8
+          <c f^~>4_(_1_4 <d f>8) r8
           <<
             {
                f4
             }
             \\
             {
-              d8._( a16) | \stemUp <a f'^~>4_( <aes f'>8)
+              d8._(_1_2 a16)_4 | \stemUp <a f'^~>4_(_4 <aes f'>8)_3
             }
           >>
           r8
           \stemUp
-          <aes f'>8._( <g es'>16) | <g es'>4_( <f des'>8) r8
+          <aes f'>8._(_4 <g es'>16) | <g es'>4_(_4 <f des'>8) r8
           <e c'>8 r8 | <f f'>8 r8 r4 \clef treble
           <bes'' d!>8._( <f c'>16) | <a c>4_( <bes d>8) r8
           <g bes>8._( <d bes'>16) | <fis a>4_( <g bes>8) r8
@@ -885,14 +912,14 @@ two-section-one = {
           % TODO: parenthesize this tie.
           <c f^~>4_( <d f>8) r8
           \stemNeutral
-          d'8.^( <a \parenthesize c>16) | \stemUp <a c>4_( \stemNeutral <aes bes>8) r8
+          d'8.^(_1 <a \parenthesize c>16) | \stemUp <a c>4_(_1_3 \stemNeutral <aes bes>8) r8
           <<
             {
               bes4
             }
             \\
             {
-              g8._( ges16) | \stemUp <ges bes>4_( <f c'>8)
+              g8._(_2_4 ges16) | \stemUp <ges bes>4_(_2_4 <f c'>8)
             }
           >>
           r8
@@ -926,7 +953,7 @@ two-section-one = {
             }
             \\
             {
-              g,8._( b16) | b4_( g8)
+              g,8._( b16)-3 \noPageBreak | b4_( g8)
             }
           >>
           r8 \clef treble
@@ -947,23 +974,25 @@ two-section-one = {
             \relative c {
               s4 | s4 s2 |
               \stemDown
-              <a' c>4 <bes, g' bes>4 <b f'^~ a^~>4 |
+              <a' c>4 <bes, g' bes>4 <b f'^~ a^~>4-1-3 |
               \stemUp
-              <f' a>4 <e g>4 <es g^~>4 |
+              <f' a>4 <e g>4 g4^~ |
               \stemDown
-              g2
+              g2_3
             }
             \\
             \relative c, {
               \stemUp
-              <fis_~ fis'^~>4 | <fis fis'>4_(
+              <fis_~ fis'^~>4 |
+              \once \override Slur.height-limit = #3.3
+              <fis fis'>4_(
               \stemDown
               \once \override Slur.height-limit = #5
               \once \override Slur.eccentricity = #1
               \once \override Slur.positions = #'(-2 . -1)
-              <fis' c' es>4 <g bes d>4 |
+              <fis' c' es>4^1 <g bes d>4^1_5 |
               s2 s4 |
-              c,2 \parenthesize c4 |
+              c,2_5 <\parenthesize c es>4 |
               s4 \stemUp b'4)
             }
             \\
