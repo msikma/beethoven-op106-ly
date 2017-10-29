@@ -89,7 +89,7 @@ two-section-one = {
               d8.(\<-2-5 es16)-4 \noPageBreak |
               \once \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
                 #'((alignment-distances . (11)))
-              \break es4( \stemUp <bes des f>8) r8 \stemNeutral <g bes c g'>8\f
+              \break es4( \stemUp <bes des f>8) \relative c'' b8\rest \stemNeutral <g bes c g'>8\f
             }
             \\
             \relative c'' {
@@ -132,7 +132,7 @@ two-section-one = {
               -\tweak X-offset #-0
               -\tweak Y-offset #6.5
               -4 e16) | \stemNeutral <bes e>4(-4 <f a f'>8)
-              r8 <g bes e g>8\f
+              \relative c'' b8\rest <g bes e g>8\f
             }
             \\
             \relative c'' {
@@ -165,7 +165,7 @@ two-section-one = {
           <a c>8.(\>-1-2 <c es>16) | <c es>4\!( <a c>8) r8
           <a c>8.(\> <des f>16)-3-5 \noPageBreak |
           \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
-            #'((alignment-distances . (12.3)))
+            #'((alignment-distances . (11.7)))
           \break <d! f>4\!(-2-4 <bes d>8)
           r8
           <<
@@ -178,7 +178,8 @@ two-section-one = {
               \once \override DynamicText.self-alignment-X = #LEFT
               <a, c>8.^(^\p-1-2 <c es>16)-2-4 |
               \once \override Slur.height-limit = #3.6
-              <c es>2^(^\textDecrescEnd "dimin."-3-5 <bes d>4-2
+              \once \override DynamicTextSpanner.style = #'none
+              <c es>2^(^\dim-3-5 <bes d>4-2
               -\tweak Y-offset #5.3
               ^4 |
               <a c>4-1-3 <g bes>4-2-4 <f^~ a^~>4 |
@@ -215,12 +216,10 @@ two-section-one = {
           \once \override Slur.positions = #'(1 . 1)
           c''8.(\pp es16) | es4( c8) r8
           \once \override Slur.positions = #'(0 . 2.5)
-          <d,, b'>8.(\cresc-1-4 <f d'>16)-2-5 | <f d'>4( <d b'>8) r8
+          \once \override DynamicTextSpanner.style = #'none
+          <d,, b'>8.(\cresc-1-4 <f d'>16)-2-5 | \stemUp <f d'>4( <d b'>8) r8 \stemNeutral
           \once \override Slur.positions = #'(0 . 2.5)
-          <d b'>8.(-1-4 <g es'>16)-2-5 | <g es'>4( <es c'>8) r8
-          \once \override Slur.positions = #'(2.2 . 2.5)
-          \once \override Slur.height-limit = #9
-          \once \override Slur.eccentricity = #-0.55
+          <d b'>8.(-1-4 <g es'>16)-2-5 | <g es'>4_( <es c'>8) r8
           <a c>8.(\f-1-2 <c a'>16)-2-5 | <c a'>4( <a f'>8) r8
           <bes bes'>8 r8 | <bes bes'>8 r8 r4
           <<
@@ -248,7 +247,8 @@ two-section-one = {
               <a, c>8.^(\p <c es>16) |
               \once \override Slur.height-limit = #3.3
               \once \override Slur.positions = #'(2.18 . 3)
-              <c es>2^(_\textDecrescEnd "dimin." <bes d>4 |
+              \once \override DynamicTextSpanner.style = #'none
+              <c es>2^(\dim <bes d>4 |
               <a c>4
               \voiceOne
               <g bes>4 <f_~ a^~>4 |
@@ -284,7 +284,7 @@ two-section-one = {
           r8
           c8.(\pp es16) | es4( c8) r8
           <d b'>8.(\cresc <f d'>16) | <f d'>4( <d b'>8) r8
-          <d b'>8.( <g es'>16) | <g es'>4( <e c'>8) r8
+          <d b'>8.( <g es'>16) | <g es'>4( <es c'>8) r8
           <a c>8.(\f <c a'>16) | <c a'>4( <a f'>8) r8
           <bes bes'>8 r8 | <bes bes'>8 r8 r4
           \bar "||"
@@ -292,25 +292,27 @@ two-section-one = {
           <des,_~ des'^~>4_\sempliceWhiteout |
           <des des'> <f f'>^( <des_~ des'^~>)-4 |
           <des des'>\!
+          <bes bes'>^( <f f'>-4) |
           \once \override Slur.positions = #'(2 . 5.6)
           \once \override Slur.eccentricity = #0.7
           \once \override Slur.height-limit = #4.5
-          <bes bes'>^( <f f'>-4 |
-          <bes bes'>2\cresc-4 <des des'>4\finger \markup \tied-finger-up #"5" #"4" |
+          \once \override DynamicTextSpanner.style = #'none
+          <bes bes'>2\cresc-4^( <des des'>4\finger \markup \tied-finger-up #"5" #"4" |
           \break
           <f f'>2\< <des des'>4 |
-          <bes bes'>2 <aes aes'>4 |
-          <bes bes'>2 <des des'>4\> |
-          <f f'>2 <aes aes'>4 |
-          <des, des'>4)\!\p r4 <bes bes'>8 r8 |
+          <bes bes'>2-5 <f f'>4\finger \markup \tied-finger-up #"4" #"2" |
+          <bes bes'>2-5 <des des'>4\>-4 |
+          <f f'>2\finger \markup \tied-finger-up #"5" #"4" <aes aes'>4\! |
+          <des, des'>4)\p r4 <bes bes'>8 r8 |
           \break
           <bes bes'>8 r8 r4
-          \explicitTuplets
+          \implicitTuplets
           \tuplet 3/2 \relative c'' { des8 bes f } |
           \tuplet 3/2 \relative c'' { des8 bes f }
+          \stemUp
           \tuplet 3/2 \relative c'' { f8 des bes }
+          \stemNeutral
           \tuplet 3/2 \relative c'' { des8 bes f } |
-          \implicitTuplets
           \tuplet 3/2 \relative c'' { des8\cresc bes f }
           \tuplet 3/2 \relative c'' { bes8 f des }
           \tuplet 3/2 \relative c' { f8 des bes } |
@@ -324,7 +326,8 @@ two-section-one = {
           \tuplet 3/2 \relative c'' { des8 bes f } |
           \break
           \tuplet 3/2 \relative c'' { bes8\> f des }
-          \tuplet 3/2 \relative c'' { bes8_\textDecresc "dimin." f des }
+          \once \override DynamicTextSpanner.style = #'none
+          \tuplet 3/2 \relative c'' { bes8_\dim f des }
           \tuplet 3/2 \relative c' { f8 des bes } |
 
           \tuplet 3/2 \relative c' { <des aes'>8 aes des }
@@ -337,17 +340,40 @@ two-section-one = {
           <f des'>4\! r4 <f'_~ f'^~>4 |
           <f f'>4 <aes aes'>4^( <f_~ f'^~>) |
           \break
-          <f f'>4
-          \once \override Slur.positions = #'(2 . 4.6)
-          \once \override Slur.eccentricity = #0.7
-          \once \override Slur.height-limit = #4.5
-          <des des'>4^( <aes aes'> |
-          <des des'>2 <f f'>4 |
-          <aes aes'>2 <f f'>4 |
-          <des des'>2 <bes bes'>4 |
-          <aes aes'>2 <bes bes'>4 |
-          <des des'>2 <f f'>4 |
-          <bes, bes'>4) r4 <des, des'>8 r8 | <des des'>8 r8
+          <f f'>4 <des des'>4^( <aes aes'>) |
+          <<
+            \relative c'' {
+              s4
+              s4\<
+              s4
+              |
+              s2.
+              |
+              s2.
+              |
+              s4\!\> s4 s4
+              |
+              s2\!
+            }
+            \\
+            {
+              \once \override Slur.positions = #'(2 . 2.6)
+              \once \override Slur.eccentricity = #0.7
+              \once \override Slur.height-limit = #4.5
+              <des des'>2^( <f f'>4
+              |
+              <aes aes'>2 <f f'>4
+              |
+              <des des'>2 <bes bes'>4
+              |
+              <f f'>2 <bes bes'>4
+              |
+              <des des'>2 <f f'>4
+              |
+              <bes, bes'>4)
+            }
+          >>
+          r4 <des, des'>8 r8 | <des des'>8 r8
 
           <<
             \relative c'' {
@@ -397,25 +423,27 @@ two-section-one = {
           f2 |
 
           \break
-          r8\cresc <f aes c>8 r8 <f aes c>8 |
-          r8 <e bes' c>8 r8 <e g bes c>8 |
-          r8 <e g c>8 r8 <e g c>8 |
-          r8 <f aes c>8 r8 <e bes' c>8 |
-          r8 <f aes c>8 r8 <f aes c f>8 |
-          r8 <f bes c f>8 r8 <e bes' c e>8 |
-          r8 <f c' f>8 r8 <f c' es!>8 |
+          \stemUp
+          r8\cresc <f aes c>8-[ r8 <f aes c>8] |
+          r8 <e bes' c>8-[ r8 <e g bes c>8] |
+          r8 <e g c>8-[ r8 <e g c>8] |
+          r8 <f aes c>8-[ r8 <e bes' c>8] |
+          r8 <f aes c>8-[ r8 <f aes c f>8] |
+          r8 <f bes c f>8-[ r8 <e bes' c e>8] |
+          r8 <f c' f>8-[ r8 <f c' es!>8] |
           \break
-          r8 <f bes des>8 r8 <es a c>8 |
+          r8 <f bes des>8-[ r8 <es a c>8] |
+          \stemNeutral
 
-          <bes' f' bes>8\ff r8 <des f bes des>8 r8 |
-          <c f a c>8 r8 <f, a c f>8 r8 |
-          <f' bes f'>8 r8 <es f a es'>8 r8 |
-          <des f bes des>8 r8 <c f c'>8 r8 |
-          <bes des f bes>8 r8 <des f bes des>8 r8 |
-          <c f c'>8 r8 <f, a c f>8 r8 |
-          <f' f'>8 r8 <des bes' des>8 r8 |
+          <bes' f' bes>8-[\ff r8 <des f bes des>8] r8 |
+          <c f a c>8-[ r8 <f, a c f>8] r8 |
+          <f' bes f'>8-[ r8 <es f a es'>8] r8 |
+          <des f bes des>8-[ r8 <c f c'>8] r8 |
+          <bes des f bes>8-[ r8 <des f bes des>8] r8 |
+          <c f c'>8-[ r8 <f, a c f>8] r8 |
+          <f' f'>8-[ r8 <des bes' des>8] r8 |
           <c a' c>2 |
-          <f f'>8 r8 <bes des>8 r8 |
+          <f f'>8-[ r8 <bes des>8] r8 |
           <a c>2\sf |
           \bar "||"
           \key bes \major
@@ -473,34 +501,28 @@ two-section-one = {
           r8\fermata
           \bar "||"
           \time 3/4
-          <es''' ges>16^( a, <es' ges> a, |
-          <es' ges> a, <es' ges> a, <es' ges> a, <es' ges> a,) r4 |
+          \tempo "Tempo I"
+          <es''' ges>16 a, <es' ges> a, |
+          <es' ges> a, <es' ges> a, <es' ges> a, <es' ges> a, r4 |
           \break
-          r4 r4
+          
           \relative c'' {
+            \once \override DynamicTextSpanner.dash-period = #-1
+            r4\p_\textCresc "dolce" r4
             \override Slur.height-limit = #3
+            \stemNeutral
+            \once \override Slur.positions = #'(2.18 . 3)
+            d8.(\< <a f'>16) | <c f>4\>( \stemUp <d f,>8)\!
+            r8
+            \once \override Slur.positions = #'(0 . 2.5)
+            bes8.(\< <fis d'>16) | <a d>4\>^( <bes d,>8)\! r8
+            \once \override Slur.positions = #'(0 . 2.5)
+            g8.-[(\< <d bes'>16]) <f bes>4\>^( <bes, g'>8)\! r8
+            \once \override Slur.positions = #'(0 . 2.5)
+            <bes g'>8.-[(\< <es a>16]) | <es a>4\>^( <bes bes'>8)\! r8
             <<
               \relative c'' {
-                \stemNeutral
-                \once \override Slur.positions = #'(2.18 . 3)
-                d8.(\< <a f'>16) | <c f>4\>( \stemUp <d f,>8)\!
-              }
-              \\
-              \relative c'' {
-                \once \override DynamicText.extra-offset = #'(-2.4 . 1.8)
-                \once \override DynamicText.self-alignment-X = #LEFT
-                s8._\p
-              }
-            >> r8
-            \once \override Slur.positions = #'(0 . 2.5)
-            bes8.(\< <fis d'>16) | <a d>4\>( <bes d,>8)\! r8
-            \once \override Slur.positions = #'(0 . 2.5)
-            g8.-[(\< <d bes'>16]) <f bes>4\>( <bes, g'>8)\! r8
-            \once \override Slur.positions = #'(0 . 2.5)
-            <bes g'>8.-[(\< <es a>16]) | <es a>4\>( <bes bes'>8)\! r8
-            <<
-              \relative c'' {
-                bes8.(\< c16) | <f,_~ c'>4\>( <f bes d>8)\!
+                bes8.(\< c16) | <f, c'>4\>( <f bes d>8)\!
               }
               \\
               \relative c' {
@@ -510,6 +532,7 @@ two-section-one = {
             r8
             <<
               \relative c'' {
+                \once \override DynamicTextSpanner.style = #'none
                 d8.(\cresc es16) | \break <es, bes' es>4( \stemNeutral <f bes des f>8) r8 \stemNeutral <g bes c g'>8\f
               }
               \\
@@ -523,7 +546,7 @@ two-section-one = {
           r8 r4
           <<
             \relative c'' {
-              s4 | b8\rest \stemDown f'4
+              s4 | b8\rest \stemDown f'8-[_~ f]
             }
             \\
             \relative c''' {
@@ -542,7 +565,7 @@ two-section-one = {
           r8
           <<
             \relative c'' {
-              s4 | b8\rest \stemDown d4
+              s4 | b8\rest \stemDown d8-[_~ d]
             }
             \\
             \relative c''' {
@@ -555,7 +578,7 @@ two-section-one = {
           r8
           <<
             \relative c'' {
-              s4 | b8\rest \stemDown bes4
+              s4 | b8\rest \stemDown bes8-[_~ bes8]
             }
             \\
             \relative c''' {
@@ -582,12 +605,12 @@ two-section-one = {
               \once \override Slur.height-limit = #4
               es'8.( e16) | e4^( f8) b,,8\rest
               \stemDown
-              <g' bes e? g>8\f b,8\rest |
+              <g' bes e g>8\f b,8\rest |
               <f' a f'>8
             }
             \\
             \relative c'' {
-              f4 | b,8\rest f'4 s8
+              f4 | b,8\rest f'8-[_~ f] s8
               bes4 | b,8\rest bes'8-[ a]
             }
           >>
@@ -613,7 +636,7 @@ two-section-one = {
           <b d>8.^(\> <es g>16) | <es g>4\!^( <c es>8) r8
           <<
             \relative c' {
-              s4 | s8 \stemDown es4
+              s4 | s8 \stemDown es8-[_~es8]
             }
             \\
             \relative c'' {
@@ -631,7 +654,7 @@ two-section-one = {
           r8
           <<
             \relative c' {
-              s4 | s8 \stemDown f4
+              s4 | s8 \stemDown f8-[_~f8]
             }
             \\
             \relative c'' {
@@ -642,35 +665,42 @@ two-section-one = {
             \\
             \relative c'' {
               s4 | \stemUp
-              <d! f>4^( <bes' d>8)
+              \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
+                #'((alignment-distances . (11.0)))
+              \break
+              <d! f>4^( <bes? d>8)
             }
           >>
           r8
-          \clef bass
           <<
             \relative c'' {
-              \voiceTwo
+              \voiceOne
               \once \override Slur.height-limit = #4
               \once \override Slur.positions = #'(0 . 3)
               % Todo: move to lower staff
-              <a, c>8.^(\p <c es>16 | <c es>2_\textDecresc "dimin." <bes d>4 |
-              <a c>4 <g bes>4 <f_~ a^~>4 |
-              <f a>4 <e g>4 <es_~ c'^~>4\pp |
+              \change Staff = "left"
+              <a, c>8.^( <c es>16) |
+              \once \override Slur.height-limit = #2.0
+              \once \override DynamicTextSpanner.style = #'none
+              <c es>2^(^\dim <bes d>4 |
+              <a c>4 <g bes>4 <f^~ a^~>4 |
+              <f a>4 <e g>4 <es_~ c'^~>4^\pp |
               <es c'>4 <b' d,>4)
             }
             \\
             \relative c {
-              \voiceTwo
+              \voiceOne
               s4 |
               s2. |
               s2. |
+              \change Staff = "left"
               s2 g'4^~ |
-              \voiceOne
+              \voiceTwo
               g2
             }
           >>
           r4 | r4 r4
-          b,8.^(\pp d16) | d4^( b8) r8 \clef treble
+          b,8._(\pp d16) | d4_( b8) r8 \clef treble
           <<
             \relative c'' {
               \once \override Slur.height-limit = #4
@@ -678,11 +708,12 @@ two-section-one = {
             }
             \\
             \relative c' {
-              d4_~ | d8 d4
+              d4_~ | d8 d8-[_~ d8]
             }
           >>
           r8
           \once \override Slur.positions = #'(1 . 1)
+          \stemNeutral
           c''8.^(\pp es16) | es4^( c8) r8
           \once \override Slur.positions = #'(0 . 2.5)
           <d,, b'>8.^(\cresc <f d'>16) | <f d'>4^( <d b'>8) r8
@@ -711,7 +742,7 @@ two-section-one = {
           \once \override Slur.positions = #'(0 . 0)
           <<
             \relative c'' {
-              s4 | s8 \stemDown es4
+              s4 | s8 \stemDown es8-[_~ es8]
             }
             \\
             \relative c''' {
@@ -728,7 +759,7 @@ two-section-one = {
           r8
           <<
             \relative c'' {
-              s4 | s8 \stemDown f4
+              s4 | s8 \stemDown f8-[_~ f8]
             }
             \\
             \relative c''' {
@@ -747,7 +778,7 @@ two-section-one = {
             \relative c''' {
               \voiceTwo
               \once \override Slur.height-limit = #5
-              <a, c>8.^(\p <c es>16 | <c es>2_\textDecresc "dimin." <bes d>4 |
+              <a, c>8.^(\p <c es>16) | <c es>2^(_\dim <bes d>4 |
               <a c>4
               \voiceOne
               <g bes>4 <f_~ a^~>4 |
@@ -784,9 +815,6 @@ two-section-one = {
           <d, b'>8.^(\cresc <f d'>16) | <f d'>4^( <d b'>8) r8
           \once \override Slur.positions = #'(0 . 2.5)
           <d b'>8.^( <g es'>16) | \break <g es'>4^( <es c'>8) r8
-          \once \override Slur.positions = #'(2.2 . 2.5)
-          \once \override Slur.height-limit = #9
-          \once \override Slur.eccentricity = #-0.55
           \ottava #1
           \set Staff.ottavation = #"8"
           <a c>8.^(\f <c a'>16) | <c a'>4^( <a f'>8) r8
@@ -826,7 +854,7 @@ two-section-one = {
           \time 3/4
           \tempo "Tempo 1"
           \key bes \major
-          <b b'>
+          <bes bes'>
           \ottava #0
           r8 r4
           <<
@@ -840,8 +868,6 @@ two-section-one = {
             }
             \\
             \relative c'' {
-              \once \override DynamicText.extra-offset = #'(-2.4 . 1.8)
-              \once \override DynamicText.self-alignment-X = #LEFT
               s8._\p
             }
           >>
@@ -849,8 +875,7 @@ two-section-one = {
           <<
             \relative c'' {
               \once \override Slur.positions = #'(0 . 1.2)
-              \stemDown d8.^(\< f16) | \stemUp
-              \once \override Voice.Stem.length = #3.5
+              \stemUp d8.^(\< f16) | \stemUp
               f4\>^( d8)\!
             }
             \\
@@ -862,8 +887,7 @@ two-section-one = {
           <<
             \relative c''' {
               \once \override Slur.positions = #'(0 . 1.2)
-              \stemDown d8.^(\p f16) | \stemUp
-              \once \override Voice.Stem.length = #3.5
+              \stemUp d8.^(\p f16) | \stemUp
               f4\pp^( d8)
             }
             \\
@@ -957,7 +981,7 @@ two-section-one = {
             }
           >>
           r8 \clef treble
-          c''8.^( es16) | es4^( c8) r8 \clef bass
+          c''8.^(\sustainOn es16) | es4^( c8) r8\sustainOff \clef bass
           <g,,_~ g'^~>4 | <g g'>2
           <c,_~ c'^~>4 | <c c'>2
           \once \override Slur.positions = #'(0 . 3.5)
@@ -1029,57 +1053,85 @@ two-section-one = {
           \repeat unfold 3 \tuplet 3/2 \relative c, { bes8 f' des' }
           \implicitTuplets
           \repeat unfold 10 \tuplet 3/2 \relative c, { bes8 f' des' }
-          \tuplet 3/2 \relative c, { bes8 f' des'\sustainOff }
+          \tuplet 3/2 \relative c, {
+            bes8
+            f'
+            \once \override Staff.SustainPedal.X-offset = #0
+            \once \override Staff.SustainPedal.Y-offset = #-4.35
+            des'\sustainOff
+          }
           \tuplet 3/2 \relative c, { aes8 f' des' }
           \tuplet 3/2 \relative c, { aes8\sustainOn f' des' }
           \tuplet 3/2 \relative c, { aes8 f' des' }
           \tuplet 3/2 \relative c, { des8 f des' }
           \tuplet 3/2 \relative c, { des8 f des' }
           \tuplet 3/2 \relative c, { des8 f des' }
-          <des_~ des'^~>4 | <des des'> <f f'>_(
-          <des_~ des'^~>4 | <des des'> <bes bes'> <f f'>
-          <bes bes'>2 <des des'>4 |
+          \once \override Staff.SustainPedal.X-offset = #-0.1
+          \once \override Staff.SustainPedal.Y-offset = #-2.35
+          <des_~ des'^~>4\sustainOff | <des des'> <f f'>_(
+          \once \override Staff.SustainPedal.X-offset = #-0.8
+          \once \override Staff.SustainPedal.Y-offset = #-3.35
+          <des_~ des'^~>4)\sustainOn | <des des'> <bes bes'>_( <f f'>)
+          <bes bes'>2_( <des des'>4 |
           <f f'>2 <des des'>4 |
           <bes bes'>2 <f f'>4 |
-          <bes bes'>2 <des des'>4 |
+          <bes bes'>2
+          \once \override Staff.SustainPedal.X-offset = #-1.3
+          \once \override Staff.SustainPedal.extra-offset = #'(0 . 3.0)
+          <des des'>4\sustainOff |
           <f f'>2 <aes aes'>4 |
           <des, des'>4) r4 <des des'>8 r8 | <des des'> r8
-          \explicitTuplets
-          \tuplet 3/2 \relative c, { des8 f des' }
-          \tuplet 3/2 \relative c, { des8 f des' }
           \implicitTuplets
+          \tuplet 3/2 \relative c, { des8\sustainOn f des' }
+          \tuplet 3/2 \relative c, { des8 f des' }
           \tuplet 3/2 \relative c, { des8 f des' }
           \repeat unfold 6 \tuplet 3/2 \relative c, { des8 f des' }
-          \tuplet 3/2 \relative c, { des8\< f des' }
-          \tuplet 3/2 \relative c, { aes8 f' des'\sustainOff }
+          \tuplet 3/2 \relative c, { des8 f des' }
+          \tuplet 3/2 \relative c, {
+            aes8
+            f'
+            \once \override Staff.SustainPedal.X-offset = #0.5
+            \once \override Staff.SustainPedal.Y-offset = #-4.35
+            des'\sustainOff
+          }
           \repeat unfold 3 \tuplet 3/2 \relative c, { aes8 f' des' }
           \tuplet 3/2 \relative c, { aes8\sustainOn f' des' }
           \tuplet 3/2 \relative c, { aes8 f' des' }
           \tuplet 3/2 \relative c, { aes8 f' des' }
-          \tuplet 3/2 \relative c, { aes8\!\> f' des' }
           \tuplet 3/2 \relative c, { aes8 f' des' }
-          \tuplet 3/2 \relative c, { aes8 f' des'\! }
+          \tuplet 3/2 \relative c, { aes8 f' des' }
+          \tuplet 3/2 \relative c, { aes8 f' des' }
           \repeat unfold 3 \tuplet 3/2 \relative c, { f,8 f' des' }
           \tuplet 3/2 \relative c, { bes8 f' des' }
-          bes4 <f'_~ f'^~>4 | <f f'>
+          bes4
+          \once \override Staff.SustainPedal.X-offset = #-0.1
+          \once \override Staff.SustainPedal.Y-offset = #-2.35
+          <f'_~ f'^~>4\sustainOff | <f f'>
           <aes aes'>4_( <f_~ f'^~>) | <f f'>
+          \once \override Staff.SustainPedal.X-offset = #-0.8
+          \once \override Staff.SustainPedal.Y-offset = #-3.35
+          <des des'>_(\sustainOn <aes aes'>) |
           \once \override Slur.positions = #'(2 . -3.2)
           \once \override Slur.eccentricity = #0.7
           \once \override Slur.height-limit = #4.5
-          <des des'>_( <aes aes'> |
-          <des des'>2 <f f'>4 |
+          <des des'>2_( <f f'>4 |
           <aes aes'>2 <f f'>4 |
-          <des des'>2 <bes bes'>4 |
+          <des des'>2 <bes bes'>4\sustainOff\sustainOn |
           <f f'>2 <bes bes'>4 |
           <des des'>2 <f f'>4 |
-          <bes bes'>4) r4 r4 |
+          <bes, bes'>4) r4 r4 |
           \tuplet 3/2 \relative c' { des8-1 bes-3 f }
           \tuplet 3/2 \relative c' { des8-2 bes-3 f }
-          \tuplet 3/2 \relative c' { f8 des f,\sustainOff }
+          \tuplet 3/2 \relative c' {
+            f8
+            des
+            \once \override Staff.SustainPedal.X-offset = #1.365
+            f,\sustainOff
+          }
           \bar "||"
           \time 2/4
           \tempo "Presto"
-          bes'8 r des r |
+          bes''8 r des r |
           c r f, r |
           f' r es r |
           des r c r |
@@ -1087,14 +1139,16 @@ two-section-one = {
           c r aes r |
           c r g r |
           f2 |
-          <f, f'>8 r <bes bes'> r |
-          <g g'> r <c, c'> r |
-          <c' c'> r <bes bes'> r |
-          <aes aes'> r <g g'> r |
-          <f f'> r <aes aes'> r |
-          <g g'> r <c c'> r |
-          <a a'> r <f f'> r |
-          <bes bes'> r <c c'> r |
+          
+          <f, f'>8-[ r <as as'>] r |
+          <g g'>-[ r <c, c'>] r |
+          <c' c'>-[ r <bes bes'>] r |
+          <aes aes'>-[ r <g g'>] r |
+          <f f'>-[ r <aes aes'>] r |
+          <g g'>-[ r <c c'>] r |
+          <a a'>-[ r <f f'>] r |
+          <bes bes'>-[ r <c c'>] r |
+          
           des8-[ des' bes, bes'] |
           f,-[ f' es, es'] |
           des,-[ des' c, c'] |
@@ -1196,7 +1250,7 @@ two-section-one = {
           <bes d>8.^( <f c'>16) | <a c>4^( <bes d>8) r8
           <g bes>8.^( <d a'>16) | <fis a>4^( <g bes>8) r8
           <es g>8.^( <bes f'>16) | <d f>4^( <es g>8) r8
-          <es g>8.^( <c f>16) | <c f_~>4^( <d f>8) r8
+          <es g>8.^( <c f>16) | <c f^~>4_( <d f>8) r8
           <<
             {
                f4
@@ -1212,11 +1266,11 @@ two-section-one = {
           <e c'>8 r8 | <f f'>8 r8 r4
 
           \clef treble
-          <bes'' d>8._( <f c'>16) | \stemDown <bes d>4_( <c es>8) r8
+          <bes'' d>8._( <f c'>16) | \stemDown <a c>4^( <bes d>8) r8
           \stemNeutral
           <g bes>8._( <d a'>16) | <fis a>4_( <g bes>8) r8
           <es g>8._( <bes f'!>16) | <d f>4_( <es g>8) r8
-          <es g>8._( <c f>16) | <c f>4_( <d g>8) r8
+          <es g>8._( <c f>16) | <c f^~>4_( <d f>8) r8
           d'8.^( <a c>16) | \stemUp <a c>4^( <aes bes>8) r8
           <g bes>8._( <ges bes>16) | <ges bes>4_( <f c'>8) r8
           \clef bass
@@ -1226,9 +1280,11 @@ two-section-one = {
           <f,,_~ f'^~>4 | <f f'>8 f_( f') r8
           <f,_~ f'^~>4 | <f f'>8 f_( f') r8
           <f,,_~ f'^~>4 | <f f'>8 f_( f') r8
-          <fis,_~ fis'^~>4 | <fis fis'>4 <g_~ g'^~>2_( |
-          <g g'>4 <a a'> <bes bes'> | <b b'> <c c'> c | g'2) r4 |
+          \stemDown
+          <fis,_~ fis'_~>4 | <fis fis'>4 <g_~ g'_~>2_( |
+          <g g'>4 <a a'> <bes bes'> | <b b'> <c c'>) c | g'2 r4 |
           R2. |
+          \stemNeutral
           r4 r4
           <<
             \relative c' {
@@ -1263,10 +1319,13 @@ two-section-one = {
             \\
             \relative c {
               <fis_~ c'^~ es^~>4 |
-              <fis c' es>4 4 <g bes d> |
+              \once \override Slur.height-limit = #5
+              \once \override Slur.eccentricity = #1
+              \once \override Slur.positions = #'(-3 . -2.5)
+              <fis c' es>4_( 4 <g bes d> |
               <a c>8-[ a,] <bes g' bes>4 <b f'^~ a^~> |
               \stemUp <f' a>4 <e g> <es g c^~> |
-              c'4 b4
+              c'4 b4)
             }
           >>
           r4 |
@@ -1292,7 +1351,7 @@ two-section-one = {
           <b b'>8 r8 | <b b'>8 r8 r4
           <bes bes'>8 r8 | <bes bes'>8 r8 r4
           <b b'>8 r8 | <b b'>8 r8 r4
-          <cis cis'>8 r8 | <cis cis'>8 r8 r4
+          <ais ais'>8 r8 | <ais ais'>8 r8 r4
           r4 | r4 r4
           <b b'>8 r8 | <b b'>8 r8 r4
           <b b'>8 r8 | <b b'>8 r8 r4
@@ -1305,7 +1364,7 @@ two-section-one = {
           <bes bes'>8 r8 r4
           bes''8.^( f16) | a4^( bes8) r8
           \clef treble
-          bes'8.^( f16) | a4^( bes8) r8
+          bes'8.^( f16) | a4^( \stemUp bes8) r8 \stemDown
           bes'8.^( f16) | a4^( bes8) r8
         }
       }
